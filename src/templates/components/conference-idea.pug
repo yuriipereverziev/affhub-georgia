@@ -1,0 +1,60 @@
+-
+  const conferenceIdeaTitle = 'General idea of our conference'
+
+  const conferenceIdeaTexts = [
+    {
+      strong: 'AFFHUB AFFILIATE CONNECT CONF',
+      text: 'is a platform that builds strong connections and fosters partnerships capable of transforming the entire industry’s trajectory'
+    },
+    {
+      text: 'AFFHUB creates an environment where participants feel a true unity of purpose: businesses open up opportunities, affiliates shape ideas, and services provide support'
+    },
+    {
+      text: 'Together, they form a space where connections gain strength, partnerships gain depth, and communication transforms into forward momentum'
+    }
+  ]
+
+  const conferenceMeta = [
+    {
+      img: 'conference-idea-1.svg',
+      title: 'Where',
+      value: 'Tbilisi, Georgia, ExpoGeorgia'
+    },
+    {
+      img: 'conference-idea-2.svg',
+      title: 'When',
+      value: 'March 27, 2026'
+    },
+    {
+      img: 'conference-idea-3.svg',
+      title: 'Who',
+      value: 'More than 3 000 participants of the affiliate industry'
+    }
+  ]
+
+
+section.conference-idea.block
+
+  .conference-idea__ellipses.ellipses
+    .ellipse.ellipse--blue
+    .ellipse.ellipse--rose
+
+  .container.conference-idea__wrapper
+
+
+
+    h2.conference-idea__title.title= conferenceIdeaTitle
+
+    .conference-idea__content
+      each item in conferenceIdeaTexts
+        p.conference-idea__text
+          if item.strong
+            strong= item.strong + ' '
+          | #{item.text}
+
+    ul.conference-idea__meta
+      each item in conferenceMeta
+        li.conference-idea__meta-item.glass
+          img.conference-idea__meta-img(src=`/img/${item.img}` alt="")
+          h4.conference-idea__meta-title= item.title
+          p.conference-idea__meta-text= item.value

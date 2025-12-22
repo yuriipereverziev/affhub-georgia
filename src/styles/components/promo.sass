@@ -1,0 +1,619 @@
+
+.promo
+  position: relative
+
+
+
+  &__ellipses
+    position: relative
+
+    & .ellipse
+      &--blue
+        width: 400px
+        height: 140px
+        top: -100px
+        right: -40px
+        transform: rotate(-14deg)
+
+        +rm(640)
+          width: 520px
+          height: 180px
+          top: -130px
+          right: -50px
+
+        +rm(768)
+          width: 650px
+          height: 220px
+          top: -160px
+          right: -60px
+
+        +rm(1024)
+          width: 800px
+          height: 275px
+          top: -200px
+          right: -80px
+
+        +rm(1220)
+          width: 975px
+          height: 335px
+          top: -250px
+          right: -110px
+
+      &--red
+        width: 300px
+        height: 100px
+        top: 80px
+        left: -100px
+        transform: rotate(-14deg)
+
+        +rm(640)
+          width: 400px
+          height: 130px
+          top: 100px
+          left: -140px
+
+        +rm(768)
+          width: 500px
+          height: 150px
+          top: 120px
+          left: -180px
+
+        +rm(1024)
+          width: 600px
+          height: 180px
+          top: 150px
+          left: -220px
+
+        +rm(1220)
+          width: 736px
+          height: 218px
+          top: 200px
+          left: -295px
+
+      &--green
+        width: 300px
+        height: 100px
+        top: 280px
+        right: -40px
+        transform: rotate(-14deg)
+
+        +rm(640)
+          width: 400px
+          height: 130px
+          top: 350px
+          right: -60px
+
+        +rm(768)
+          width: 500px
+          height: 150px
+          top: 400px
+          right: -80px
+
+        +rm(1024)
+          width: 600px
+          height: 180px
+          top: 500px
+          right: -100px
+
+        +rm(1220)
+          width: 736px
+          height: 218px
+          top: 650px
+          right: -140px
+
+
+  //&__ellipses
+  //  position: relative
+  //
+  //  & .ellipse
+  //
+  //    &--blue
+  //      width: 975px
+  //      height: 335px
+  //      top: -250px
+  //      right: -110px
+  //      transform: rotate(-14deg)
+  //
+  //    &--red
+  //      top: 200px
+  //      left: -295px
+  //      width: 736px
+  //      height: 218px
+  //      transform: rotate(-14deg)
+  //
+  //
+  //    &--green
+  //      top: 650px
+  //      right: -140px
+  //      width: 736px
+  //      height: 218px
+  //      transform: rotate(-14deg)
+
+
+  &__wrapper
+
+    padding-top: 60px
+
+
+
+    +flex($direction: column, $justify: space-around, $gap: 100px)
+
+    +rm(1024)
+      //min-height: 100vh
+      padding-top: 90px
+
+    +rm(1220)
+      padding-top: 120px
+    +rm(1360)
+      padding-top: 180px
+      //padding-bottom: 230px
+
+    &:before
+      position: absolute
+      content: ''
+      top: -170px
+      right: -190px
+      width: 1053px
+      height: 1037px
+      background: url(../img/promo-line.png)
+      background-position: left bottom
+      -webkit-transform: rotate(21deg)
+      transform: rotate(345deg)
+      mix-blend-mode: screen
+      background-size: 972px
+      z-index: 1
+
+
+  &__container
+
+    +rm(1024)
+      width: 100%
+      +flex($justify: space-between, $gap: 30px)
+      position: relative
+
+    +rm(1220)
+      gap: 100px
+
+  &__inner
+    text-align: center
+    +rm(1024)
+      max-width: 800px
+      width: 100%
+      text-align: left
+
+  &__date
+    text-align: center
+    margin-bottom: 22px
+
+    +rm(640)
+      font-size: 18px
+
+    +rm(1024)
+      font-size: 20px
+      text-align: left
+      margin-bottom: 35px
+
+    +rm(1220)
+      margin-bottom: 62px
+
+  &__title
+    font-family: $ital-font
+    position: relative
+    z-index: 3
+    font-weight: 400
+    line-height: 0.9
+    text-align: center
+    +text-size(34, 54)
+    margin-bottom: 25px
+
+    +rm(1024)
+      margin-bottom: 35px
+      font-size: 54px
+      text-align: left
+
+    +rm(1220)
+      margin-bottom: 48px
+      font-size: 64px
+
+
+  &-hero__block
+
+    width: 100%
+    max-width: 320px
+    margin: 0 auto 10px
+    display: block
+    z-index: 2
+
+
+    +rm(768)
+      max-width: 480px
+    +rm(1024)
+      max-width: 700px
+      margin-bottom: 0
+      display: block
+      position: absolute
+      top: -170px
+      right: -115px
+    +rm(1220)
+      max-width: 800px
+      top: -180px
+      right: -95px
+    +rm(1360)
+      max-width: 870px
+      top: -260px
+      right: -66px
+
+  &__btns
+
+    +rm(640)
+      +flex($gap: 24px)
+
+  &__btn
+    margin: 0 auto
+
+  .diamond-1
+    width: 15.3%
+    top: -5%
+    left: 4%
+    opacity: 0
+    transition: transform 0s, opacity 1s, top 1s
+
+    +rm(1024)
+      left: 46%
+
+    &::before
+      top: 4%
+      left: 11%
+
+  .diamond-2
+    width: 5%
+    top: -5%
+    left: 90%
+    opacity: 0
+    transition: transform 0s, opacity 1s, top 1s
+
+    +rm(1024)
+      left: 95%
+
+    &::before
+      animation-delay: 1.5s
+
+  .diamond-3
+    width: 8.09%
+    top: -5%
+    left: 16%
+    opacity: 0
+    transition: transform 0s, opacity 1s, top 1s
+
+    +rm(1024)
+      left: 46%
+
+    &::before
+      top: 4%
+      left: 11%
+
+  .diamond-4
+    width: 5.22%
+    top: auto
+    left: 80%
+    bottom: 105%
+    opacity: 0
+    transition: transform 0s, opacity 1s, bottom 1s
+    z-index: 5
+
+    +rm(1024)
+      top: auto
+      left: 30%
+
+    &::before
+    animation-delay: 1.5s
+
+.details
+  //margin-bottom: -70px
+
+  display: flex
+  //flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: 10px
+  position: relative
+  z-index: 5
+  margin-bottom: 20px
+
+
+  +rm(480)
+
+    flex-direction: row
+    justify-content: center
+    gap: 10px
+
+
+  +rm(1024)
+    margin-bottom: 50px
+    justify-content: flex-start
+  +rm(1360)
+    margin-bottom: 55px
+
+
+  &__item
+    width: fit-content
+    padding: 14px
+    border-radius: 24px
+    background-color: #100730
+    color: #ff57c6
+
+    +rm(1220)
+      font-size: 18px
+
+  &__link
+    color: #ff57c6
+
+@keyframes sparking
+  0%
+    transform: scale(0) rotate(0)
+  50%
+    transform: scale(1) rotate(180deg)
+  100%
+    transform: scale(0) rotate(360deg)
+
+.diamond
+  position: absolute
+  top: 0
+  left: 0
+  // transition-duration: 0.5s
+
+  &::before
+    content: ""
+    width: 30%
+    min-width: 10px
+    aspect-ratio: 1 / 1
+    background-image: url(../img/spark.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    position: absolute
+    // top: auto
+    // left: auto
+    // right: 100%
+    // bottom: 100%
+    // transform: translate(50%, 50%)
+    // transform-origin: center
+
+    animation: sparking 3s infinite forwards
+
+.video-bg
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    opacity: 0.2
+
+  video
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+@keyframes fall_1
+  0%
+    top: -5%
+
+  60%
+
+    top: 33%
+
+  75%
+
+    top: 29%
+
+  85%
+
+    top: 33%
+
+  92%
+
+    top: 31%
+
+  100%
+
+    top: 33%
+
+@keyframes fall_1_480
+  0%
+    top: -5%
+
+  60%
+
+    top: 47%
+
+  75%
+
+    top: 40%
+
+  85%
+
+    top: 47%
+
+  92%
+
+    top: 45%
+
+  100%
+
+    top: 47%
+
+@keyframes fall_1_1024
+  0%
+    top: -5%
+
+  60%
+
+    top: 16%
+
+  75%
+
+    top: 12%
+
+  85%
+
+    top: 16%
+
+  92%
+
+    top: 14%
+
+  100%
+
+    top: 16%
+
+@keyframes fall_2
+  0%
+    top: -5%
+
+  60%
+
+    top: 45%
+
+  75%
+
+    top: 40%
+
+  85%
+
+    top: 45%
+
+  92%
+
+    top: 43%
+
+  100%
+
+    top: 45%
+
+@keyframes fall_2_1024
+  0%
+    top: -5%
+
+  60%
+
+    top: 21%
+
+  75%
+
+    top: 16%
+
+  85%
+
+    top: 21%
+
+  92%
+
+    top: 19%
+
+  100%
+
+    top: 21%
+
+@keyframes fall_3
+  0%
+    top: -5%
+
+  60%
+
+    top: 78%
+
+  75%
+
+    top: 73%
+
+  85%
+
+    top: 78%
+
+  92%
+
+    top: 76%
+
+  100%
+
+    top: 78%
+
+@keyframes fall_3_1024
+  0%
+    top: -5%
+
+  60%
+
+    top: 69%
+
+  75%
+
+    top: 63%
+
+  85%
+
+    top: 69%
+
+  92%
+
+    top: 66%
+
+  100%
+
+    top: 69%
+
+@keyframes fall_4
+  0%
+    bottom: 105%
+
+  60%
+
+    bottom: 13%
+
+  75%
+
+    bottom: 18%
+
+  85%
+
+    bottom: 13%
+
+  92%
+
+    bottom: 15%
+
+  100%
+
+    bottom: 13%
+
+@keyframes fall_4_1024
+  0%
+    bottom: 105%
+
+  60%
+
+    bottom: -3%
+
+  75%
+
+    bottom: 5%
+
+  85%
+
+    bottom: -3%
+
+  92%
+
+    bottom: 1%
+
+  100%
+
+    bottom: -3%

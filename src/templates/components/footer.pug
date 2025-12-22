@@ -1,0 +1,93 @@
+-
+  var footerLinks = [
+    {id: 'Conference', label: 'TIMELINE', href: '#timeline'},
+    {id: 'ceremony', label: 'Номінації', href: '#ceremony'},
+    {id: 'location', label: 'Локація', href: '#location'},
+    {id: 'tickets', label: 'Квитки', href: '#tickets'},
+    {id: 'partners', label: 'Партнери', href: '#partners'},
+  ]
+
+footer.footer.block
+  .container.footer__wrapper
+    a.footer__logo-link(href="#promo")
+      img.footer__logo(
+        src=basePath + "img/logo.svg"
+        alt=""
+        loading="lazy"
+        width="120"
+        height="28"
+        fetchpriority="low"
+        decoding="async"
+      )
+    .footer__inner
+      p.footer__text Your go-to community for affiliate marketers and digital specialists. Your ultimate ecosystem for professional growth in the industry.
+      .footer__links
+        each link in footerLinks
+          if link.external
+            a.footer__link(href=link.href target="_blank") #{link.label}
+          else
+            a.footer__link(href=link.href) #{link.label}
+      .footer__social
+        .footer__socila-inner
+          a(href="https://www.instagram.com/affhubcommunity/profilecard/", class="footer__social-link", target="_blank")
+            svg(xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none" class="icon")
+              defs
+                linearGradient#grad1(x1="0%" y1="0%" x2="100%" y2="100%")
+                  stop(offset="0%" stop-color="#ffffff")
+                  stop(offset="54.33%" stop-color="#ffffff")
+                  stop(offset="100%" stop-color="#ffffff")
+              path(d="M17.1973 15.2236C17.1973 16.4371 16.2135 17.4209 15 17.4209C13.7865 17.4209 12.8027 16.4371 12.8027 15.2236C12.8027 14.0102 13.7865 13.0264 15 13.0264C16.2135 13.0264 17.1973 14.0102 17.1973 15.2236Z" fill="url(#grad1)")
+              path(d="M18.7109 8.58301H11.2891C9.67354 8.58301 8.35938 9.89717 8.35938 11.5127V18.9346C8.35938 20.5501 9.67354 21.8643 11.2891 21.8643H18.7109C20.3265 21.8643 21.6406 20.5501 21.6406 18.9346V11.5127C21.6406 9.89717 20.3265 8.58301 18.7109 8.58301ZM15 18.8857C12.9807 18.8857 11.3379 17.2429 11.3379 15.2236C11.3379 13.2043 12.9807 11.5615 15 11.5615C17.0193 11.5615 18.6621 13.2043 18.6621 15.2236C18.6621 17.2429 17.0193 18.8857 15 18.8857ZM19.1992 11.7568C18.7947 11.7568 18.4668 11.429 18.4668 11.0244C18.4668 10.6199 18.7947 10.292 19.1992 10.292C19.6038 10.292 19.9316 10.6199 19.9316 11.0244C19.9316 11.429 19.6038 11.7568 19.1992 11.7568Z" fill="url(#grad1)")
+              path(d="M20.9082 2.72363H9.0918C5.45715 2.72363 2.5 5.68079 2.5 9.31543V21.1318C2.5 24.7665 5.45715 27.7236 9.0918 27.7236H20.9082C24.5428 27.7236 27.5 24.7665 27.5 21.1318V9.31543C27.5 5.68079 24.5428 2.72363 20.9082 2.72363ZM23.1055 18.9346C23.1055 21.3577 21.134 23.3291 18.7109 23.3291H11.2891C8.86597 23.3291 6.89453 21.3577 6.89453 18.9346V11.5127C6.89453 9.0896 8.86597 7.11816 11.2891 7.11816H18.7109C21.134 7.11816 23.1055 9.0896 23.1055 11.5127V18.9346Z" fill="url(#grad1)")
+          a(href="https://t.me/affhub_community", class="footer__social-link", target="_blank")
+            svg(xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none" class="icon")
+              defs
+                linearGradient#grad2(x1="0%" y1="0%" x2="100%" y2="100%")
+                  stop(offset="0%" stop-color="#ffffff")
+                  stop(offset="54.33%" stop-color="#ffffff")
+                  stop(offset="100%" stop-color="#ffffff")
+              path(d="M21.25 2.72363C24.7018 2.72363 27.5 5.52185 27.5 8.97363V21.4736C27.5 24.9254 24.7018 27.7236 21.25 27.7236H8.75C5.29822 27.7236 2.5 24.9254 2.5 21.4736V8.97363C2.5 5.52185 5.29822 2.72363 8.75 2.72363H21.25ZM22.4883 10.7461C22.6382 9.53455 21.2383 10.0469 21.2383 10.0469C21.2061 10.0589 18.2345 11.1671 17.3389 11.5381C15.0388 12.4235 8.3877 14.9873 8.3877 14.9873C6.84622 15.5436 7.77867 16.0535 7.78809 16.0586C7.78809 16.0586 9.13805 16.4785 10.2881 16.8047C11.4249 17.1271 12.0245 16.7661 12.0381 16.7578C12.0381 16.7578 14.6884 15.1263 17.4385 13.3555C19.3384 12.144 18.8885 13.1695 18.4385 13.5889C17.4385 14.5208 15.7886 16.0118 14.3887 17.1768C13.7386 17.6894 14.0889 18.1088 14.3389 18.3418C15.3385 19.1336 18.0854 20.7635 18.2383 20.8584C18.3883 20.9982 19.4886 21.6505 20.1387 21.5107C20.7887 21.3709 20.8887 20.5322 20.8887 20.5322C20.8915 20.5158 21.3901 17.5888 21.8389 14.8936C22.1389 12.983 22.4383 11.2587 22.4883 10.7461Z" fill="url(#grad2)")
+          a(href="https://www.youtube.com/@affhub", class="footer__social-link", target="_blank")
+            svg(xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none" class="icon")
+              defs
+                linearGradient#grad3(x1="0%" y1="0%" x2="100%" y2="100%")
+                  stop(offset="0%" stop-color="#ffffff")
+                  stop(offset="54.33%" stop-color="#ffffff")
+                  stop(offset="100%" stop-color="#ffffff")
+              path(d="M21.25 2.72363C24.7018 2.72363 27.5 5.52185 27.5 8.97363V21.4736C27.5 24.9254 24.70018 27.7236 21.25 27.7236H8.75C5.29822 27.7236 2.5 24.9254 2.5 21.4736V8.97363C2.5 5.52185 5.29822 2.72363 8.75 2.72363H21.25ZM12.749 10.9395C12.0538 10.6076 11.25 11.1144 11.25 11.8848V18.5635C11.2503 19.3336 12.054 19.8406 12.749 19.5088L19.7441 16.1689C20.5391 15.7895 20.5391 14.6578 19.7441 14.2783L12.749 10.9395Z" fill="url(#grad3)")
+          a(href="https://www.tiktok.com/@affhub.community?_t=8sNDVC9h58A&_r=1", class="footer__social-link", target="_blank")
+            svg(xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none" class="icon")
+              defs
+                linearGradient#grad4(x1="0%" y1="0%" x2="100%" y2="100%")
+                  stop(offset="0%" stop-color="#ffffff")
+                  stop(offset="54.33%" stop-color="#ffffff")
+                  stop(offset="100%" stop-color="#ffffff")
+              path(d="M21.25 2.72363C24.7018 2.72363 27.5 5.52185 27.5 8.97363V21.4736C27.5 24.9254 24.7018 27.7236 21.25 27.7236H8.75C5.29822 27.7236 2.5 24.9254 2.5 21.4736V8.97363C2.5 5.52185 5.29822 2.72363 8.75 2.72363H21.25ZM15.6719 7.41211V18.0547C15.6718 18.5601 15.522 19.0543 15.2412 19.4746C14.9603 19.895 14.5608 20.2225 14.0938 20.416C13.6266 20.6095 13.1121 20.6602 12.6162 20.5615C12.1205 20.4629 11.6651 20.2197 11.3076 19.8623C10.9501 19.5048 10.7061 19.0487 10.6074 18.5527C10.5089 18.057 10.5596 17.5431 10.7529 17.0762C10.9464 16.609 11.2749 16.2096 11.6953 15.9287C12.1157 15.6479 12.6097 15.4981 13.1152 15.498H14.332V13.0645H13.1152C11.7931 13.0645 10.5248 13.5895 9.58984 14.5244C8.65496 15.4593 8.12994 16.7277 8.12988 18.0498C8.12988 19.3719 8.65498 20.6403 9.58984 21.5752C10.5248 22.5101 11.793 23.0352 13.1152 23.0352C14.4364 23.0329 15.7029 22.5068 16.6367 21.5723C17.5703 20.6377 18.0956 19.3708 18.0967 18.0498V12.9023C18.868 13.3682 19.7523 13.6146 20.6533 13.6133H21.8789V11.1846H20.6611C19.9832 11.1845 19.3329 10.9149 18.8535 10.4355C18.3742 9.95618 18.1046 9.30584 18.1045 8.62793V7.41211H15.6719Z" fill="url(#grad4)")
+          a(href="https://affhub.media/", class="footer__social-link", target="_blank")
+            svg(width="26" height="26" viewBox="0 0 26 26" fill="none" class="icon")
+              defs
+                linearGradient#grad5(x1="0%" y1="0%" x2="100%" y2="100%")
+                  stop(offset="0%" stop-color="#ffffff")
+                  stop(offset="54.33%" stop-color="#ffffff")
+                  stop(offset="100%" stop-color="#ffffff")
+              path(d="M19.25 0.223633C22.7018 0.223633 25.5 3.02185 25.5 6.47363V18.9736C25.5 22.4254 22.7018 25.2236 19.25 25.2236H6.75C3.29822 25.2236 0.5 22.4254 0.5 18.9736V6.47363C0.5 3.02185 3.29822 0.223633 6.75 0.223633H19.25Z" fill="url(#grad5)")
+              g(clip-path="url(#clip0_2001_12)")
+                path(d="M19.5833 13C19.5833 8.85786 16.4119 5.5 12.5 5.5C8.58794 5.5 5.41663 8.85786 5.41663 13C5.41663 17.1421 8.58794 20.5 12.5 20.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                path(d="M13.2084 5.53711C13.2084 5.53711 15.3334 8.50007 15.3334 13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                path(d="M11.7916 20.4631C11.7916 20.4631 9.66663 17.5 9.66663 13C9.66663 8.50007 11.7916 5.53711 11.7916 5.53711" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                path(d="M5.86267 15.625H12.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                path(d="M5.86267 10.375H19.1374" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                path(fill-rule="evenodd" clip-rule="evenodd" d="M19.4975 17.4379C19.8473 17.6657 19.8257 18.2202 19.4655 18.2635L17.6475 18.4816L16.832 20.2159C16.6705 20.5595 16.171 20.3913 16.0884 19.9654L15.1993 15.3784C15.1295 15.0184 15.4351 14.7918 15.7307 14.9844L19.4975 17.4379Z" stroke="black" stroke-width="1.5")
+              defs
+                clipPath#clip0_2001_12
+                  rect(width="17" height="18" fill="white" transform="translate(4 4)")
+
+
+    p.footer__copy #{t.footer.copyright}
+      span.year #{t.footer.year}
+
+
+
+
+
+

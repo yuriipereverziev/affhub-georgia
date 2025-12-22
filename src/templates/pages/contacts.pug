@@ -1,0 +1,19 @@
+extends ../settings/layout
+
+prepend html
+  - const lang = "en";
+  - const currentPage = 'contacts'
+
+prepend head
+  - const pageTitle = "Contacts — Affhub Georgia";
+  - const themeColor = "#ffffff";
+
+include ../settings/mixins
+
+append content
+  include ../components/header
+  include ../components/socials
+  include ../components/footer
+
+  .overlay
+

@@ -1,0 +1,36 @@
+extends ../settings/layout
+
+prepend html
+  - const lang = "en";
+  - const currentPage = 'index'
+
+prepend head
+  - const pageTitle = "Affhub Georgia";
+  - const themeColor = "#ffffff";
+
+append head
+
+include ../settings/mixins
+
+append content
+  include ../components/promo
+  include ../components/conference-idea
+  include ../components/vertical
+  include ../components/expectations
+  include ../components/tickets
+  include ../components/expozone
+  include ../components/location
+  include ../components/speakers
+  include ../components/partners
+  include ../components/info-partners
+  include ../components/timeline
+  include ../components/stand
+  include ../components/footer
+
+  .overlay
+
+append scripts
+  if currentPage === 'index'
+    //script(src=basePath + "js/rte-script.js" fetchpriority="low")
+    script(src="https://a.rte.im/api/v1/events/4709/form/script")
+

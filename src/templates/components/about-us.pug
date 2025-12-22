@@ -1,0 +1,45 @@
+-
+  const aboutUsTitle = 'About us'
+
+  const aboutUsItems = [
+    {
+      text: 'Your go-to community for affiliate marketers and digital specialists'
+    },
+    {
+      text: 'We provide a comprehensive ecosystem that drives success in the affiliate and digital marketing sectors'
+    },
+    {
+      text: '6 years of organizing premier affiliate marketing events across Ukraine and internationally'
+    },
+    {
+      text: 'Our community compromises of 10,000+ specialists in the affiliate marketing industry, including webmasters, affiliate managers, media buyers, SEO and ASO specialists, etc.'
+    },
+    {
+      text: 'Through our TOP events, Affhub Media, a popular YouTube channel, and dynamic social platforms, we equip marketers with essential information and tools for success'
+    },
+    {
+      text: 'Powerful media platform featuring insider content from practicing experts'
+    }
+  ]
+
+section.about-us.block
+
+  .about-us__ellipses.ellipses
+    .ellipse.ellipse--blue
+    .ellipse.ellipse--red
+    .ellipse.ellipse--green
+
+
+  .container.about-us__wrapper
+    h2.about-us__title.title= aboutUsTitle
+
+    ul.about-us__list
+      each item, index in aboutUsItems
+        li.about-us__item.glass
+          span.about-us__count #{index + 1 < 10 ? '0' + (index + 1) : index + 1}
+
+          p.about-us__text= item.text
+
+  .circle__bg.about-us__circle-bg
+  .circle__bg.circle__bg--pink.about-us__circle-bg--pink
+  .strips__container(data-stripes="2")

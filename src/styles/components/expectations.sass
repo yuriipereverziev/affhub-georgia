@@ -1,0 +1,105 @@
+.expectations
+  position: relative
+  //overflow: hidden
+  //&-overlay
+  //  position: absolute
+  //  top: 0
+  //  left: 0
+  //  width: 100%
+  //  height: 100%
+  //  background: url("../img/expectations-bg.png")
+  //  background-repeat: no-repeat
+  //  background-position: left bottom
+  //  background-size: contain
+  //  mix-blend-mode: screen
+
+
+  & .ellipse
+
+    &--blue
+      width: 1490px
+      height: 442px
+      top: 15px
+      right: -620px
+      transform: rotate(18deg)
+
+    &--rose
+      top: 400px
+      left: -95px
+      width: 736px
+      height: 218px
+      transform: rotate(-14deg)
+
+
+  &__wrapper
+    position: relative
+    z-index: 2
+
+  &__title
+    margin-bottom: 32px
+    max-width: 520px
+
+    +rm(768)
+      margin-bottom: 48px
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+    +rm(640)
+      flex-direction: row
+      flex-wrap: wrap
+      gap: 20px
+
+  &__item
+    position: relative
+    //flex: 1 1 100%
+    padding: 20px
+    border-radius: 20px
+
+    //background: rgba(255, 255, 255, 0.55)
+    //border: 1px solid rgba(255, 255, 255, 0.6)
+    //
+    //box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 10px 22px rgba(17, 24, 39, 0.08)
+    //
+    //backdrop-filter: blur(12px)
+    //-webkit-backdrop-filter: blur(12px)
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 16px
+
+    +rm(640)
+      width: calc((100% - 32px) / 2)
+      //flex: 1 1 calc(50% - 20px)
+
+    +rm(1024)
+      gap: 24px
+      width: calc((100% - 72px) / 3)
+      padding: 20px
+
+  &__icon
+    width: 40px
+    height: 40px
+    flex-shrink: 0
+
+    +rm(1024)
+      width: 72px
+      height: 72px
+      align-self: flex-start
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+  &__text
+    font-size: 14px
+    line-height: 1.5
+    color: #2b1636
+
+    +rm(1024)
+      padding-top: 80px
+      font-size: 15px

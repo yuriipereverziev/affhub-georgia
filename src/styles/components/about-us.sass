@@ -1,0 +1,122 @@
+.about-us
+  position: relative
+
+  &__ellipses
+    position: relative
+
+    & .ellipse
+
+      &--blue
+        width: 975px
+        height: 335px
+        top: -250px
+        right: -110px
+        transform: rotate(-14deg)
+
+      &--red
+        top: 150px
+        left: -295px
+        width: 736px
+        height: 218px
+        transform: rotate(-14deg)
+
+
+      &--green
+        top: 450px
+        right: 0px
+        width: 736px
+        height: 218px
+        transform: rotate(-14deg)
+
+
+
+  &__list
+
+    +rm(640)
+      +flex($justify: center, $align: stretch, $gap: 20px, $wrap: wrap)
+
+    +rm(1220)
+      gap: 25px
+
+  &__item
+    padding: 15px
+    //background: #FFFFFF
+    border-radius: 20px
+    //border: 1px solid rgba(255, 255, 255, 0.6)
+    //box-shadow: inset 0 -1px 2px rgba(255, 255, 255, 0.6), inset 0 6px 12px rgba(17, 24, 39, 0.06)
+    //
+    //background: rgba(255, 255, 255, 0.55)
+    //border: 1px solid rgba(255, 255, 255, 0.6)
+    //
+    //box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 10px 22px rgba(17, 24, 39, 0.08)
+    //
+    //backdrop-filter: blur(12px)
+    //-webkit-backdrop-filter: blur(12px)
+
+
+
+    +rm(640)
+      width: 48%
+
+    +rm(768)
+      //backdrop-filter: blur(7px)
+      padding: 20px
+
+    +rm(1024)
+      width: calc((100% - 50px) / 3)
+
+    +rm(1220)
+
+      //width: 420px
+      padding: 24px
+
+    &:not(:last-of-type)
+      margin-bottom: 15px
+
+      +rm(480)
+        margin-bottom: 20px
+
+      +rm(640)
+        margin-bottom: 0
+
+  &__count
+    width: 30px
+    height: 30px
+    display: block
+    margin-bottom: 10px
+    text-align: center
+    font-weight: 700
+    padding: 8px 5px
+
+    +rm(480)
+      margin-bottom: 15px
+
+    +rm(1220)
+      font-size: 24px
+      margin-bottom: 20px
+
+  &__text
+    line-height: 1.5
+    opacity: .6
+
+  &__circle-bg
+    top: 50%
+
+    +rm(640)
+      top: auto
+      bottom: 30%
+
+    +rm(768)
+      top: auto
+      bottom: 0
+
+  &__circle-bg--pink
+    top: auto
+    bottom: 0
+
+    +rm(640)
+      bottom: 30%
+
+    +rm(768)
+      top: auto
+      bottom: 0

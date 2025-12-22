@@ -1,0 +1,24 @@
+section.galary.block
+    .container
+        h2.galary__title.title photos from our previous events
+        .galary__slider.swiper
+            .galary__wrapper.swiper-wrapper
+                each i in [...Array(112).keys()]
+                    .galary__slide.swiper-slide
+                        +picture(`galary_${i + 1}`, format='jpg', className='galary__img zoom-img')
+            .galary__btns
+                .swiper-pagination
+                button.galary__arrow.wait-slider__nav.wait-slider__nav--prev.swiper-button-prev
+                button.galary__arrow.wait-slider__nav.wait-slider__nav--next.swiper-button-next
+
+.modal#galleryModal
+    .modal__overlay
+        .modal__content
+            .modal__close(aria-label=t.galary.close)
+            .modal-slider.swiper
+                .swiper-wrapper
+
+            .galary__btns
+                button.galary__arrow.wait-slider__nav.wait-slider__nav--prev.swiper-button-prev
+                button.galary__arrow.wait-slider__nav.wait-slider__nav--next.swiper-button-next
+            .swiper-pagination

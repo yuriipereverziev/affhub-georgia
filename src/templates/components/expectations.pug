@@ -1,0 +1,45 @@
+-
+  const expectationsTitle = "Here's what awaits you:"
+
+  const expectationsItems = [
+    {
+      text: 'One of the biggest affiliate conferences in Tbilisi',
+      icon: 'icon-community.svg'
+    },
+    {
+      text: 'A huge number of Fun & Networking Zones',
+      icon: 'icon-network.svg'
+    },
+    {
+      text: '3000+ guests',
+      icon: 'icon-users.svg'
+    },
+    {
+      text: '10+ Top Speakers',
+      icon: 'icon-speaker.svg'
+    },
+    {
+      text: 'An exhibition area filled with 50+ stands and brand activations',
+      icon: 'icon-expo.svg'
+    }
+  ]
+
+
+section.expectations.block
+
+  .expectations__ellipses.ellipses
+    .ellipse.ellipse--blue
+    .ellipse.ellipse--rose
+
+
+  .container.expectations__wrapper
+
+    .expectations-overlay
+    h2.expectations__title.title= expectationsTitle
+
+    ul.expectations__list
+      each item in expectationsItems
+        li.expectations__item.glass
+          p.expectations__text= item.text
+          .expectations__icon
+            img(src=`/img/${item.icon}` alt="")

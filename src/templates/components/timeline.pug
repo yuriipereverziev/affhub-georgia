@@ -1,0 +1,35 @@
+-
+  const timelineTitle = 'Conference'
+  const timelineText = 'Full schedule of the conference program and afterparty'
+
+  const timelineItems = [
+    { time: '10:00', info: 'Registration (all day), Expo Zone' },
+    { time: '11:00 - 18:00', info: 'Fun & networking zone' },
+    { time: '12:00 - 17:00', info: 'Business part: CONFERENCE' },
+    { time: '17:30 - 18:00', info: 'Gifts from partners' },
+    { time: '18:00', info: 'Afterparty' },
+    { time: '19:30 - 20:20', info: 'Charity auction' },
+    { time: '20:40 - 00:00', info: 'DJ Set' }
+  ]
+
+section.timeline#conference.block
+
+  .timeline__ellipses.ellipses
+    .ellipse.ellipse--blue
+    .ellipse.ellipse--rose
+
+  .container.timeline__wrapper
+
+    .timeline__top
+      h2.timeline__title.title= timelineTitle
+      p.timeline__text= timelineText
+
+
+    ul.timeline__list
+      each item in timelineItems
+        li.timeline__item
+          span.timeline__time= item.time
+          p.timeline__info= item.info
+
+  //.circle__bg.timeline__circle-bg
+  //.circle__bg.circle__bg--pink.timeline__circle-bg--pink

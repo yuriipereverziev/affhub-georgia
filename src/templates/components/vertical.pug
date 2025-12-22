@@ -1,0 +1,40 @@
+-
+  const verticalTitle = 'Вертикалi:'
+  const verticalBtnText = 'Придбати квиток'
+
+  const verticalItems = [
+    { icon: 'icon-vert1', text: 'Gambling' },
+    { icon: 'icon-vert2', text: 'Crypto' },
+    { icon: 'icon-vert3', text: 'Dating' },
+    { icon: 'icon-vert4', text: 'Nutra' },
+    { icon: 'icon-vert5', text: 'Sweepstakes' },
+    { icon: 'icon-vert6', text: 'E-commerce' },
+    { icon: 'icon-vert7', text: 'Betting' },
+    { icon: 'icon-vert8', text: 'Finance' },
+    { icon: 'icon-vert9', text: 'PDL' },
+    { icon: 'icon-vert10', text: 'SEO' },
+    { icon: 'icon-vert11', text: 'Adult' },
+    { icon: 'icon-vert12', text: 'HR' },
+    { icon: 'icon-vert13', text: 'Media' },
+    { icon: 'icon-vert14', text: 'Legal' },
+    { icon: 'icon-vert15', text: 'TikTok' },
+    { icon: 'icon-vert16', text: 'Influencer' },
+    { icon: 'icon-vert17', text: 'Search Feed' },
+    { icon: 'icon-vert18', text: 'Others' },
+
+  ]
+
+.vertical.block.animate-block
+  .container
+    ul.vertical-list
+      each item in verticalItems
+        li.vertical-list__item.glass
+          img.vertical-list__icon(
+            src=`img/${item.icon}.svg`
+            alt="image"
+            width="56"
+            height="56"
+            loading="lazy"
+          )
+          span.vertical-list__text= item.text
+

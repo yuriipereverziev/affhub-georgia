@@ -1,0 +1,62 @@
+-
+  var navItems = [
+    {id: 'expozone', label: 'Expo Zone'},
+    {id: 'conference', label: 'Conference'},
+    {id: 'speakers', label: 'Speakers'},
+    {id: 'partners', label: 'Partners'},
+    {id: 'location', label: 'Location'},
+    {id: 'contacts', label: 'Contacts'},
+    {id: 'about', label: 'About Us'},
+  ]
+
+header.header
+  .container
+    .header__inner
+      // Логотип
+      a.header__logo-link(href="index.html")
+        img.header__logo(
+          src=basePath + "img/logo.svg"
+          alt=""
+          width="150"
+          height="35"
+          loading="eager"
+        )
+
+      // Desktop меню
+      ul.header__list
+        each item in navItems
+          li.header__item
+            +navLink(item.id, item.label, 'header__link')
+
+      // Кнопка "Квиток"
+      +navLink('tickets', 'Buy Ticket', 'btn header__btn nav__btn')
+
+      // Бургер меню (Mobile)
+      .burger.js-show-menu
+        span.burger__line
+        span.burger__line
+
+// Mobile Nav
+.header__nav.nav.js-menu
+  .nav__inner
+    a.header__logo-link(href="index.html#promo")
+      img.header__logo(
+        src=basePath + "img/logo.svg"
+        alt=""
+        loading="lazy"
+        fetchpriority="low"
+        decoding="async"
+        width="150"
+        height="35"
+      )
+
+    .nav__burger.js-close-menu
+      span.nav-burger__line
+      span.nav-burger__line
+
+  ul.nav__list
+    each item in navItems
+      li.nav__item
+        +navLink(item.id, item.label, 'nav__link')
+
+  +navLink('tickets', 'Buy Ticket', 'btn header__btn nav__btn ')

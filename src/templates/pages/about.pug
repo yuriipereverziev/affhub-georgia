@@ -1,0 +1,21 @@
+extends ../settings/layout
+
+prepend html
+  - const lang = "en";
+  - const currentPage = 'about'
+
+prepend head
+  - const pageTitle = "About — Affhub Georgia";
+  - const themeColor = "#ffffff";
+
+include ../settings/mixins
+
+append content
+  include ../components/header
+  include ../components/about-us
+  include ../components/about-events
+  include ../components/why
+  include ../components/galary
+  include ../components/footer
+
+  .overlay

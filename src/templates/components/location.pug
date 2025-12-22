@@ -1,0 +1,53 @@
+-
+  var locationTitle = 'Location';
+  var locationText = 'Tbilisi, Georgia, ExpoGeorgia';
+  var locationDate = 'March 27, 2026';
+
+
+section.location#location.block
+
+  .location__ellipses.ellipses
+    .ellipse.ellipse--grey
+    .ellipse.ellipse--purple
+    .ellipse.ellipse--red
+
+
+
+  .container
+    h2.location__title.title= locationTitle
+
+    .location__wrapper
+      .location__top
+
+        p.location__text= locationText
+          span.location__date= locationDate
+
+        a(href="https://maps.app.goo.gl/YqhUxXSFht53DedCA", class="btn promo__btn secondary__btn", target="_blank")
+          span.btn__text View Details
+
+
+      .location-galary
+        picture.location__img
+          source(type="image/webp" srcset="img/location-1.webp")
+          img(src="img/location-1.png" alt="" loading="lazy" width="422" height="253" fetchpriority="low" decoding="async")
+
+        picture.location__img
+          source(type="image/webp" srcset="img/location-2.webp")
+          img(src="img/location-2.png" alt="" loading="lazy" width="421" height="253" fetchpriority="low" decoding="async")
+
+    .location__video
+      .location__video-inner
+        //iframe.location__video-iframe(
+        //  src="https://www.youtube.com/embed/yPDNxVURoVg?si=SkobSzjEo5EBOT76?enablejsapi=1&controls=1"
+        //  title="Conference video"
+        //  frameborder="0"
+        //  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        //  allowfullscreen
+        //)
+
+        button.location__video-play(
+          type="button"
+          aria-label="Play video"
+          data-video-play
+        )
+

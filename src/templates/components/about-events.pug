@@ -1,0 +1,32 @@
+-
+  const aboutEventsTitle = 'our events'
+
+  const aboutEventsItems = [
+    {
+      text: 'AFFHUB organizes TOP affiliate events across Ukraine and internationally. Throughout our story, we\'ve hosted over 60 offline and 15 online gatherings in Ukraine, Poland, Georgia, Kazakhstan, and Spain.'
+    },
+    {
+      text: 'Our events create an exceptional environment for business growth and networking. Each gathering attracts hundreds of participants from diverse verticals including iGaming, Betting, Dating, Crypto, Nutra, E-commerce, Sweepstakes and others. This diversity fosters unique multi-vertical connections and knowledge exchange between different market segments.'
+    },
+    {
+      text: 'Our event format consistently features a distinctive atmosphere blending productive networking, knowledge sharing, and active entertainment. We cultivate a setting where partners effectively demonstrate their products, discover new markets, and establish strong industry relationships.'
+    },
+    {
+      text: 'Every Affhub event offers the opportunity to join a leading professional community, broaden your business connections, and explore new possibilities in a welcoming and productive environment.'
+    },
+  ]
+
+section.about-events.block
+  .container.about-events__wrapper
+    h2.about-events__title.title= aboutEventsTitle
+
+    ul.about-events__list
+      each item, index in aboutEventsItems
+        li.about-events__item.glass
+          span.about-events__count #{index + 1 < 10 ? '0' + (index + 1) : index + 1}
+
+          p.about-events__text= item.text
+
+  .circle__bg.about-events__circle-bg
+  .circle__bg.circle__bg--pink.about-events__circle-bg--pink
+  .strips__container(data-stripes="2")
