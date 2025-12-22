@@ -1,5 +1,6 @@
 .tickets
 
+
     &-overlay
       position: absolute
       top: 0
@@ -15,6 +16,27 @@
     &__wrapper
       +rm(1024)
         +flex($justify: space-between, $align: flex-start, $gap: 20px)
+
+
+    &__ellipses
+      position: relative
+
+      & .ellipse
+
+        &--turquoise
+          top: 250px
+          left: -250px
+          width: 736px
+          height: 218px
+          transform: rotate(-14deg)
+
+        &--green
+          top: 230px
+          right: -100px
+          width: 736px
+          height: 218px
+          transform: rotate(18deg)
+
 
 
     &__top

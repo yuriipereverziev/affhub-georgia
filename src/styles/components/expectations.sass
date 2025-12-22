@@ -1,5 +1,21 @@
 .expectations
   position: relative
+
+  &:before
+    position: absolute
+    content: ''
+    bottom: -250px
+    left: calc(50% + 300px)
+    width: 862px
+    height: 934px
+    background: url(../img/man.png)
+    background-repeat: no-repeat
+    background-position: left bottom
+    transform: translateX(-50%)
+    mix-blend-mode: screen
+    background-size: 100%
+    z-index: 1
+
   //overflow: hidden
   //&-overlay
   //  position: absolute

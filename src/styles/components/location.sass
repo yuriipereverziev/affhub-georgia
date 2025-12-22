@@ -1,4 +1,21 @@
 .location
+  position: relative
+
+  &:before
+    position: absolute
+    content: ''
+    bottom: -500px
+    left: 50%
+    width: 1422px
+    height: 1407px
+    background: url(../img/location-line.png)
+    background-repeat: no-repeat
+    background-position: left bottom
+    transform: translateX(-50%) rotate(365deg)
+
+    mix-blend-mode: screen
+    background-size: 100%
+    z-index: 1
 
 
   &__ellipses
@@ -75,6 +92,13 @@
         width: 1490px
         height: 442px
         transform: rotate(18deg)
+
+      &--turquoise
+        top: 900px
+        right: 100px
+        width: 736px
+        height: 218px
+        transform: rotate(-14deg)
 
 
 

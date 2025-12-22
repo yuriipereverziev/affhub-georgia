@@ -1,4 +1,86 @@
 .info-partners {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: 494px;
+    background: url("../img/lines-bg.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    mix-blend-mode: plus-lighter;
+    z-index: 1;
+
+  }
+
+
+
+  &__ellipses {
+    position: relative;
+
+    & .ellipse {
+      &--red {
+        top: 0px;
+        right: -895px;
+        width: 1490px;
+        height: 442px;
+        transform: rotate(18deg);
+      }
+
+
+      &--turquoise {
+        top: 0px;
+        right: 150px;
+        width: 736px;
+        height: 218px;
+        transform: rotate(-14deg);
+      }
+
+      &--purple {
+        width: 300px;
+        height: 100px;
+        bottom: 80px;
+        left: -100px;
+        transform: rotate(-14deg);
+
+        @include rm(640) {
+          width: 400px;
+          height: 130px;
+          bottom: 100px;
+          left: -140px;
+        }
+
+
+        @include rm(768) {
+          width: 500px;
+          height: 150px;
+          bottom: 160px;
+          left: -180px;
+        }
+
+
+        @include rm(1024) {
+          width: 600px;
+          height: 180px;
+          bottom: 250px;
+          left: -220px;
+        }
+
+        @include rm(1220) {
+          width: 736px;
+          height: 218px;
+          bottom: -200px;
+          left: -495px;
+        }
+      }
+    }
+  }
+
+
   &__title {
     @include rm(640) {
       margin-bottom: 25px;
@@ -19,6 +101,8 @@
 }
 
 .info-partners-list {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -43,9 +127,8 @@
     -webkit-backdrop-filter: blur(20px);
     /* тонкая белая рамка */
     border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow:
-      inset -1px -1px 3px rgba(255, 255, 255, 0.9),
-      inset 3px 3px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.9),
+    inset 3px 3px 8px rgba(0, 0, 0, 0.08);
 
 
     transition: all 0.4s;
@@ -94,7 +177,7 @@
       .info-partners-list__img {
         max-width: 60px;
 
-        @include rm(1024){
+        @include rm(1024) {
           max-width: 80px;
         }
       }
@@ -110,7 +193,7 @@
       .info-partners-list__img {
         max-width: 60px;
 
-        @include rm(1024){
+        @include rm(1024) {
           max-width: 77px;
         }
       }
@@ -132,7 +215,7 @@
       .info-partners-list__img {
         max-width: 120px;
 
-        @include rm(1024){
+        @include rm(1024) {
           max-width: 140px;
         }
       }
@@ -154,7 +237,7 @@
       .info-partners-list__img {
         max-width: 65px;
 
-        @include rm(1024){
+        @include rm(1024) {
           max-width: 80px;
         }
       }
@@ -177,111 +260,133 @@
         max-width: 66px;
       }
     }
+
     &--15 {
       .info-partners-list__img {
         max-width: 139px;
       }
     }
+
     &--16 {
       .info-partners-list__img {
         max-width: 123px;
       }
     }
+
     &--17 {
       .info-partners-list__img {
         max-width: 95px;
       }
     }
+
     &--18 {
       .info-partners-list__img {
         max-width: 128px;
       }
     }
+
     &--19 {
       .info-partners-list__img {
         max-width: 131px;
       }
     }
+
     &--20 {
       .info-partners-list__img {
         max-width: 139px;
       }
     }
+
     &--21 {
       .info-partners-list__img {
         max-width: 141px;
       }
     }
+
     &--22 {
       .info-partners-list__img {
         max-width: 124px;
       }
     }
+
     &--24 {
       .info-partners-list__img {
         max-width: 140px;
       }
     }
+
     &--26 {
       .info-partners-list__img {
         max-width: 120px;
       }
     }
+
     &--27 {
       .info-partners-list__img {
         max-width: 140px;
       }
     }
+
     &--28 {
       .info-partners-list__img {
         max-width: 65px;
       }
     }
+
     &--29 {
       .info-partners-list__img {
         max-width: 140px;
       }
     }
+
     &--30 {
       .info-partners-list__img {
         max-width: 70px;
       }
     }
+
     &--31 {
       .info-partners-list__img {
         max-width: 120px;
       }
     }
+
     &--32 {
       .info-partners-list__img {
         max-width: 130px;
       }
     }
+
     &--33 {
       .info-partners-list__img {
         max-width: 150px;
       }
     }
+
     &--34 {
       .info-partners-list__img {
         max-width: 100px;
       }
     }
+
     &--35 {
       .info-partners-list__img {
         max-width: 140px;
       }
     }
+
     &--36 {
       .info-partners-list__img {
         max-width: 120px;
       }
     }
+
     &--37 {
       .info-partners-list__img {
         max-width: 80px;
       }
     }
+
     &--38 {
       .info-partners-list__img {
         max-width: 130px;
@@ -292,7 +397,7 @@
       .info-partners-list__img {
         max-width: 90px;
 
-        @include rm(1024){
+        @include rm(1024) {
           max-width: 120px;
         }
       }
@@ -302,7 +407,7 @@
       .info-partners-list__img {
         max-width: 70px;
 
-        @include rm(1024){
+        @include rm(1024) {
           max-width: 70px;
         }
       }
@@ -327,11 +432,12 @@
         //}
       }
     }
+
     &--43 {
       .info-partners-list__img {
         max-width: 70px;
 
-        @include rm(1024){
+        @include rm(1024) {
           max-width: 80px;
         }
       }
