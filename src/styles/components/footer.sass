@@ -41,6 +41,7 @@
             margin-bottom: 44px
 
         +rm(1024)
+            gap: 20px
             margin-bottom: 50px
             flex-wrap: nowrap
             justify-content: flex-start
@@ -71,31 +72,39 @@
         margin: 0 auto 20px
 
         +rm(640)
-            width: 250px
+            width: 225px
             margin: 0
 
+        +rm(768)
+            width: 315px
+
+
         +rm(1024)
-            width: 220px
+            width: 355px
             margin-right: 50px
 
         +rm(1220)
             margin-right: 130px
-            width: 272px
+            width: 325px
         +rm(1360)
             width: 330px
             margin-right: 120px
 
     &__link
-        width: 30%
+        width: 35%
         font-size: 16px
-        text-transform: uppercase
+        //text-transform: uppercase
         //font-family: $ital-font
         position: relative
         color: #100730
         transition: all .2s
 
         +rm(640)
+            width: 43%
+
+        +rm(768)
             width: 33%
+
 
         &:hover
           text-decoration: underline
@@ -103,7 +112,7 @@
 
     &__socila-inner
         width: 290px
-        margin: 0 auto
+        margin: 0 auto 20px
         +flex($justify: space-between, $gap: 0)
 
         +rm(640)
@@ -122,6 +131,10 @@
 
         &:hover
 
+            .icon path
+              fill: #FF57C6
+
+
             stop
               stop-color: #FF57C6
 
@@ -133,7 +146,7 @@
         +flex($justify: space-between, $gap: 20px 15px, $wrap: wrap)
 
         +rm(640)
-            width: 280px
+            width: 333px
 
         .footer__link
             width: fit-content

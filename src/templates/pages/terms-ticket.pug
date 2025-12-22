@@ -1,0 +1,13 @@
+extends ../settings/layout-policy
+
+prepend html
+  - const lang = locale;
+
+prepend head
+  - const pageTitle = "Ticket Purchase Policy";
+  - const themeColor = "#ffffff";
+
+append head
+
+append content
+  include ../components/terms-ticket-page

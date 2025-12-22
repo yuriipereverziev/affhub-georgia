@@ -1,0 +1,13 @@
+extends ../settings/layout-policy
+
+prepend html
+  - const lang = locale;
+
+prepend head
+  - const pageTitle = "Cookie Policy";
+  - const themeColor = "#ffffff";
+
+append head
+
+append content
+  include ../components/cookiePage
