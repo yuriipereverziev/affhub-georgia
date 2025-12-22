@@ -1,0 +1,118 @@
+include ../mixins/media-partners
+
+section.partner
+    .container.block.partner__wrapper
+        header.header 
+            .header__inner
+                a(href="index.html" class="header__logo-link") 
+                    img.header__logo(src=basePath + "img/logo.svg", alt="")
+                ul.header__list 
+                    li.header__item
+                        a(href="index.html#expozone" class="header__link")!= t.header.expoZone
+                    li.header__item
+                        a(href="index.html#speakers" class="header__link")!= t.header.speakers
+                    li.header__item
+                        span(class="header__link--active")!= t.header.partners
+                    li.header__item
+                        a(href="index.html#timeline" class="header__link")!= t.header.conference
+                a(href="index.html#tickets").btn.secondary__btn.header__btn.nav__btn= t.promo.buyTicket
+                .burger.js-show-menu
+                    span.burger__line
+                    span.burger__line
+        .header__nav.nav.js-menu
+            .nav__inner
+                a(href="index.html" class="header__logo-link")
+                    img.header__logo(src=basePath + "img/logo.svg", alt="")
+                .nav__burger.js-close-menu 
+                    span.nav-burger__line
+                    span.nav-burger__line
+            ul.nav__list
+                li.nav__item
+                    a.nav__link(href="index.html#expozone")!= t.header.expoZone
+                li.nav__item
+                    a.nav__link(href="index.html#speakers")!= t.header.speakers
+                li.nav__item
+                    span.nav__link--active= t.header.partners
+                li.nav__item
+                    a.nav__link(href="index.html#timeline")!= t.header.conference
+            a(href="index.html#tickets").btn.secondary__btn.header__btn= t.promo.buyTicket
+        .breadcrumps
+            span.breadcrumps__text.breadcrumps__text-active!= t.aboutCommunity.breadCrumbBase + ' / '
+            span.breadcrumps__text= t.partnerPage.breadCrumb
+        h2.partner__title.title= t.partnerPage.generalPartners
+        .partner__top 
+            each partner in t.partnerPage.PartnersTop
+                .partner__item.partner__top-item
+                    img(class="partner__top-img" src=basePath + partner.img, alt="")
+                    if partner.text
+                        p.partner__text!= partner.text
+                    if partner.sections
+                        each section in partner.sections
+                            span.partner__header= section.header
+                            ul.partner__list-inner
+                                each item in section.list
+                                    li.partner__items= item
+                    if partner.text2
+                        p.partner__text!= partner.text2
+                    if partner.text3
+                        p.partner__text!= partner.text3
+        h2.partner__title.title= t.partnerPage.title
+        .partner__inner
+            each partner in t.partnerPage.partners
+                - var customClass = partner.customClass || ""
+                    .partner__item
+                        img(class="partner__img" + customClass src=basePath + partner.img, alt="")
+                        if partner.text
+                            p.partner__text!= partner.text
+                        if partner.text1
+                            p.partner__text!= partner.text1
+                        if partner.list
+                            ul.partner__list-inner
+                                each item in partner.list
+                                    li.partner__items= item
+                        if partner.text2
+                            p.partner__text!= partner.text2
+                        if partner.text3
+                            p.partner__text!= partner.text3
+                        if partner.text4
+                            p.partner__text!= partner.text4
+                        if partner.text5
+                            p.partner__text!= partner.text5
+                        if partner.text6
+                            p.partner__text!= partner.text6
+                        if partner.text7
+                            p.partner__text!= partner.text7
+                        if partner.text8
+                            p.partner__text!= partner.text8
+                        if partner.text9
+                            p.partner__text!= partner.text9
+                        if partner.sections
+                            each section in partner.sections
+                                span.partner__header= section.header
+                                ul.partner__list-inner
+                                    each item in section.list
+                                        li.partner__items= item
+                        if partner.sections2
+                            each section in partner.sections2
+                                span.partner__header= section.header
+                                ul.partner__list-inner
+                                    each item in section.list
+                                        li.partner__items= item
+                        if partner.sections3
+                            each section in partner.sections3
+                                span.partner__header= section.header
+                                ul.partner__list-inner
+                                    each item in section.list
+                                        li.partner__items= item
+                        if partner.textLast
+                            p.partner__text!= partner.textLast
+
+
+        h2.partner__title.title!= t.partners.mediaPartners
+        +media-partners('static')
+
+    .circle__bg.team__circle-bg
+    .circle__bg.circle__bg--pink.team__circle-bg--pink
+    footer.team__footer 
+        a(href="index.html")
+            img(src=basePath + "img/logo.svg", alt="Logo")

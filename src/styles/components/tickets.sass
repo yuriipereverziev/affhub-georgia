@@ -1,0 +1,931 @@
+.tickets
+
+    &-overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: url("../img/tickets-bg.png")
+      background-repeat: no-repeat
+      background-position: left bottom
+      background-size: contain
+      mix-blend-mode: hard-light
+
+    &__wrapper
+      +rm(1024)
+        +flex($justify: space-between, $align: flex-start, $gap: 20px)
+
+
+    &__top
+        width: 100%
+        margin-bottom: 26px
+
+        +rm(480)
+            margin-bottom: 32px
+
+        +rm(640)
+            margin-bottom: 38px
+
+        +rm(768)
+            margin-bottom: 44px
+
+        +rm(1024)
+            max-width: 235px
+            +flex($justify: space-between, $align: center, $gap: 20px)
+
+
+    &__top-inner
+      margin-bottom: 20px
+
+      +rm(1024)
+        margin-bottom: 0
+
+    &__title
+
+      +rm(1220)
+      +rm(1360)
+        margin-bottom: 40px
+
+    &__subtitle
+      line-height: 1.4
+      text-align: center
+      font-size: 14px
+
+      +rm(640)
+
+      +rm(1024)
+        font-size: 16px
+        text-align: left
+        width: 90%
+
+      +rm(1220)
+        width: 80%
+
+    &__range
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        gap: 10px
+        font-family: $headers-font
+        text-transform: uppercase
+        //text-align: right
+        //color: rgba(255, 255, 255, 0.24)
+        //padding-bottom: 22px
+        overflow-x: scroll
+        scrollbar-width: none
+        -ms-overflow-style: none
+
+        &::-webkit-scrollbar
+            display: none
+
+        +rm(480)
+            gap: 20px
+            font-size: 18px
+
+        //+rm(640)
+        //    flex-shrink: 0
+
+        +rm(768)
+            font-size: 22px
+
+        +rm(1024)
+            flex-direction: column
+            font-size: 24px
+
+    &__wave.active,
+    &__slash.active
+        color: #fff
+
+    &__wave
+
+      //background-color: rgba(0, 0, 0, 0)
+      position: relative
+      white-space: nowrap
+
+    &__wave.active,
+    &__slash.active
+      color: #000
+      background: white
+
+    &__date
+      margin-bottom: 30px
+      z-index: 0
+
+      +rm(480)
+
+      +rm(768)
+
+      +rm(1024)
+        margin-bottom: 43px
+        font-size: 18px
+
+    &__content
+
+        +rm(640)
+            +flex($align: stretch, $gap: 25px, $wrap: wrap)
+
+        +rm(1024)
+            width: 100%
+            justify-content: flex-end
+            flex-wrap: nowrap
+            gap: 24px
+
+
+
+
+    &__row
+      width: 100%
+      display: flex
+      justify-content: space-between
+    &__inner
+        max-width: 260px
+        width: 100%
+        margin: 0 auto
+        position: relative
+
+        +rm(640)
+            max-width: 290px
+            margin: 0
+
+        +rm(768)
+            max-width: 350px
+            // max-width: 300px
+
+        +rm(1220)
+            max-width: 420px
+
+        &:not(:last-of-type)
+            margin-bottom: 30px
+
+            +rm(640)
+                margin-bottom: 0
+
+        &::before
+            // content: ""
+            position: absolute
+            width: 60px
+            height: 17px
+            background: #1268E7
+            left: 15px
+            top: -8px
+            transition: .2s ease
+
+        &:hover
+
+            &::before
+                width: 90%
+                height: 15%
+
+    &__inner--gold
+
+        .tickets__price
+            color: #ff57c6
+
+        .tickets__item
+
+            &::before
+                background: url(../img/check_purple.svg) no-repeat center / contain
+
+        &::before
+            background: #9109EF
+        .tickets__container .tickets__bg
+            background: rgba(235, 195, 26, 0.2)
+
+    &__inner--vip
+
+        .tickets__price
+            color: #FAC599
+
+        .tickets__item
+
+            &::before
+                background: url(../img/check_pink.svg) no-repeat center / contain
+
+        &::before
+            background: #F406BC
+        .tickets__container .tickets__bg
+            background: rgba(250, 197, 153, 0.2)
+
+    &__container
+        height: 100%
+        padding: 15px
+
+        border-radius: 24px
+
+        background: rgba(255, 255, 255, 0.55)
+        border: 1px solid rgba(255, 255, 255, 0.6)
+        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 10px 22px rgba(17, 24, 39, 0.08)
+        backdrop-filter: blur(12px)
+        -webkit-backdrop-filter: blur(12px)
+        //background: #161616
+        //transition: background-color 0.4s
+        overflow: hidden
+        position: relative
+
+        +rm(480)
+
+        +rm(640)
+            +flex($direction: column, $align: flex-start, $gap: 0)
+
+        +rm(768)
+          padding: 20px
+        +rm(1024)
+          padding: 25px
+
+        +rm(1220)
+          padding: 35px
+
+        +rm(1360)
+          padding: 35px
+
+        //&::before, &::after
+        //  content: ""
+        //  position: absolute
+        //  top: -9px
+        //  left: -18px
+        //  width: 100%
+        //  height: 18px
+        //  border-top: 18px dotted #000
+        //  z-index: 5
+        &::after
+          top: auto
+          bottom: -9px
+        &:hover
+          .tickets__bg
+            height: 100%
+    &__bg
+      position: absolute
+      background-color: rgba(205, 239, 249, 0.2)
+      height: 0%
+      top: 0
+      left: 0
+      right: 0
+      bottom: auto
+      z-index: 0
+      transition: all 0.4s
+
+    &__header,
+    &__price
+        text-transform: uppercase
+        font-family: $headers-font
+        z-index: 0
+
+        +rm(768)
+
+        +rm(1024)
+
+    &__header
+        margin-bottom: 15px
+        +text-size(24, 30)
+        font-family: $ital-font
+        +rm(640)
+          min-height: 2lh
+
+
+        +rm(1024)
+        +rm(1360)
+          margin-bottom: 0
+
+
+    &__price
+        color: #ff57c6
+        font-size: 30px
+        line-height: 1
+        font-weight: bold
+        font-family: $ital-font
+
+        +rm(768)
+            // font-size: 48px
+            // margin-bottom: 54px
+    &__details
+        margin-bottom: 30px
+        padding-right: 40px
+        font-size: 16px
+        //color: rgba(255, 255, 255, 0.5)
+        line-height: 1.2
+        z-index: 0
+        +rm(1220)
+          font-size: 18px
+        +rm(1360)
+          margin-bottom: 36px
+
+    &__list
+        list-style-type: disc
+        margin-bottom: 26px
+        padding-left: 20px
+        font-size: 14px
+
+        +rm(768)
+            margin-bottom: 30px
+
+    &__item
+
+
+        line-height: 1.2
+        position: relative
+
+        &:not(:last-of-type)
+            margin-bottom: 18px
+
+        &::before
+            position: absolute
+            content: ""
+            width: 14px
+            height: 14px
+            background: url(../img/check_blue.svg) no-repeat center / contain
+            top: 2px
+            left: 0
+
+    &__btn
+        width: 100%
+        max-width: 350px
+        margin: 0 auto
+        display: flex
+
+        +rm(640)
+            margin-top: auto
+
+        &:disabled
+            // color: rgba(255, 255, 255, .24)
+            // border-color: rgba(255, 255, 255, .24)
+            cursor: not-allowed
+
+            &:hover
+                // transform: translateY(0)
+                // background: transparent
+
+// form
+.tickets-bg
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(255, 255, 255, 0.05)
+    backdrop-filter: blur(24px)
+    z-index: 60
+    display: none
+
+    &.active
+        display: block
+
+.tickets-popup
+    padding: 25px 0
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: none
+    z-index: 70
+
+    &.active
+        display: block
+
+    &__content
+        height: 100%
+        padding-top: 80px
+        position: relative
+        overflow: hidden
+
+        +rm(640)
+            padding-top: 100px
+
+        +rm(1220)
+            padding-top: 160px
+
+        &>.container
+            height: 100%
+            overflow-y: auto
+            scrollbar-color: #000000 #fff !important
+            scrollbar-width: thin !important
+
+            &::-webkit-scrollbar
+                width: 1px
+
+            &::-webkit-scrollbar-thumb
+                background-color: #000000
+
+            &::-webkit-scrollbar-track
+                background: #fff
+
+    &__header
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+
+    &__title
+        font-family: $headers-font
+        text-align: center
+        font-size: 24px
+        line-height: 48px
+
+        +rm(640)
+            font-size: 36px
+
+        +rm(1220)
+            font-size: 40px
+
+    &__back
+        height: 48px
+        padding: 15px 10px
+        width: 48px
+        height: 48px
+        position: absolute
+        top: 0
+        left: 15px
+        align-items: center
+        justify-content: center
+        background: #000
+        color: #fff
+        font-size: 18px
+        display: none
+        cursor: pointer
+
+        +rm(640)
+            font-size: 24px
+
+        +rm(768)
+            padding: 10px 19px
+            padding-left: 30px
+
+        +rm(1220)
+            left: 25px
+
+        +rm(1440)
+            left: 135px
+
+        &.active
+            display: flex
+
+        span
+            &::before
+                width: 10px
+                height: 20px
+                content: ""
+                display: flex
+                align-items: center
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                background-image: url(../img/icon-back.svg)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: 50%
+
+    &__close
+        width: 48px
+        height: 48px
+        padding: 10px
+        position: absolute
+        top: 0
+        right: 15px
+        background: #000
+        cursor: pointer
+
+        +rm(1220)
+            right: 25px
+
+        &::before,
+        &::after
+            content: ""
+            width: 30px
+            height: 1px
+            position: absolute
+            top: 50%
+            left: 50%
+            background: #fff
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+
+
+.rte-form
+  font-size: 16px
+
+  .rte-table-responsive .rte-table .rte-th
+    color: #fff
+
+    +rm(768)
+      font-size: 22px
+
+    +rm(1220)
+      font-size: 24px
+
+  .rte-table-text
+    margin-bottom: 15px
+    text-align: center
+    color: #fff
+    line-height: 1.2
+
+    +rm(768)
+      text-align: left
+      font-size: 27px
+
+    +rm(1220)
+      margin-bottom: 0
+      font-size: 30px
+
+  .rte-table-responsive .rte-table .rte-tr
+    background: 0
+
+  .rte-table-responsive .rte-table .rte-thead .rte-tr
+    border-bottom: 1px solid rgba(255, 255, 255, 1)
+
+  .rte-table-responsive .rte-table .rte-tbody .rte-tr
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+
+  .rte-table-responsive .rte-table .rte-td
+    color: #fff
+
+    +rm(1220)
+      font-size: 18px
+
+  .rte-input-form
+    margin: 0 auto
+    padding: 15px
+    border: 0
+    border-radius: 0
+    box-shadow: inset 0 0 1px #fff
+    background: rgba(0, 0, 0, 0.5)
+
+    +rm(768)
+      padding: 20px
+
+    +rm(1220)
+      max-width: 1030px
+      padding: 30px
+
+  .rte-table-footer
+    margin-top: 10px
+    gap: 15px
+    justify-content: center
+    background-color: transparent
+
+    +rm(768)
+      margin-top: 25px
+      justify-content: space-between
+
+  .rte-table-footer img
+    display: none
+
+  .rte-table-responsive .rte-table .rte-td-price
+    white-space: nowrap
+
+  .one-by-form .rte-table-footer-text
+    margin: 0
+    color: #fff
+    font-size: 16px
+    line-height: 1.2
+
+    +rm(768)
+      max-width: 60%
+
+    +rm(1220)
+      max-width: 70%
+
+  .rte-decrease-button,
+  .rte-decrease-button:hover,
+  .rte-increase-button,
+  .rte-increase-button:hover
+    color: #fff
+    font-size: 18px
+    font-weight: 700
+    border: 0
+    border-radius: 0
+    background: rgba(255, 255, 255, 0.10)
+
+  .rte-decrease-button,
+  .rte-increase-button
+    width: 38px
+    height: 38px
+
+    +rm(768)
+      width: 40px
+      height: 40px
+
+    +rm(1220)
+      width: 40px
+      height: 40px
+
+  .rte-number-input
+    color: #fff
+    border: 0
+    background: 0
+    font-size: 16px
+    font-weight: 700
+    font-family: gilroy, sans-serif
+
+    +rm(1220)
+      font-size: 18px
+
+  .rte-table-footer button,
+  .rte-add-button
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 20px
+    border: 0 !important
+    border-radius: 0
+    font-size: 18px
+    line-height: 1
+    color: #fff
+    position: relative
+    overflow: hidden
+
+    &:disabled
+      opacity: 0.5
+      cursor: default
+
+    &:hover:not(:disabled)
+      background-size: 180% 100%
+
+      &::before
+        right: 110%
+        transition: right 0.8s
+
+      // &::after
+      //   animation: pulse-right infinite linear 1s
+
+    &::before
+      content: ""
+      width: 40px
+      height: 100%
+      position: absolute
+      top: 0
+      right: -40px
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 100%)
+      transform: skewX(-10deg)
+
+    // &::after
+    //   content: ""
+    //   width: 22px
+    //   height: 12px
+    //   background-image: url(../img/btn-arrow.svg)
+    //   background-repeat: no-repeat
+    //   background-size: contain
+
+  .rte-table-footer button,
+  .rte-add-button
+    width: 100%
+    max-width: 247px
+    height: auto
+    padding: 10px 15px
+    border-radius: 100px
+    background: linear-gradient(0deg, rgba(255, 238, 0, 0.20) 0%, rgba(255, 238, 0, 0.20) 100%), linear-gradient(100deg, #FFC933 8.21%, #473D1A 21.2%, #B48D00 31.35%, #D59C00 39.87%, #71600B 48.8%, #EBC31A 58.95%, #7A650D 67.88%, #A17F04 87.77%, #FFC933 100%)
+    background-size: 100% 100%
+    text-transform: uppercase
+    font-size: 24px
+    color: #000
+    font-weight: 400
+    font-family: $ital-font
+    transition: .2s
+    cursor: pointer
+
+  .rte-add-button
+    margin: 25px auto
+    max-width: none
+
+  .rte-order-details__element
+    margin-top: 0
+    border: 1px solid #fff
+    border: 0
+    border-radius: 0
+    box-shadow: inset 0 0 1px #fff
+    background: rgba(0, 0, 0, 0.5)
+
+    +rm(768)
+      padding: 30px
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+  .rte-order-details__header
+    color: #fff
+    font-size: 24px
+
+    +rm(1024)
+      font-size: 26px
+
+    +rm(1220)
+      font-size: 30px
+
+  .rte-form-group label
+    color: #fff
+
+  .rte-form-group .checkbox-option, .rte-form-group .radio-option
+    margin: 0
+
+  .rte-phone-wrapper
+    gap: 15px
+
+    & .multiselect-dropdown
+      width: 80% !important
+      padding-right: 0 !important
+
+  .rte-form-group label
+    margin-bottom: 3px
+
+  .rte-form-group input,
+  .rte-phone-wrapper .telephone_code
+    background: rgba(255, 255, 255, 0.16)
+    color: #fff !important
+    font-size: 14px
+
+    +rm(480)
+      font-size: 16px
+
+    &.vertical
+      margin-bottom: 0 !important
+
+  .rte-phone-wrapper .optdel
+    display: none
+
+  .single-select .multiselect-dropdown-list input
+    pointer-events: none
+
+  .rte-order-agreement-element
+    padding: 5px 0 5px 35px
+    color: #fff
+    line-height: 1.2
+    font-weight: 400
+
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      width: 24px
+      height: 24px
+      background: #ebc31a
+
+    &.active
+      &::before
+        background-image: url(../img/icon-check.svg)
+        background-size: 50%
+        background-position: 50%
+        background-repeat: no-repeat
+
+  .rte-order-agreement-element a
+    color: #fff
+
+  .rte-order-agreement-element input
+    display: none
+
+  .rte-order-details
+    +rm(640)
+      max-width: 550px
+
+.multiselect-dropdown,
+.telephone_code
+  min-height: 38px !important
+  padding: 0 !important
+  background-color: rgba(255, 255, 255, .16) !important
+  display: flex !important
+  align-items: center !important
+  text-align: left
+  flex-wrap: wrap
+  padding-right: 40px !important
+
+  &.invalid
+    border: 1px solid red !important
+
+  label
+    margin: 0 !important
+    display: inline-block
+    text-align: left !important
+
+  &.multiselect-dropdown input
+    margin-right: 10px !important
+    flex-grow: initial !important
+    display: inline-block !important
+
+  &-list-wrapper
+    padding: 0 !important
+    border: 0 !important
+    border-radius: 0 !important
+    background: #000 !important
+
+  .multiselect-dropdown-search.multiselect-dropdown-search
+    display: none !important
+
+  &-list
+    div
+      display: flex !important
+      align-items: center
+      justify-content: flex-start
+
+      &:hover
+        background-color: #3a3a3a !important
+
+  span.maxselected
+    height: 38px !important
+    display: flex !important
+    align-items: center
+
+  span.optext
+    margin-bottom: 0 !important
+    padding: 3px 5px !important
+    color: #fff !important
+    border-radius: 0 !important
+    background-color: transparent !important
+    font-size: 14px
+
+    +rm(480)
+      font-size: 16px
+
+.telephone_code
+  padding-left: 12px !important
+  border-radius: 4px
+  border: solid 1px #ced4da
+  background-color: white
+  position: relative
+  background-image: url(../img/arrow.svg) !important
+  background-repeat: no-repeat !important
+  background-position: right .75rem center !important
+  background-size: 16px 12px !important
+  margin-right: 0 !important
+  flex-shrink: 0
+  width: 120px
+  padding-right: 35px !important
+
+  +rm(480)
+    width: 135px
+
+.rte-phone-wrapper .telephone_code
+    min-width: 120px !important
+
+.error-overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  backdrop-filter: blur(24px)
+  z-index: 80
+  display: none
+
+  &.active
+    display: block
+
+.error-popup
+  width: 100%
+  max-width: 290px
+  padding: 25px 15px
+  background-color: #101010
+  text-align: center
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  box-shadow: inset 0 0 1px #fff
+  z-index: 90
+  display: none
+
+  +rm(768)
+    max-width: 440px
+
+  &.active
+    display: block
+
+  &__img
+    width: 40px
+    margin: 0 auto 25px
+    display: block
+
+  &__title
+    margin-bottom: 25px
+    font-size: 30px
+    line-height: 1
+
+    +rm(1220)
+      font-size: 36px
+
+  &__text
+    margin-bottom: 25px
+    line-height: 1.2
+
+  &__btn
+    max-width: 120px
+
+.fake-checkbox
+  width: 15px
+  height: 15px
+  margin-right: 10px
+  display: inline-block
+  border-radius: 2px
+  background-color: #fff
+  pointer-events: none
+
+.checked .fake-checkbox
+  background-image: url(../img/icon-check.svg)
+  background-size: 50%
+  background-position: 50%
+  background-repeat: no-repeat
+
+  background-color: #ebc31a

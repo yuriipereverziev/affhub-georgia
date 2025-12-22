@@ -1,0 +1,126 @@
+section.team
+    .container.block.team__wrapper
+        header.header 
+            .header__inner
+                a(href="index.html" class="header__logo-link") 
+                    img.header__logo(src=basePath + "img/logo.svg", alt="")
+                ul.header__list 
+                    li.header__item
+                        a(href="index.html#expozone" class="header__link")= t.header.expoZone
+                    li.header__item
+                        span(class="header__link--active")= t.header.speakers
+                    li.header__item
+                        a(href="partners-page.html" class="header__link")= t.header.partners
+                    li.header__item
+                        a(href="index.html#timeline" class="header__link")= t.header.conference
+                a(href="index.html#tickets").btn.secondary__btn.header__btn.nav__btn= t.header.buyTicket
+                .burger.js-show-menu
+                    span.burger__line
+                    span.burger__line
+        .header__nav.nav.js-menu
+            .nav__inner
+                a(href="index.html" class="header__logo-link")
+                    img.header__logo(src=basePath + "img/logo.svg", alt="")
+                .nav__burger.js-close-menu 
+                    span.nav-burger__line
+                    span.nav-burger__line
+            ul.nav__list
+                li.nav__item
+                    a.nav__link(href="index.html#expozone")= t.header.expoZone
+                li.nav__item
+                    span.nav__link--active= t.header.speakers
+                li.nav__item
+                    a.nav__link(href="partners-page.html")= t.header.partners
+                li.nav__item
+                    a.nav__link(href="index.html#timeline")= t.header.conference
+            a(href="index.html#tickets").btn.secondary__btn.header__btn= t.header.buyTicket
+        .breadcrumps
+            span.breadcrumps__text.breadcrumps__text-active= t.team.breadcrumbs.affhubConf + ' '
+            span.breadcrumps__text= t.team.breadcrumbs.speakers
+        h2.team__title.title= t.team.title
+        .team__inner
+            .team__item
+                .team__speaker
+                    picture
+                        source(srcset=basePath + "img/speaker.webp" type="image/webp")
+                        img(class="team__img" src=basePath + "img/speaker.jpg" alt="")
+                    .team__speaker-info
+                        h3.team__name= t.team.speakerName
+                        p.team__position= t.team.position
+                        img(src=basePath + "img/palai.svg", class="team__company" alt="")
+                .team__line
+                h3.team__footnote= t.team.speechTitle
+                .team__line
+                .team__timeline 
+                    p.team__time 
+                        svg(xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none")
+                            path(fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5C6.02944 2.5 2 6.52944 2 11.5C2 16.4706 6.02944 20.5 11 20.5C15.9706 20.5 20 16.4706 20 11.5C20 6.52944 15.9706 2.5 11 2.5ZM0 11.5C0 5.42487 4.92487 0.5 11 0.5C17.0751 0.5 22 5.42487 22 11.5C22 17.5751 17.0751 22.5 11 22.5C4.92487 22.5 0 17.5751 0 11.5Z" fill="#F207FD")
+                            path(fill-rule="evenodd" clip-rule="evenodd" d="M12 11.2409V4.5H10V11.5C10 11.6699 10.0433 11.8371 10.1258 11.9856L12.6258 16.4856L14.3742 15.5144L12 11.2409Z" fill="#F207FD")
+                        | #{t.team.time}
+                    span.team__stage= t.team.stage
+                    span.team__place= t.team.circle
+            .team__item
+                .team__speaker
+                    picture
+                        source(srcset=basePath + "img/speaker.webp" type="image/webp")
+                        img(class="team__img" src=basePath + "img/speaker.jpg" alt="")
+                    .team__speaker-info
+                        h3.team__name= t.team.speakerName
+                        p.team__position= t.team.position
+                        img(src=basePath + "img/palai.svg", class="team__company" alt="")
+                .team__line
+                h3.team__footnote= t.team.speechTitle
+                .team__line
+                .team__timeline 
+                    p.team__time 
+                        svg(xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none")
+                            path(fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5C6.02944 2.5 2 6.52944 2 11.5C2 16.4706 6.02944 20.5 11 20.5C15.9706 20.5 20 16.4706 20 11.5C20 6.52944 15.9706 2.5 11 2.5ZM0 11.5C0 5.42487 4.92487 0.5 11 0.5C17.0751 0.5 22 5.42487 22 11.5C22 17.5751 17.0751 22.5 11 22.5C4.92487 22.5 0 17.5751 0 11.5Z" fill="#F207FD")
+                            path(fill-rule="evenodd" clip-rule="evenodd" d="M12 11.2409V4.5H10V11.5C10 11.6699 10.0433 11.8371 10.1258 11.9856L12.6258 16.4856L14.3742 15.5144L12 11.2409Z" fill="#F207FD")
+                        | #{t.team.time}
+                    span.team__stage= t.team.stage
+                    span.team__place= t.team.circle
+            .team__item
+                .team__speaker
+                    picture
+                        source(srcset=basePath + "img/speaker.webp" type="image/webp")
+                        img(class="team__img" src=basePath + "img/speaker.jpg" alt="")
+                    .team__speaker-info
+                        h3.team__name= t.team.speakerName
+                        p.team__position= t.team.position
+                        img(src=basePath + "img/palai.svg", class="team__company" alt="")
+                .team__line
+                h3.team__footnote= t.team.speechTitle
+                .team__line
+                .team__timeline
+                    p.team__time
+                        svg(xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none")
+                            path(fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5C6.02944 2.5 2 6.52944 2 11.5C2 16.4706 6.02944 20.5 11 20.5C15.9706 20.5 20 16.4706 20 11.5C20 6.52944 15.9706 2.5 11 2.5ZM0 11.5C0 5.42487 4.92487 0.5 11 0.5C17.0751 0.5 22 5.42487 22 11.5C22 17.5751 17.0751 22.5 11 22.5C4.92487 22.5 0 17.5751 0 11.5Z" fill="#F207FD")
+                            path(fill-rule="evenodd" clip-rule="evenodd" d="M12 11.2409V4.5H10V11.5C10 11.6699 10.0433 11.8371 10.1258 11.9856L12.6258 16.4856L14.3742 15.5144L12 11.2409Z" fill="#F207FD")
+                        | #{t.team.time}
+                    span.team__stage= t.team.stage
+                    span.team__place= t.team.circle
+            .team__item
+                .team__speaker
+                    picture
+                        source(srcset=basePath + "img/speaker.webp" type="image/webp")
+                        img(class="team__img" src=basePath + "img/speaker.jpg" alt="")
+                    .team__speaker-info
+                        h3.team__name= t.team.speakerName
+                        p.team__position= t.team.position
+                        img(src=basePath + "img/palai.svg", class="team__company" alt="")
+                .team__line
+                h3.team__footnote= t.team.speechTitle
+                .team__line
+                .team__timeline 
+                    p.team__time 
+                        svg(xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none")
+                            path(fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5C6.02944 2.5 2 6.52944 2 11.5C2 16.4706 6.02944 20.5 11 20.5C15.9706 20.5 20 16.4706 20 11.5C20 6.52944 15.9706 2.5 11 2.5ZM0 11.5C0 5.42487 4.92487 0.5 11 0.5C17.0751 0.5 22 5.42487 22 11.5C22 17.5751 17.0751 22.5 11 22.5C4.92487 22.5 0 17.5751 0 11.5Z" fill="#F207FD")
+                            path(fill-rule="evenodd" clip-rule="evenodd" d="M12 11.2409V4.5H10V11.5C10 11.6699 10.0433 11.8371 10.1258 11.9856L12.6258 16.4856L14.3742 15.5144L12 11.2409Z" fill="#F207FD")
+                        | #{t.team.time}
+                    span.team__stage= t.team.stage
+                    span.team__place= t.team.circle
+    .circle__bg.team__circle-bg
+    .circle__bg.circle__bg--pink.team__circle-bg--pink
+    footer.team__footer 
+        a(href="index.html")
+            img(src=basePath + "img/logo.svg", alt=t.team.logoAlt)

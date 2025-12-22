@@ -1,0 +1,123 @@
+.why
+    position: relative
+
+    &__list
+        margin-bottom: 26px
+
+        +rm(480)
+            margin-bottom: 32px
+
+        +rm(640)
+            margin-bottom: 38px
+            +flex($justify: center, $align: stretch, $gap: 20px, $wrap: wrap)
+
+        +rm(768)
+            margin-bottom: 44px
+
+        +rm(1024)
+            margin-bottom: 50px
+
+        +rm(1230)
+            margin-bottom: 56px
+            gap: 25px
+
+    &__item
+        padding: 15px
+        //background: #FFFFFF
+        border-radius: 20px
+        //background: rgba(255, 255, 255, 0.55)
+        //border: 1px solid rgba(255, 255, 255, 0.6)
+        //box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 10px 22px rgba(17, 24, 39, 0.08)
+        //backdrop-filter: blur(12px)
+        //-webkit-backdrop-filter: blur(12px)
+        //border: 1px solid rgba(255, 255, 255, 0.6)
+        //box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), inset 0 -6px 12px rgba(17, 24, 39, 0.06)
+
+        +rm(640)
+            width: 48%
+
+        +rm(768)
+            //backdrop-filter: blur(7px)
+            padding: 20px
+
+        +rm(1024)
+            width: 31%
+
+        +rm(1230)
+            width: 420px
+            padding: 24px
+
+        &:not(:last-of-type)
+            margin-bottom: 15px
+
+            +rm(480)
+                margin-bottom: 20px
+
+            +rm(640)
+                margin-bottom: 0
+
+    &__count
+        width: 30px
+        height: 30px
+        //background: linear-gradient(135deg, #1664E6 0%, #9308F0 54.33%, #FC06B7 100%)
+        display: block
+        margin-bottom: 10px
+        text-align: center
+        font-weight: 700
+        padding: 8px 5px
+
+        +rm(480)
+            margin-bottom: 15px
+
+        +rm(1230)
+            margin-bottom: 20px
+
+    &__header
+        text-transform: uppercase
+        font-family: $main-font
+        line-height: 1.5
+        margin-bottom: 10px
+
+        +rm(480)
+            margin-bottom: 15px
+
+        +rm(1220)
+            font-size: 18px
+            margin-bottom: 20px
+
+    &__text
+        line-height: 1.5
+        opacity: .6
+
+    &__btns
+
+        & .tooltip__wrapper
+
+            +rm(640)
+                margin: 0
+
+        .btn
+            +rm(640)
+                margin: 0
+
+    &__circle-bg
+        top: 50%
+
+        +rm(640)
+            top: auto
+            bottom: 30%
+
+        +rm(768)
+            top: auto
+            bottom: 0
+
+    &__circle-bg--pink
+        top: auto
+        bottom: 0
+
+        +rm(640)
+            bottom: 30%
+
+        +rm(768)
+            top: auto
+            bottom: 0

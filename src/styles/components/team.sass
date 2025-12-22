@@ -1,0 +1,151 @@
+.team
+    position: relative
+
+    & .team__wrapper
+        padding-top: 90px
+
+        +rm(1024)
+            padding-top: 140px
+
+    &__header,
+    &__footer
+        padding: 25px 15px
+        text-align: center
+        background: #1d1d1d
+
+        & a
+            display: inline-block
+
+    &__inner
+
+        +rm(640)
+            +flex($align: inherit, $gap: 0, $wrap: wrap)
+
+        +rm(768)
+            display: block
+
+    &__item
+        padding: 16px
+        border: 1px solid rgba(255, 255, 255, 0.10)
+        background: rgba(18, 18, 18, 0.40)
+        backdrop-filter: blur(7px)
+
+        +rm(640)
+            width: 50%
+
+        +rm(768)
+            width: 100%
+            +flex($justify: flex-start)
+
+    &__speaker
+        margin-bottom: 20px
+
+        +rm(768)
+            margin-bottom: 0
+
+        +rm(1024)
+            +flex($justify: flex-start, $gap: 24px)
+            width: 85%
+
+        +rm(1230)
+            width: 52%
+
+        & picture 
+
+            +rm(1024)
+                flex-shrink: 0
+
+    &__line
+        margin-bottom: 20px
+        background: #F207FD
+        width: 100%
+        height: 1px
+
+        +rm(768)
+            width: 1px
+            height: 180px
+            margin: 0
+
+        +rm(1024)
+            height: 105px
+
+    &__img
+        width: 200px
+        height: 200px
+        object-fit: cover
+        border-radius: 50%
+        margin: 0 auto 15px 
+
+        +rm(768)
+            width: 100px
+            height: 100px
+
+        +rm(1024)
+            margin: 0
+
+    &__name,
+    &__footnote,
+    &__time,
+    &__stage
+        margin-bottom: 10px
+        text-transform: uppercase
+        line-height: 1.5
+        font-weight: 800
+
+    &__name
+        width: 100%
+        max-width: 256px
+
+        +rm(480)
+            max-width: none
+            
+    &__position
+        color: #F207FD
+        margin-bottom: 16px
+
+    &__company
+        width: 100px
+
+    &__footnote
+        margin-bottom: 20px
+
+        +rm(768)
+            margin-bottom: 0
+
+    &__timeline 
+
+        +rm(1230)
+            width: 35%
+
+    &__time
+        font-family: $headers-font
+        +flex($justify: flex-start, $gap: 10px)
+        line-height: 1
+
+        +rm(768)
+            white-space: nowrap
+
+    &__stage
+        display: block
+        line-height: 1
+        font-family: $headers-font
+
+    &__circle-bg
+        top: 30%
+        
+        +rm(640)
+            top: 45%
+
+        +rm(768)
+            top: 45%
+        
+    &__circle-bg--pink
+        top: auto
+        bottom: 30%
+        
+        +rm(640)
+            top: 45%
+            bottom: auto
+
+        +rm(768)
+            top: 45%

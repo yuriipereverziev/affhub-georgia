@@ -1,0 +1,127 @@
+.partner
+  position: relative
+
+  & .partner__wrapper
+    padding-top: 90px
+
+    +rm(1024)
+      padding-top: 140px
+
+  &__inner
+    margin-bottom: 70px
+    +rm(480)
+      margin-bottom: 90px
+    +rm(640)
+      +flex($align: inherit, $gap: 24px, $wrap: wrap)
+      margin-bottom: 110px
+    +rm(768)
+      margin-bottom: 130px
+    +rm(1024)
+      margin-bottom: 140px
+
+
+  &__list-inner
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__items
+    margin-bottom: 7px
+
+    &:last-of-type
+      margin-bottom: 0
+
+  &__item
+    padding: 20px
+    backdrop-filter: blur(7px)
+    border: 1px solid rgba(255, 255, 255, 0.10)
+    background: rgba(18, 18, 18, 0.40)
+    font-size: 14px
+    line-height: 1.42
+
+    +rm(480)
+      padding: 24px
+
+    +rm(640)
+      width: 277px
+      padding: 55px 24px
+
+    &:not(:last-of-type)
+      margin-bottom: 20px
+
+      +rm(480)
+        margin-bottom: 24px
+
+      +rm(640)
+        margin: 0
+
+  &__top-item
+    margin-bottom: 26px
+
+    +rm(480)
+      margin-bottom: 32px
+
+    +rm(640)
+      width: 100%
+      margin-bottom: 38px
+      padding: 30px
+
+    +rm(768)
+      width: 80%
+      margin: 0 auto 44px
+
+    +rm(1024)
+      width: 90%
+      margin-bottom: 50px
+
+    +rm(1230) 
+      width: 100%
+      margin-bottom: 56px
+
+  &__img
+    max-width: 248px
+    margin: 0 auto 20px
+    height: 55px
+
+    +rm(480)
+      margin-bottom: 24px
+
+    +rm(640)
+      max-width: 227px
+      height: 46px
+
+      &--square
+        +rm(640)
+        height: 70px
+
+  &__top-img
+    margin: 0 auto 20px
+    max-width: 320px
+    width: 100%
+
+    +rm(640)
+      max-width: 340px
+
+    +rm(1024)
+      max-width: 360px
+
+  &__text
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__header
+    margin-bottom: 5px
+    display: inline-block
+    
+    &:empty
+      display: none
+
+.media-partners
+    &--static
+        +flex($justify: center, $align: center, $gap: 20px)
+        flex-wrap: wrap
+
+            

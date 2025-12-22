@@ -1,0 +1,112 @@
+-
+  const ticketsTitle = 'Tickets';
+
+  const ticketWaves = [
+    { name: "1st wave" },
+    { name: "2nd wave" },
+    { name: "3nd wave" }
+  ];
+
+  const ticketsData = [
+    {
+      type: 'silver',
+      header: 'Silver',
+      // price: 150,
+      features: [
+        "Expo Zone",
+        "Food & Drinks in Expo Zone",
+        "Fun & Networking Zone",
+        "Conference"
+      ],
+      btnId: 'earlybird-silver-btn'
+    },
+    {
+      type: 'gold',
+      header: 'Gold',
+      // price: 180,
+      features: [
+        "Expo Zone",
+        "Food & Drinks in Expo Zone",
+        "Fun & Networking Zone",
+        "Conference",
+        "Afterparty",
+        "Food & Drinks in Afterparty"
+      ],
+      btnId: 'earlybird-gold-btn'
+    },
+    // {
+    //   type: 'vip',
+    //   header: 'Vip',
+    //   price: 220,
+    //   date: '02.12-16.12.2025',
+    //   details: 'Твій all-inclusive квиток на богемну вечірку',
+    //   features: [
+    //     "Expo Zone",
+    //     "Food & Drinks in Expo Zone",
+    //     "Fun & Networking Zone",
+    //     "Business part: Mastermind",
+    //     "VIP registration desk",
+    //     "Afterparty",
+    //     "Exclusive  Food & Drinks in afterparty",
+    //     "Bar with cocktails",
+    //     "Exclusive VIP Zone on the Afterparty"
+    //   ],
+    //   btnId: 'earlybird-vip-btn'
+    // }
+  ];
+
+  const ticketsPopup = {
+    step: "Step",
+    of: "/",
+    errorTitle: "Error",
+    errorText: "Promo code does not exist",
+    okButton: "Ok"
+  }
+
+section.tickets#tickets.block
+  .container
+    .tickets-overlay
+    h2.tickets__title.title= ticketsTitle
+    .tickets__wrapper
+      .tickets__top
+        .tickets__range
+          each wave, i in ticketWaves
+            button.tickets__wave.btn(class=`tickets__${i===0 ? 'first' : i===1 ? 'second' : 'last'}-wave`)
+              | #{wave.name}
+
+
+      .tickets__content
+        each ticket in ticketsData
+          .tickets__inner(class=`tickets__inner--${ticket.type}`)
+            .tickets__container
+              .tickets__bg
+              .tickets__row
+                .tickets__header= ticket.header
+                .tickets__price
+                  span.price__value(data-base=ticket.price)= ticket.price
+                  | $
+
+              ul.tickets__list
+                each feature in ticket.features
+                  li.tickets__item= feature
+              button.btn(class=`tickets__btn tickets__btn--${ticket.type}` disabled data-name=ticket.btnId)= 'Buy Ticket'
+
+
+
+  .tickets-bg
+  .tickets-popup
+    .tickets-popup__content
+      .tickets-popup__header
+        .container
+          button.tickets-popup__back
+            span
+          p.tickets-popup__title
+            != ticketsPopup.step + '&nbsp;<span class="tickets-popup__step">1</span> ' + ticketsPopup.of + ' 2'
+          button.tickets-popup__close
+      .container
+        .rte-form
+  .error-overlay
+  .error-popup
+    h3.error-popup__title= ticketsPopup.errorTitle
+    p.error-popup__text= ticketsPopup.errorText
+    button.btn.error-popup__btn= ticketsPopup.okButton

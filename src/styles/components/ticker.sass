@@ -1,0 +1,19 @@
+.ticker
+    overflow: hidden
+
+    &__inner
+        display: flex
+        white-space: nowrap
+        animation: marquee 25s linear infinite
+        text-transform: uppercase
+        +text-size(34, 100)
+        font-family: sans-serif
+        -webkit-text-stroke: 1px rgba(255, 255, 255, .2)
+        color: transparent
+
+@keyframes marquee 
+  0% 
+    transform: translateX(0)
+
+  100% 
+    transform: translateX(-100%)

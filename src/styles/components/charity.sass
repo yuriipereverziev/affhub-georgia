@@ -1,0 +1,149 @@
+.charity
+
+    +rm(768)
+        position: relative
+
+    &__title
+        margin-bottom: 24px
+
+        +rm(480)
+            margin-bottom: 28px
+
+        +rm(640)
+            margin-bottom: 32px
+
+        +rm(768)
+            margin-bottom: 36px
+
+        +rm(1024)
+            margin-bottom: 42px
+
+        +rm(1230)
+            margin-bottom: 48px
+
+.lots
+    max-width: 370px
+    width: 100%
+    margin: 0 auto
+    
+    +rm(640)
+        max-width: none
+        +flex($wrap: wrap)
+
+    +rm(768)
+        flex-wrap: nowrap
+
+    +rm(1024)
+        gap: 24px
+
+    &__items
+        background: rgba(18, 18, 18, 0.40)
+        +gradient-border($radius: 0, $color1: #1069E6, $color2: #9C00F0, $color3: #FF06B4, $width: 1px)
+        text-align: center
+        // cursor: pointer
+        // height: 300px
+        // width: 100%
+        // display: block
+        padding: 20px 20px 30px
+        backdrop-filter: blur(5px)
+        // perspective: 500px
+
+        +rm(640)
+            width: 48%
+
+        +rm(768)
+            width: 32%
+            // height: 276px
+
+        +rm(1024)
+            // height: 300px
+
+        +rm(1230)
+            width: 377px
+            // height: 324px
+
+        &:not(:last-of-type)
+            margin-bottom: 20px
+
+            +rm(640)
+                margin-bottom: 0
+
+        // &:hover .lots__img
+        //     transform: scale(1.05)
+
+    &__img
+        width: 208px
+        margin: 0 auto 16px
+        // transition: .3s
+
+        +rm(1230)
+            width: 232px
+
+    &__title
+        font-size: 18px
+
+// .flip 
+//     height: inherit
+//     position: relative
+//     transform-style: preserve-3d
+//     transition: transform .6s
+//     padding: 20px
+    
+//     &__back, &__front 
+//         height: 100%
+//         width: 100%
+//         padding: 20px
+//         +flex($direction: column, $justify: inherit, $gap: 0)
+//         position: absolute
+//         top: 0
+//         left: 0
+//         border-radius: 20px
+//         backface-visibility: hidden
+//         cursor: pointer
+//         transition: .6s
+
+//     &__front
+//         padding-bottom: 30px
+//         transform: rotateY(0deg)
+//         z-index: 5
+
+//     &__back 
+//         -webkit-overflow-scrolling: touch
+//         justify-content: center
+//         opacity: 0
+//         z-index: 2
+//         pointer-events: none
+
+//     &__text 
+//         width: 100%
+//         overflow-y: scroll
+//         font-size: 18px
+//         line-height: 1.3
+//         max-height: 266px
+//         padding-right: 8px
+//         scrollbar-width: thin
+//         scrollbar-color: #1069E6 transparent
+//         -webkit-overflow-scrolling: touch
+//         pointer-events: auto
+//         will-change: transform
+
+//         &::-webkit-scrollbar
+//             width: 6px
+
+//         &::-webkit-scrollbar-track
+//             background: transparent
+
+//         &::-webkit-scrollbar-thumb
+//             background-color: #1069E6
+//             border-radius: 10px
+//             border: none
+
+// .flip__back, .flipped .flip
+//     transform: rotateY(180deg)
+
+// .flipped .flip__front
+//     opacity: 0
+
+// .flipped .flip__back
+//     opacity: 1
+//     pointer-events: auto

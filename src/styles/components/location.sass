@@ -1,0 +1,230 @@
+.location
+
+
+  &__ellipses
+    position: relative
+
+    & .ellipse
+
+      &--grey
+        width: 300px
+        height: 100px
+        top: 80px
+        left: -100px
+        transform: rotate(18deg)
+
+        +rm(640)
+          width: 400px
+          height: 130px
+          top: 100px
+          left: -140px
+
+        +rm(768)
+          width: 500px
+          height: 150px
+          top: 160px
+          left: -180px
+
+        +rm(1024)
+          width: 600px
+          height: 180px
+          top: 250px
+          left: -220px
+
+        +rm(1220)
+          width: 1490px
+          height: 442px
+          top: 0
+          right: -497px
+          left: auto
+
+      &--purple
+        width: 300px
+        height: 100px
+        bottom: 80px
+        left: -100px
+        transform: rotate(-14deg)
+
+        +rm(640)
+          width: 400px
+          height: 130px
+          bottom: 100px
+          left: -140px
+
+        +rm(768)
+          width: 500px
+          height: 150px
+          bottom: 160px
+          left: -180px
+
+        +rm(1024)
+          width: 600px
+          height: 180px
+          bottom: 250px
+          left: -220px
+
+        +rm(1220)
+          width: 736px
+          height: 218px
+          bottom: -1100px
+          left: -495px
+
+      &--red
+        top: 650px
+        right: -595px
+        width: 1490px
+        height: 442px
+        transform: rotate(18deg)
+
+
+
+  &__wrapper
+    position: relative
+    z-index: 2
+    margin-bottom: 20px
+
+    +rm(480)
+      margin-bottom: 40px
+    +rm(640)
+      margin-bottom: 60px
+    +rm(768)
+      margin-bottom: 80px
+    +rm(1024)
+      display: flex
+      justify-content: space-between
+      gap: 20px
+      margin-bottom: 120px
+    +rm(1220)
+      gap: 30px
+      margin-bottom: 150px
+
+  &__title
+    +rm(1024)
+      margin-bottom: 20px
+    +rm(1220)
+      margin-bottom: 30px
+
+  &__subtitle
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 24px
+
+
+  &__text
+    font-size: 16px
+    margin-bottom: 24px
+
+  &__date
+    display: block
+
+  &-galary
+    display: flex
+    gap: 25px
+
+    & img
+      border-radius: 24px
+
+
+  &__video
+    position: relative
+    width: 100%
+    margin: 0 auto
+    border-radius: 24px
+    overflow: hidden
+    z-index: 4
+    aspect-ratio: 16 / 9
+
+    background: white
+    border: 5px solid white
+
+    backdrop-filter: blur(18px)
+    -webkit-backdrop-filter: blur(18px)
+
+
+    background: rgba(151, 133, 255, .24)
+    -webkit-transition: all .4s
+    transition: all .4s
+    will-change: transform
+
+    border: 10px solid rgba(255, 255, 255, .6)
+    -webkit-box-shadow: inset -1px -1px 3px rgba(255, 255, 255, .9), inset 3px 3px 8px rgba(0, 0, 0, .08)
+    box-shadow: inset -1px -1px 3px rgba(255, 255, 255, .9), inset 3px 3px 8px rgba(0, 0, 0, .08)
+
+    //box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 20px 40px rgba(17, 24, 39, 0.12)
+
+    +rm(640)
+      max-width: 560px
+
+    +rm(768)
+      max-width: 720px
+
+    +rm(1024)
+      max-width: 920px
+      border: 20px solid white
+
+    +rm(1220)
+      max-width: 1040px
+
+    &-inner
+      position: relative
+      border-radius: 16px
+      overflow: hidden
+      //background: red
+      width: 100%
+      height: 100%
+
+    &-iframe
+      position: absolute
+      inset: 0
+      width: 100%
+      height: 100%
+      border: none
+      z-index: 1
+
+    &-play
+      position: absolute
+      z-index: 2
+      inset: 0
+      margin: auto
+
+      width: 64px
+      height: 64px
+      border-radius: 50%
+      border: none
+      cursor: pointer
+
+      background: #fff
+      display: flex
+      align-items: center
+      justify-content: center
+
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.18)
+      transition: .25s ease
+
+      +rm(1024)
+        width: 122px
+        height: 122px
+
+      &::before
+        content: ''
+        margin-left: 3px
+        border-top: 8px solid transparent
+        border-bottom: 8px solid transparent
+        border-left: 14px solid #ff5ec4
+
+        +rm(1024)
+          margin-left: 10px
+          border-top: 20px solid transparent
+          border-bottom: 20px solid transparent
+          border-left: 40px solid #ff5ec4
+
+      &:hover
+        transform: scale(1.06)
+
+    &.is-playing
+      .location__video-play
+        opacity: 0
+        pointer-events: none
+
+
+

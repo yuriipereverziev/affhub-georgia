@@ -1,0 +1,14 @@
+.cookie-banner.hide
+  .cookie-banner__content
+    p.cookie-banner__text!= t.cookies.bannerText
+
+    label.cookie-banner__label
+      input.cookie-banner__checkbox(type="checkbox" id="cookieConsent")
+      span.checkbox__custom
+      span.cookie-banner__label-text!= t.cookies.consentLabel
+        |
+        a(href="policy.html" target="_blank")!= t.cookies.privacyPolicyLink
+
+    .cookie-banner__buttons
+      button.cookie-banner__btn.cookie-banner__btn--accept(type="button" disabled)!= t.cookies.acceptButton
+      button.cookie-banner__btn.cookie-banner__btn--decline(type="button")!= t.cookies.declineButton

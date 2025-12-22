@@ -1,0 +1,39 @@
+.stand
+
+    +rm(768)
+        position: relative
+
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 15px
+
+        +rm(768)
+            gap: 25px
+
+        +rm(1220)
+            gap: 30px
+
+    &__title
+        margin-bottom: 0 !important
+        text-transform: uppercase
+        //color: #1963E7
+        line-height: 1
+        font-family: $ital-font
+        +text-size(22, 48)
+
+    & a
+        width: 150px
+        margin-left: auto
+        margin-right: auto
+        display: block
+        margin: 0 auto
+        +rm(1220)
+          width: 200px
+        +rm(1360)
+          width: 230px
+
+    &__title--bottom
+        margin-bottom: 0
+        //color: #EDFF00

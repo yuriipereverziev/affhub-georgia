@@ -1,0 +1,106 @@
+.contact
+
+    +rm(768)
+        position: relative
+
+    &__wrapper
+        text-align: center
+
+    &__title
+        margin-bottom: 26px
+        +text-size(22, 40)
+
+        +rm(480)
+            margin-bottom: 25px
+
+        +rm(640)
+            margin-bottom: 30px
+
+        +rm(768)
+            margin-bottom: 35px
+
+        +rm(1024)
+            margin-bottom: 40px
+
+        +rm(1220)
+            margin-bottom: 45px
+
+    &__main-link 
+        max-width: 150px
+        display: block
+        margin: 0 auto 20px
+
+        +rm(480)
+        +rm(640)
+            max-width: 170px
+            margin-bottom: 24px
+
+        +rm(1024)
+            margin-bottom: 30px
+        +rm(1220)
+            max-width: 230px
+            margin-bottom: 35px
+        +rm(1360)
+            max-width: 254px
+
+    &__subtitle
+        margin-bottom: 15px
+        font-family: $ital-font
+        font-size: 18px
+
+        +rm(480)
+            font-size: 20px
+
+        +rm(640)
+
+        +rm(768)
+            font-size: 22px
+
+        +rm(1024)
+            font-size: 20px
+
+        +rm(1220)
+            font-size: 30px
+
+    &__link
+        color: #fff
+        font-weight: 200
+        position: relative
+
+        +rm(1024)
+          font-size: 18px
+
+        &::before
+            position: absolute
+            content: ""
+            width: 0
+            height: 1px
+            background: #fff
+            left: 0
+            bottom: -2px
+            transition: .3s width
+
+        &:hover
+
+            &::before
+                width: 100%
+
+    .diamond-1
+      width: 12.57%
+      top: -18%
+      left: 7%
+      &::before
+        top: -18%
+        left: 18%        
+
+    .diamond-2
+      width: 11.18%
+      top: auto
+      left: auto
+      right: 10.6%
+      bottom: 16%
+
+      &::before
+        top: -16%
+        left: 61%
+        animation-delay: 1.5s

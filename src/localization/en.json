@@ -1,0 +1,863 @@
+{
+  "pageTitles": {
+    "home": "Affhub Warsaw conf",
+    "about": "About Us",
+    "cookie": "Cookie Policy",
+    "partners": "Partners",
+    "policy": "Privacy Policy",
+    "speakers": "Speakers",
+    "terms": "Terms of Service",
+    "termsTicket": "Ticket Purchase Policy"
+  },
+  "promo": {
+    "date": "October 3, Warsaw",
+    "title": "Квитки <br> Affiliate <br> Aggregator <br> conf",
+    "buyTicket": "BUY TICKET",
+    "becomePartner": "BECOME A PARTNER",
+    "sendEmail": "Send Email",
+    "telegramMessage": "Message in telegram"
+  },
+  "community": {
+    "title": "Your Go-To Community for Affiliate Marketers",
+    "text1": "AFFHUB unites affiliate marketing professionals, businesses, and media buyers through expert content, industry events, and a thriving media platform. We offer a space for skill growth, trend insights, and high-impact networking.",
+    "text2": "With 50+ offline and 15 online events across Ukraine, Poland, Georgia, Kazakhstan, and Spain, AFFHUB is the organizer of the region’s largest digital marketing gatherings. Our events attract hundreds from across iGaming, Dating, Crypto, Nutra, E-commerce, Sweepstakes and others – fostering unique cross-vertical collaboration.",
+    "text3": "Each event blends knowledge sharing, networking, and vibrant experiences, helping members grow their networks, reach new markets, and build lasting industry connections.",
+    "participants": "participants",
+    "sqm": "sq.m",
+    "verticals": "verticals",
+    "participants_count": "2000",
+    "sqm_count": "3600+",
+    "verticals_count": "16"
+  },
+  "ticker": {
+    "text": "affiliate aggregator"
+  },
+  "timeline": {
+    "title": "general timeline",
+    "items": [
+      {
+        "time": "10:00",
+        "info": "Registration (all day), Expo Zone"
+      },
+      {
+        "time": "10:00 - 12:00",
+        "info": "Fun & Networking Zone"
+      },
+      {
+        "time": "12:00 - 17:00",
+        "info": "Business part: MASTERMIND"
+      },
+      {
+        "time": "17:00 - 17:30",
+        "info": "Gifts from partners"
+      },
+      {
+        "time": "17:30 - 18:00",
+        "info": "Change of setup"
+      },
+      {
+        "time": "18:00 - 19:30",
+        "info": "Afterparty, DJ set"
+      },
+      {
+        "time": "19:30 - 20:20",
+        "info": "Charity auction"
+      },
+      {
+        "time": "20:30 - 22:00",
+        "info": "Special guest: OMNIA"
+      },
+      {
+        "time": "22:00 - 00:00",
+        "info": "DJ Set"
+      }
+    ]
+  },
+  "header": {
+    "expoZone": "Expo Zone",
+    "speakers": "Speakers",
+    "partners": "Partners",
+    "conference": "Conference",
+    "buyTicket": "BUY TICKET"
+  },
+  "speakers": {
+    "title": "Speakers",
+    "learnMore": "learn more",
+    "secretSpeaker": "Secret speaker",
+    "list": [
+      {
+        "name": "Andrii Kartsev",
+        "position": "Head of One Media Nutra Team",
+        "img": "speaker-1"
+      },
+      {
+        "name": "Nikita Koshelyuk",
+        "position": "CEO Trident Media",
+        "img": "speaker-3"
+      },
+      {
+        "name": "Miroslav Liaskovez",
+        "position": "Founder of LeadMarketing, expert in online advertising and traffic arbitrage",
+        "img": "speaker-4"
+      },
+      {
+        "name": "Iryna",
+        "position": "Head of Affiliates FRBS Team",
+        "img": "speaker-6"
+      },
+      {
+        "name": "Nikolay Popov",
+        "position": "Head of Services AdKey.Agency",
+        "img": "speaker-7"
+      },
+      {
+        "name": "Dmytro Miasnikov",
+        "position": "Chief Operating Officer AdKey.Agency",
+        "img": "speaker-8"
+      },
+      {
+        "name": "Alex Emelian",
+        "position": "Co-founder, Co-CEO, Simple",
+        "img": "speaker-9"
+      },
+      {
+        "name": "Dan Kurkin",
+        "position": "Head of Resality, Cpamatica",
+        "img": "speaker-10"
+      },
+      {
+        "name": "Olga Kosiuk",
+        "position": "Client Acquisition Team Lead, Adskeeper",
+        "img": "speaker-11"
+      },
+      {
+        "name": "Natalia Vlasiuk",
+        "position": "Affiliate Manager TRAFORCE & Partnership Manager Dating Traffic Experts",
+        "img": "speaker-12"
+      },
+      {
+        "name": "Viktoria Piskaryova",
+        "position": "Head of Affiliate Marketing OMNI CPA",
+        "img": "speaker-14"
+      },
+      {
+        "name": "Alexander Flint",
+        "position": "Owner &Flint",
+        "img": "speaker-15"
+      },
+      {
+        "name": "Alexander Yasiukovich",
+        "position": "Founder UNIC",
+        "img": "speaker-16"
+      },
+      {
+        "name": "Viktoriia Sokolenko",
+        "position": "Affiliate manager, N1 Partners",
+        "img": "speaker-17"
+      },
+      {
+        "name": "Ivan Paskar",
+        "position": "Head of Growth AltiusLabs, Ex-Binance Marketing Lead",
+        "img": "speaker-18"
+      },
+      {
+        "name": "Danylo Diachenko",
+        "position": "CBDO DEVILS",
+        "img": "speaker-19"
+      },
+      {
+        "name": "Inna Babich",
+        "position": "Founder & Co-owner G.Partners",
+        "img": "speaker-20"
+      },
+      {
+        "name": "Ella",
+        "position": "CTO One Media",
+        "img": "speaker-21"
+      },
+      {
+        "name": "Anna Sukhanova",
+        "position": "CEO, Gentle Partners",
+        "img": "speaker-22"
+      },
+      {
+        "name": "Djan Fellows",
+        "position": "COO&co-founder Fellows Team",
+        "img": "speaker-23"
+      },
+      {
+        "name": "Irina Rostunkova",
+        "position": "Head of Affiliates at CG Solutions",
+        "img": "speaker-24"
+      },
+      {
+        "name": "Alex Ryżkowski",
+        "position": "Managing Director",
+        "img": "speaker-25"
+      },
+      {
+        "name": "Andrii Dzhmil",
+        "position": "Co-owner & CEO of the funnel builder for grey traffic &quot;SPENDY&quot;",
+        "img": "speaker-26"
+      },
+      {
+        "name": "Exitoso",
+        "position": "Team Lead Media Buying Traffhub",
+        "img": "speaker-27"
+      },
+      {
+        "name": "DMT",
+        "position": "Team Lead Media Buying Traffhub",
+        "img": "speaker-28"
+      },
+      {
+        "name": "Igor Eftidevskyi",
+        "position": "Team Lead of Mediabuying FTD",
+        "img": "speaker-29"
+      },
+      {
+        "name": "baby mama",
+        "position": "Owner of AMG",
+        "img": "speaker-30"
+      },
+      {
+        "name": "SMART",
+        "position": "Head of AMG",
+        "img": "speaker-31"
+      },
+      {
+        "name": "Yehor Stavitskiy",
+        "position": "CEO BlackBan",
+        "img": "speaker-32"
+      },
+      {
+        "name": "Danylo Yena",
+        "position": "Team Lead of the Buying Team BlackBan",
+        "img": "speaker-33"
+      },
+      {
+        "name": "Lex Zabelin",
+        "position": "CEO AdversterX",
+        "img": "speaker-34"
+      },
+      {
+        "name": "Anastasiia Kyrylenko",
+        "position": "Founder of the TikTok agency Vertycal and owner of a network of public pages. Former head of the PR editorial team",
+        "img": "speaker-35"
+      }
+    ]
+  },
+  "mastermind": {
+    "header": "MASTERMIND",
+    "circles": [
+      {
+        "title": "Circle #1",
+        "time": "12:00 – 12:45",
+        "text": "Restart Time <br> 15 min"
+      },
+      {
+        "title": "Circle #2",
+        "time": "13:00 – 13:45",
+        "text": "Restart Time <br>15 min"
+      },
+      {
+        "title": "Circle #3",
+        "time": "14:00 – 14:45",
+        "text": "Restart Time <br> 15 min"
+      },
+      {
+        "title": "Circle #4",
+        "time": "15:00 – 15:45",
+        "text": "Restart Time <br> 15 min"
+      },
+      {
+        "title": "Circle #5",
+        "time": "16:00 – 16:45",
+        "text": "Restart Time <br> 15 min"
+      }
+    ],
+    "cards": [
+      "iGaming",
+      "nutra",
+      "dating",
+      "crypto",
+      "C-LEVEL",
+      "iGaming 2"
+    ]
+  },
+  "tickets": {
+    "title": "tickets",
+    "subtitle": "Ticket - is a confirmation of the Participant's right to take part in the Event. The subject of purchase is the right to participate.",
+    "wave1": "1st wave",
+    "wave1Date": "until 17.08.2025",
+    "wave2": "2nd wave",
+    "wave2Date": "until 21.09.2025",
+    "wave3": "Last chance",
+    "wave3Date": "until 03.10.2025",
+    "silver": {
+      "header": "Silver",
+      "features": [
+        "Expo Zone",
+        "Food & Drinks in Expo Zone",
+        "Fun & Networking Zone",
+        "Business part: Mastermind"
+      ]
+    },
+    "gold": {
+      "header": "Gold",
+      "features": [
+        "Expo Zone",
+        "Food & Drinks in Expo Zone",
+        "Fun & Networking Zone",
+        "Business part: Mastermind",
+        "Afterparty",
+        "Food & Drinks in Afterparty"
+      ]
+    },
+    "vip": {
+      "header": "Vip",
+      "features": [
+        "Expo Zone",
+        "Food & Drinks in Expo Zone",
+        "Fun & Networking Zone",
+        "Business part: Mastermind",
+        "VIP registration desk",
+        "Afterparty",
+        "Exclusive  Food & Drinks in afterparty",
+        "Bar with cocktails",
+        "Exclusive VIP Zone on the Afterparty"
+      ]
+    },
+    "popup": {
+      "step": "Step",
+      "of": "/",
+      "errorTitle": "Error",
+      "errorText": "Promo code does not exist",
+      "okButton": "Ok"
+    }
+  },
+  "aboutWhy": {
+    "title": "Why Partner with Us?",
+    "items": [
+      {
+        "header": "Engage with industry leaders",
+        "text": "Connect directly with influential figures and decision-makers within the global affiliate marketing community"
+      },
+      {
+        "header": "Access exclusive networking opportunities",
+        "text": "Receive VIP passes to private events and invite-only gatherings throughout the conference"
+      },
+      {
+        "header": "Build high-value relationships",
+        "text": "Strengthen connections with top-tier clients, strategic partners, and key stakeholders in the affiliate ecosystem"
+      },
+      {
+        "header": "Boost brand visibility",
+        "text": "Position your brand in front of a highly engaged, international audience of affiliates, partners, and media buyers"
+      },
+      {
+        "header": "Maximize ROI with customized proposals",
+        "text": "Benefit from bespoke sponsorship opportunities tailored to align with your goals and deliver measurable impact"
+      },
+      {
+        "header": "Establish thought leadership",
+        "text": "Highlight your company as a forward-thinking innovator at the forefront of affiliate marketing"
+      }
+    ]
+  },
+  "aboutCommunity": {
+    "breadCrumbBase": "Affhub Conf",
+    "about": "About AFFHUB",
+    "expoZone": "Expo Zone",
+    "speakers": "Speakers",
+    "attendees": "attendees"
+  },
+  "footer": {
+    "description": "Your go-to community for affiliate marketers and digital specialists. Your ultimate ecosystem for professional growth in the industry.",
+    "conference": "Conference",
+    "partners": "Partners",
+    "speakers": "Speakers",
+    "expozone": "Expo Zone",
+    "tickets": "Tickets",
+    "aboutUs": "About Us",
+    "privacy": "Privacy",
+    "cookie": "Cookie",
+    "terms": "Terms of Service",
+    "ticketPurchase": "Ticket Purchase",
+    "footnote": "PERLA HELSA EU SP. Z O.O., Poland 03-216, Warsaw, Modlinska str, 6A, office 222",
+    "copyright": "All rights reserved © AFFHUB",
+    "year": "2025"
+  },
+  "charity": {
+    "title": "charity auction",
+    "secretLot": "Secret lot"
+  },
+  "contact": {
+    "title": "contact us",
+    "subtitle": "Sales manager",
+    "email": "d.zavada@affhub.com",
+    "telegram": "https://t.me/zavadadmytro"
+  },
+  "cookies": {
+    "bannerText": "We use only essential cookies to ensure the proper functioning of our website.<br>By giving your consent, you agree to the processing of your personal data in accordance with our Privacy&nbsp;Policy.",
+    "consentLabel": "I consent to the processing of my personal data as described in the ",
+    "privacyPolicyLink": "Privacy&nbsp;Policy",
+    "acceptButton": "Accept",
+    "declineButton": "Decline"
+  },
+  "expozone": {
+    "free": "Free",
+    "sold": "Sold",
+    "reserved": "Reserved",
+    "title": "expo zone"
+  },
+  "galary": {
+    "title": "our previous events",
+    "close": "Close"
+  },
+  "location": {
+    "title": "Location",
+    "place": "EXPO XXI Warszawa",
+    "hall": "HALA 3",
+    "hotels": [
+      {
+        "name": "Crowne Plaza Warsaw The HUB Нotel",
+        "promoCode": "Special promo code: <strong>&quot;AFFHUB&quot;</strong> - 10% discount on Best Flexible Rate with breakfast.",
+        "note": "*Offer is valid upon availability.",
+        "text": "Individual Reservations Department: <a href=tel:+48223773737>+48 22 377 37 37</a>; <br> <span class=text-nowrap>e-mail</span>: <a class=email href=mailto:ReservationCP.WarsawHUB@ihg.com>ReservationCP.WarsawHUB@ihg.com</a>"
+      },
+      {
+        "name": "Holiday Inn Express Warsaw The HUB Нotel",
+        "promoCode": "Special promo code: <strong>&quot;AFFHUB&quot;</strong> - 10% discount on Best Flexible Rate with breakfast.",
+        "note": "**Offer is valid upon availability.",
+        "text": "Individual Reservations Department: <a href=tel:+48223881111>+48 22 388 11 11</a>; <br> <span class=text-nowrap>e-mail</span>: <a class=email href=mailto:ReservationHIEX.WarsawHUB@ihg.com>ReservationHIEX.WarsawHUB@ihg.com</a>"
+      }
+    ]
+  },
+  "secret": {
+    "title": "OMNIA<span class=hide>i</span>",
+    "subtitle": "Headliner Affhub affiliate aggregator conf"
+  },
+  "stand": {
+    "title1": "WE STAND",
+    "title2": "WITH UKRAINE"
+  },
+  "partners": {
+    "title": "our partners",
+    "generalMediaPartner": "GENERAL MEDIA PARTNER",
+    "generalConferencePartner": "GENERAL CONFERENCE PARTNER",
+    "mediaPartners": "media partners"
+  },
+  "partnerPage": {
+    "breadCrumb": "Partners",
+    "generalPartners": "GENERAL CONFERENCE PARTNER",
+    "title": "Partners",
+    "PartnersTop": [
+      {
+        "name": "King_Partners",
+        "img": "img/logo_king.png",
+        "text": "King Partners — the next-generation affiliate ecosystem\u00A0🚀",
+        "sections": [
+          {
+            "header": "Making partnerships simple, transparent, and rewarding.",
+            "list": [
+              "✨ Intuitive tools to manage campaigns with ease",
+              "✨ 24/7 support that’s always there for you",
+              "✨ Flexible terms that grow with your goals",
+              "✨ Proven success in building lasting partnerships"
+            ]
+          }
+        ],
+        "text2": "As part of King Group, they unite technology, expertise, and people who care — turning connections into results and partnerships into long-term growth.",
+        "text3": "King Partners are more than just an affiliate platform — it`s a team that cares about your results and grows with your success."
+      }
+    ],
+    "partners": [
+      {
+        "name": "v-partners",
+        "img": "img/v-partners.svg",
+        "text": "V.Partners is the power source behind top affiliate performance.\nWith over 9 years of experience in the iGaming industry, V.Partners stands out as more than just an affiliate program — it’s the energy driving profit.",
+        "text2": "As a direct advertiser for high-performing casino and betting brands, the company offers exclusive deals, industry-leading conversion rates, and partnerships designed for sustainable growth.\nWorking across Tier 1 and Tier 2 GEOs, V.Partners provides flexible CPA, RevShare, and hybrid models to meet diverse partner goals.",
+        "text3": "Affiliates benefit from weekly payouts, dedicated support from experienced managers, and access to brands that are built to convert.",
+        "text4": "⚡\uFE0F Power up your profit with V.Partners — the affiliate program that’s always fully charged."
+      },
+      {
+        "name": "frbs",
+        "img": "img/frbs.png",
+        "text": "FRBS is an iGaming media buying company focused on Tier-1 markets, with Facebook as its main traffic source. <br> The team brings together years of individual expertise and a well-established infrastructure. Thanks to a structured yet flexible approach, FRBS has built a strong foundation for profitable, long-term partnerships — all in less than 6 months. <br>FRBS — Fast ROI, Big Scale."
+      },
+      {
+        "name": "trustee",
+        "img": "img/trustee.svg",
+        "text": "Trustee Plus - cryptowallet with cryptocard. This is a mobile app which connecting cryptocurrency with fiat and makes using crypto easier in your casual life. <br> Functional Trustee Plus:",
+        "list": [
+          "Buy cryptocurrency with a bank card",
+          "Personal IBAN",
+          "Exchange all cryptocurrencies with each other",
+          "Support for 30+ coins and methods like TRC20, ERC20, SOL, Base, Arbitrum, BEP20, NEAR",
+          "Pay for any purchases using cryptocurrency from the Trustee plus wallet",
+          "Securely store cryptocurrency"
+        ]
+      },
+      {
+        "name": "everad",
+        "img": "img/everad.svg",
+        "text": "Everad is a trusted force in affiliate marketing — 12+ years on the market, 400+ in-house offers, 45+ GEOs, and payouts up to $50. We don’t guess what affiliates need — we know, because we’ve built the system for it. Flexible benefits, stable payouts, and real expertise — that’s how we help partners grow."
+      },
+      {
+        "name": "spt",
+        "img": "img/spt1.png",
+        "text": "SPT is a leading team in the nutra vertical. We are a full-service team: we handle analytics, strategy, creative development, and traffic according to your request and geography. We perform most effectively because we have chosen and are developing deep expertise in a specific niche."
+      },
+      {
+        "name": "omni",
+        "img": "img/omni.png",
+        "text": "Direct nutra advertiser since 2014. 40+ in-house offers with no reselling across EU, LATAM, and KZ.Own production, native-speaking call centers, and full logistics. Earn 20–30% more with dynamic payouts. Everyone upsells — we’re in OMNI CPA, and we pay for it!"
+      },
+      {
+        "name": "playcash",
+        "img": "img/playcash.svg",
+        "text1": "PlayCash is high-trusted iGaming affiliate network, established in 2020 <br> The team provides CPA and RS offers, mostly oriented on conditions for FB apps, SEO, ASO, Google PPC and UAC traffic sources. Always ready to create profitable conditions for your traffic.",
+        "list": [
+          "900+ gambling and betting brands in 1 catalog",
+          "individual approach for offers recommendation",
+          "free apps for partners",
+          "bonus for volume and tests",
+          "rates boost for high-quality traffic",
+          "adaptive support bot Alertica",
+          "offer integration by your request"
+        ],
+        "text2": "Just try and see your convert rate fly sky-high!"
+      },
+      {
+        "name": "scrooge",
+        "img": "img/scrooge.svg",
+        "text": "ScroogeFrog provides trusted agency advertising accounts tailored to different verticals, with no setup fees, convenient payment options, guaranteed refunds, and dedicated support. We offer access to 130+ traffic sources across various GEOs—including native, social, search, in-app, and push. Minimum ad budgets start at just $300, and provider bonuses may be available."
+      },
+      {
+        "name": "one_partners",
+        "img": "img/one_partners.svg",
+        "text": "One Partners is an affiliate CPA program in gambling and betting, offering 800+ WW offers. The program has developed a truly high-quality product used by over 10k+ partners worldwide. It also features in-house creative development and PWA solutions."
+      },
+      {
+        "name": "terraleads",
+        "img": "img/terraleads.svg",
+        "text": "Direct nutra advertiser, operating in the market for over 9 years and offering end-to-end business solutions.",
+        "sections": [
+          {
+            "header": "🔹R&D department",
+            "list": [
+              "· Exclusive offers.",
+              "· Private offers.",
+              "· Free promo and localisation.",
+              "· Unique packaging design.",
+              "· Conducting tests with competitors' products."
+            ]
+          },
+          {
+            "header": "🔹In-house marketing platform",
+            "list": [
+              "· Audience setting.",
+              "· API integration.",
+              "· Real-time analytics and lead reports."
+            ]
+          },
+          {
+            "header": "🔹Professional sales",
+            "list": [
+              "· Daily payments.",
+              "· Call centre with native speakers.",
+              "· High approval and payout rates."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "hrcom",
+        "img": "img/hrcom.png",
+        "text": "HR Community is an active online and offline network for HR professionals and recruiters in digital, affiliate, and IT. We were created to unite, support, and develop specialists who work daily with people, processes, and business growth.\nThis is a place where you can always get advice, support, trusted tools, and honest feedback.\nOnline and offline — we don’t just connect people, we build an environment that moves the industry forward.\nOur members constantly level up their expertise through mentorship, educational formats, and access to exclusive insights.\nWe were created by HRs, for HRs."
+      },
+      {
+        "name": "affpro",
+        "img": "img/affpro.png",
+        "text": "What is AFFPRO?",
+        "text2": "AFFPRO — A Worldwide Affiliate Program Where You Always Win",
+        "text3": "The affiliate marketing industry, particularly in the gambling sector, is rapidly expanding, and AFFPRO stands as a great example of this progress.",
+        "text4": "AFFPRO is a global CPA network that provides favorable conditions for both webmasters and advertisers within the gambling and betting verticals. Over the years, AFFPRO has built a reputation for being a reliable and stable partner.",
+        "text5": "In this piece, we'll explore the unique aspects that make this network stand out from others and the benefits it offers."
+      },
+      {
+        "name": "n1Partners",
+        "img": "img/n1_partners.svg",
+        "text": "N1 Partners is a multi-brand affiliate program operating since 2018, uniting 12+ licensed casino and sportsbook brands across 10+ Tier-1 GEOs. In the highly competitive iGaming market, we go beyond standard conditions, offering expertise, transparency, and consistent results. Partners benefit from high-converting offers, top-performing products, flexible, personalized deals, and transparent terms built on trusted relationships. With reliable payouts, multi-channel support, and an infrastructure designed for predictable earnings, we help partners thrive in even the most competitive markets."
+      },
+      {
+        "name": "manymoney",
+        "img": "img/manymoney.svg",
+        "text": "We're direct nutra advertiser with a huge experience and background in European market of Health&Beauty niche.",
+        "text2": "ManyMoney allows our partners to work directly with the advertiser. With us you will always get the best terms of the market. Our call centers are staffed only by native speakers who know the Health & Beauty audience like no one else.",
+        "text3": "We believe that everyone can achieve financial independence with the right tools and support. ManyMoney is designed to provide you with those tools and be a trusted partner on the path to your success. Join us today and start earning with ManyMoney!"
+      },
+      {
+        "name": "gentle_partners",
+        "img": "img/gp.png",
+        "text": "Gentle Partners is a CPA affiliate network created specifically for media buying teams in the iGaming niche. We combine deep traffic expertise with genuine care for every partner — our support is always on your side. Gentle is more than just a network; it's a community that values performance, people, and style. We offer fair conditions, stable payouts, a deep understanding of market needs, and a personalized approach to every partner. Gentle Partners is regularly present at major industry events and creates its own meetups and YouTube formats to build media presence together with its partners. Everything we do — we do with love for traffic."
+      },
+      {
+        "name": "yosa",
+        "img": "img/yosa.svg",
+        "text": "YOSA is the ultimate show, insight source, and community for those in the know. We create content on the most relevant topics in digital marketing, with podcasts and live streams featuring industry leaders, top companies, and self-made online traffic experts. Our coverage includes the best professional conferences, top spots and the latest in affiliate marketing. With YOSA, you’re always at the center of the action."
+      },
+      {
+        "name": "gamehub",
+        "img": "img/gamehub.svg",
+        "text": "Gamehub - gambling affiliate program with 1000+ worldwide offers, fast and professional support, fast payouts and high CPA rates"
+      },
+      {
+        "name": "ezaff",
+        "img": "img/ezaff.svg",
+        "text": "Ezaff is an affiliate marketing company focused on building new markets in Nutra vertical and delivering high-quality services for publishers. The main mission is to provide partners with efficient traffic processing solutions and ensure fast, reliable cash flow."
+      },
+      {
+        "name": "tequila",
+        "img": "img/tequila.svg",
+        "text": "Tequila is more than just a partner network. It's a space where you have everything you need to scale: high-margin offers, fast payouts, clear communication, and streamlined processes - no bureaucracy. We work as equals - with transparency and confidence.",
+        "text2": "Tequila isn't just about numbers. It's about a team united by a shared goal: to grow. You run traffic - we've got the rest: support, product, quality control"
+      },
+      {
+        "name": "trident",
+        "img": "img/trident.svg",
+        "text": "Trident Media -  Ukrainian media buying agency and mobile app development service, headquartered in Kyiv. Since 2020, we’ve grown up to 190 teammates.",
+        "text2": "We aim to become one of the top performance marketing agencies in Eastern Europe",
+        "text3": "Our values: analytics, transparency, and quality traffic.",
+        "text4": "Our culture is freedom, low bureaucracy and rapid growth."
+      },
+      {
+        "name": "flint",
+        "img": "img/flint.svg",
+        "text": "Flint Group — a company specializing in SEO for high-risk niches. We provide full SEO support and ensure Brand Safe promotion, helping brands grow confidently and sustainably even in the most competitive verticals."
+      },
+      {
+        "name": "win-offers",
+        "img": "img/win-offers.svg",
+        "text": "Win-Offers is an affiliate program with exclusive iGaming offers for Europe such as BetMatch (HU & DACH) and RoyalSea (IT & HU & DACH), and several offers for Ukraine (among them Parik24) as well as for Ukrainians in Europe (Stawki.bet).",
+        "text2": "Win-Offers supports CPA, RevShare, and Hybrid models.",
+        "sections": [
+          { 
+            "header": "The key advantages include:",
+            "list": [
+              "⭐️ exclusive high-converting offers;",
+              "⭐️ timely bi-weekly payouts from $100 via all popular methods (including crypto);",
+              "⭐️ custom creatives on demand;",
+              "⭐️ dedicated AM support with regular promotions."
+            ]
+          }
+        ],
+        "text4": "Win-Offers focuses on building long-term, win-win partnerships and additionally provides a lifetime referral program — 3% of each referred partner’s profit."
+      },
+      {
+        "name": "onetraf",
+        "img": "img/onetraf.svg",
+        "text": "OneTraff is the leading PWA solution on the market. With the most precise and detailed statistics, allowing you to see exactly what happens to your traffic, where you’re losing users, and how to optimize performance."
+      },
+      {
+        "name": "r2d",
+        "img": "img/r2d.svg",
+        "text": "Is a multi-brand affiliate program designed for traffic monetization in the gambling and betting industry. Within our affiliate network, you'll find exclusive direct offers from leading brands  – LEON, Twin and Slott. R2D aims to combine fresh ideas and extensive experience, providing affiliates with a reliable and profitable partnership."
+      },
+      {
+        "name": "sweeply",
+        "img": "img/sweeply.svg",
+        "text": "СС-submit & SOI network with more than 6 years experience on the market. We have large number of direct advertisers and highly competitive EPC."
+      },
+      {
+        "name": "spendy",
+        "img": "img/spendy.svg",
+        "text": "SPENDY is a platform with tools for generating traffic in the gambling, betting, and crypto verticals.",
+        "text2": "Development of a private PWA label for teams, partners, and products.",
+        "text3": "Multifunctional PWA builder.",
+        "text4": "Rental and custom development of iOS and Android applications for all verticals — quick start and maximum profit!"
+      },
+      {
+        "name": "bobaffs",
+        "img": "img/bobaffs.svg",
+        "text": "BOBAFFS - growth ecosystem in igaming.",
+        "text2": "A cpa network equipped with tools for webmasters and affiliate teams, created to bring organic relationship, transparency, and simplicity to the industry’s growth process.",
+        "text3": "For webmasters, we provide reliable and profitable cooperation, while advertisers gain access to high volumes and top-quality traffic. our flexibility, attention to detail, and focus on mutually beneficial long-term partnerships make bobaffs the right place for growth and sustainable earnings."
+      },
+      {
+        "name": "pmaffiliates",
+        "img": "img/pmaffiliates.svg",
+        "text": "Parimatch Affiliates — is the official affiliate program of the international iGaming operator Parimatch. As a partner, you’ll gain access to exclusive conditions for monetizing traffic in the Gambling, Betting, and Esports verticals, working directly with a globally trusted brand operating for over 30 years.",
+        "text2": "Parimatch is represented by high-profile sports ambassadors, is the regional sponsor of the Argentinian Football Association and UFC – The Ultimate Fighting Championship, and is actively involved in major sponsorships, including Leicester City FC and Nottingham Forest FC in the 2024/25 Premier League season.",
+        "text3": "On top of that, Parimatch is Leeds United’s Official Sleeve Partner and Manchester United’s Official Betting Partner across Asia and the MENA region."
+      },
+      {
+        "name": "traffhub",
+        "img": "img/traffhub.svg",
+        "text": "TraffHub is a Ukrainian media buying team in the iGaming industry that has been successfully operating on the market for over 4 years.",
+        "text2": "Our main value is people. Our key advantage is our ecosystem.",
+        "text3": "A comprehensive infrastructure, automated processes, transparency in the system, a constant network, and corporate culture are exactly what drives our colleagues and guides them to results.",
+        "sections": [
+          { 
+            "header": "It's not quantity, but quality.",
+            "list": [
+              "◇ The best partners ",
+              "◇ The most profitable offers",
+              "◇ The most modern tools and approaches"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "huffson",
+        "img": "img/huffson.png",
+        "text": "Huffson Group is an iGaming affiliate network with over 15 years of experience. We build long-term partnerships based on trust, transparency, and performance.",
+        "text2": "What we offer:",
+        "text3": "Global reach: 100+ countries, including Tier 1, Tier 2, and LATAM",
+        "text4": "50+ exclusive niche offers from leading brands",
+        "sections": [
+          { 
+            "list": [
+              "- Always relevant terms and flexible models: CPA, CPM, CPC, Hybrid, RevShare, Flat Fee",
+              "- A convenient dashboard with detailed analytics that saves you time",
+              "- Support from experienced managers who guide you at every step",
+              "- Stable and always timely payouts",
+              "Huffson Group - your reliable partner in the iGaming world."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "alreadymedia",
+        "img": "img/already_media.png",
+        "text": "Already Media is a tech-driven SEO & affiliate company whose brand has grown into one of the industry leaders in just three years. The company entered the ranks of the strongest iGaming players, taking 17th place in the prestigious EGR Power Affiliate 2024 ranking. We demonstrate steady growth: last year alone, traffic increased by 44%, reaching 130,000 FTDs monthly. Our team now spans 21 countries, with 23% of employees being SEO specialists. In 2024–2025, we executed three public deals and strengthened our presence in key markets — Latam, Asia, and Africa."      
+      },
+      {
+        "name": "mmt",
+        "img": "img/mmt.png",
+        "text": "Marvel Money Traff is an affiliate and media buying team operating since 2020. We work across Tier 1 to Tier 3 GEOs with a performance-driven and creative approach. Our steadily growing team is built on transparency, ownership, and deep expertise in affiliate marketing.",      
+        "text2": "We’re always on the lookout for talented solo media buyers — and open to partnering with ready-made teams.",
+        "text3": "We offer up to 50% profit share, perfect infrastructure, unlimited ad budgets, and a long-term mindset."
+      },
+      {
+        "name": "pw_apps",
+        "img": "img/pw_apps.svg",
+        "text": "pw_apps"
+      },
+      {
+        "name": "everest",
+        "img": "img/everest-logo.png",
+        "sections": [
+          { 
+            "list": [
+              "🚀 Everest Media Network — Direct Nutra Advertiser!",
+              "🌍 34+ GEOs (Tier1 + LATAM + Asia) — stable traffic, high approval rates!",
+              "💰 SS / Trial — payouts from $50 to $160, top rates and fast, no-delay payments.",
+              "📈 21+ verticals, expanding into new every month."
+            ]
+          },
+          { 
+            "list": [
+              "🤝 No middlemen — only transparent conditions and long-term partnerships.",
+              "Join Everest Media Network today!"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "step_mode",
+        "img": "img/stepmode.png",
+        "text": "STEP MODE - direct nutra advertiser with own manufacturing, inhouse native call centers present in EU and Balkan with more that 28 COD and SS offers.  Reliable and stabile partner for next STEP!"
+      },
+      {
+        "name": "holy_bulls",
+        "img": "img/holy-bulls.jpg",
+        "customClass": " partner__img--square",
+        "text": "We are a media buying, technology-driven company in the iGaming industry, specializing in advanced Tier-1 Geo’s."
+      },
+      {
+        "name": "banknot",
+        "img": "img/banknot.png",
+        "customClass": "",
+        "text": "BANKNOT — a trusted crypto exchange in Poland and the EU",
+        "sections": [
+          { 
+            "header": "Who we are?",
+            "list": [
+              "BANKNOT is a modern cryptocurrency exchange service that operates legally and transparently.",
+              "We have physical offices across Poland and a convenient 24/7 online exchange, making buying and selling crypto as simple and secure as possible."
+            ]
+          }
+        ],
+        "sections2": [
+          { 
+            "header": "Our services:",
+            "list": [
+              "✔️ Online and offline crypto exchange — in the format most convenient for you",
+              "✔️ Cash transfers between cities and countries — fast and reliable transactions",
+              "✔️ Large transactions without limits — anonymity and security guaranteed",
+              "✔️ Innovative wallet-bot — instant transfers in just a few clicks",
+              "✔️ Official payments for apartments, cars, and other luxury assets"
+            ]
+          }
+        ],
+        "sections3": [
+          { 
+            "header": "Why choose BANKNOT?",
+            "list": [
+              "💠 Legality and security — we operate officially with a license in Poland, all transactions are transparent, and client data is fully protected",
+              "💠 Physical offices — if you prefer to receive cash in hand, visit one of our secure branches",
+              "💠 Fast online exchange — trade crypto without leaving your home",
+              "💠 Tailored conditions for VIP clients — personalized rates and priority service",
+              "💠 Live support 24/7 — experienced operators, not chat-bots, ready to assist you anytime"
+            ]
+          }
+        ],
+        "textLast": "BANKNOT — crypto exchange without hassle or hidden fees. Convenient. Reliable. Transparent."
+      }
+    ]
+  },
+  "team": {
+    "breadcrumbs": {
+      "affhubConf": "Affhub Conf /",
+      "speakers": "Speakers"
+    },
+    "title": "Speakers",
+    "speakerName": "Konstantin Konstantinopolskiy",
+    "position": "Head of Advertisers",
+    "speechTitle": "The art and science of balancing iGaming media buying in the off-season",
+    "time": "11:30 - 12:00",
+    "stage": "Stage a",
+    "circle": "Circle 1",
+    "logoAlt": "Logo"
+  },
+  "js": {
+    "tickets1": " Ticket Purchase Policy, ",
+    "tickets2": "Privacy Policy",
+    "tickets3": " Privacy Policy ",
+    "tickets4": "Position",
+    "tickets5": "Marketing vertical",
+    "tickets6": "Select",
+    "tickets7": "Order",
+    "tickets8": "You must fill in all required fields and agree to the terms of the public offer, user agreement and privacy policy.",
+    "tickets9": "Promo code does not exist",
+    "tickets10": "Select the number of tickets you wish to purchase",
+    "tickets11": "Type",
+    "tickets12": "Quantity",
+    "tickets13": "Price",
+    "tickets14": "Sum",
+    "tickets15": "If the event provides additional discounts or promo codes, they can be applied in the next step",
+    "tickets16": "Order",
+    "tickets17": "Do you accept terms and conditions of",
+    "tickets18": "and agree to the processing of personal data",
+    "tickets19": "First name",
+    "tickets20": "Telephone number",
+    "tickets21": "Email",
+    "tickets22": "Company",
+    "tickets23": "Telegram",
+    "tickets24": "Position",
+    "tickets25": "Marketing vertical",
+    "tickets26": "Promocode"
+  }
+}

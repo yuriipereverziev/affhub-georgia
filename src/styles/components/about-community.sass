@@ -1,0 +1,40 @@
+.about-community
+
+    & .community__wrapper
+        padding-top: 90px
+
+        +rm(1024)
+            padding-top: 140px
+
+.breadcrumps
+    margin-bottom: 26px
+
+    +rm(768)
+        margin-bottom: 30px
+
+    +rm(1024)
+        margin-bottom: 39px
+    
+    &__text
+        color: rgba(255, 255, 255, 0.40)
+
+    &__text-active
+        color: #fff
+
+.header__link--active,
+.nav__link--active
+    position: relative
+        
+    &:before
+        position: absolute
+        content: ""
+        width: 100%
+        height: 2px
+        background: #fff
+        transition: .3s
+        bottom: -2px
+
+.nav__link--active
+
+    +rm(480)
+        font-size: 18px

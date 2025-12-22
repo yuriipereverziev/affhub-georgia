@@ -1,0 +1,16 @@
+section.mastermind
+    .container.block.mastermind__wrapper
+        +picture('master_img', format = 'png', className = 'mastermind__img', breakpoint = null)
+        h2.mastermind__header.text-upper= t.mastermind.header
+        ul.mastermind__list
+            each circle in t.mastermind.circles
+                li.mastermind__item
+                    h3.mastermind__title!= circle.title
+                    p.mastermind__time!= circle.time
+                    p.mastermind__text!= circle.text
+        ul.mastermind__cards.text-upper
+            each card in t.mastermind.cards
+                li.mastermind__cards-item!= card
+
+    .circle__bg.mastermind__circle-bg
+    .circle__bg.circle__bg--pink.mastermind__circle-bg--pink

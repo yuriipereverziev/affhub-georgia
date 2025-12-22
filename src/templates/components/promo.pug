@@ -1,0 +1,31 @@
+section.promo#promo
+
+  .promo__ellipses.ellipses
+    .ellipse.ellipse--blue
+    .ellipse.ellipse--red
+    .ellipse.ellipse--green
+
+  .container.block.promo__wrapper
+    include header
+    .promo__container
+      .promo__inner
+
+        ul.details
+          li.details__item March 27, 2026
+
+          li.details__item
+            a.details__link(href="#location") Tbilisi, Georgia
+
+
+        h1.promo__title.text-upper AFFHUB AFFILIATE CONNECT CONF
+
+
+        picture.promo-hero__block
+          //source(type="image/webp" media="(min-width:480px)" srcset="img/heart.webp")
+          //source(media="(min-width:480px)" srcset="img/heart.png")
+          //source(type="image/webp" media="(min-width:320px)" srcset="img/heart-mob.webp")
+          //source(media="(min-width:320px)" srcset="img/heart-mob.png")
+          img(src="img/heart.png" alt="" width="320" height="432" fetchpriority="high" loading="eager")
+
+        a(href="https://t.me/zavadadmytro", class="btn promo__btn secondary__btn", target="_blank")
+          span.btn__text Become a partner

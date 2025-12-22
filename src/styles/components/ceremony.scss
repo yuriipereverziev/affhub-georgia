@@ -1,0 +1,288 @@
+#ceremony {
+  display: block;
+}
+
+.ceremony {
+  &__mask {
+    max-width: 180px;
+    margin: 0 auto;
+    margin-bottom: -58px;
+    display: block;
+
+    @include rm(640) {
+      max-width: 190px;
+      margin-bottom: -61px;
+    }
+
+    @include rm(768) {
+      max-width: 200px;
+      margin-bottom: -61px;
+    }
+
+    @include rm(1024) {
+      max-width: 220px;
+      margin-bottom: -67px;
+    }
+
+    @include rm(1220) {
+      max-width: 270px;
+      margin-bottom: -86px;
+    }
+
+    @include rm(1360) {
+      max-width: 333px;
+      margin-bottom: -107px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0 !important;
+    text-shadow: 4px 4px 10px #000;
+
+    @include rm(480) {
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include rm(640) {
+      max-width: 470px;
+    }
+
+    @include rm(768) {
+      max-width: 540px;
+    }
+
+    @include rm(1220) {
+      max-width: 730px;
+    }
+
+    @include rm(1360) {
+      max-width: 790px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+    padding-top: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $ital-font;
+    @include text-size(26, 30);
+
+    @include rm(480) {
+      padding-top: 30px;
+    }
+
+    @include rm(768) {
+      margin-bottom: 20px;
+    }
+
+    @include rm(1024) {
+      padding-top: 50px;
+    }
+
+    @include rm(1220) {
+      margin-bottom: 23px;
+      padding-top: 77px;
+    }
+  }
+
+  .diamond-1 {
+    display: none;
+
+    @include rm(480) {
+      width: 8.7%;
+      top: 23%;
+      left: 2%;
+      bottom: auto;
+      display: block;
+    }
+
+    @include rm(768) {
+      top: 40%;
+    }
+
+    @include rm(1024) {
+      top: 48%;
+      left: 1%;
+    }
+
+    @include rm(1220) {
+      top: 55%;
+    }
+
+    @include rm(1360) {
+      top: 60%;
+    }
+
+    &::before {
+      top: 1%;
+      left: 53%;
+      animation-delay: 1.5s;
+    }
+  }
+
+  .diamond-2 {
+    width: 11.18%;
+    top: 11%;
+    left: auto;
+    right: 9%;
+
+    @include rm(1024) {
+      width: 11.18%;
+      top: 26%;
+      left: auto;
+      right: 9%;
+    }
+
+    &::before {
+      top: 1%;
+      left: 1%;
+    }
+  }
+
+  .diamond-3 {
+    width: 8.09%;
+    top: auto;
+    left: 29%;
+    bottom: -4%;
+
+    @include rm(480) {
+      bottom: -6%;
+    }
+
+    @include rm(640) {
+      bottom: -7%;
+    }
+
+    @include rm(768) {
+      left: 20%;
+      bottom: -9%;
+    }
+
+    @include rm(1024) {
+      left: 29%;
+      bottom: -14%;
+    }
+
+    &::before {
+      top: -12%;
+      left: 56%;
+    }
+  }
+
+  .diamond-4 {
+    display: none;
+
+    @include rm(768) {
+      width: 4.49%;
+      top: auto;
+      left: auto;
+      right: 2%;
+      bottom: 4%;
+      display: block;
+    }
+  }
+}
+
+.ceremony-list {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  @include rm(1024) {
+    max-width: 780px;
+  }
+
+  @include rm(1220) {
+    max-width: 1000px;
+    gap: 30px;
+  }
+
+  @include rm(1360) {
+    max-width: 1090px;
+  }
+
+  &__item {
+    width: 100%;
+    transition: transform 0.2s, color 0.2s;
+    position: relative;
+    z-index: 0;
+
+    @include rm(480) {
+      width: calc((100% - 15px) / 2);
+    }
+
+    @include rm(768) {
+      width: calc((100% - 30px) / 3);
+    }
+
+    @include rm(1024) {
+      width: calc((100% - 60px) / 4);
+    }
+
+    @include rm(1220) {
+      width: calc((100% - 120px) / 5);
+    }
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        linear-gradient(0deg, rgba(255, 238, 0, 0.20) 0%, rgba(255, 238, 0, 0.20) 100%), linear-gradient(100deg, #FFC933 8.21%, #473D1A 21.2%, #B48D00 31.35%, #D59C00 39.87%, #71600B 48.8%, #EBC31A 58.95%, #7A650D 67.88%, #A17F04 87.77%, #FFC933 100%);
+      opacity: 0;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      color: #000;
+      transform: scale(1.05);
+
+      @include rm(1220) {
+        transform: scale(1.1);
+      }
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.2;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.5s;
+    position: relative;
+
+    @include rm(480) {
+      display: flex;
+    }
+
+    @include rm(1220) {
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: #000;
+    }
+  }
+}

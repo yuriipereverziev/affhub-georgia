@@ -1,0 +1,48 @@
+-
+  const speakersTitle = 'Speakers'
+  const learnMoreText = 'learn more'
+  const secretSpeakerLabel = 'Secret speaker'
+
+  const speakersList = [
+    { name: 'Andrii Kartsev', position: 'Head of One Media Nutra Team', img: 'speaker-1' },
+    { name: 'Nikita Koshelyuk', position: 'CEO Trident Media', img: 'speaker-3' },
+    { name: 'Miroslav Liaskovez', position: 'Founder of LeadMarketing, expert in online advertising and traffic arbitrage', img: 'speaker-4' },
+    { name: 'Iryna', position: 'Head of Affiliates FRBS Team', img: 'speaker-6' },
+    { name: 'Nikolay Popov', position: 'Head of Services AdKey.Agency', img: 'speaker-7' },
+    { name: 'Dmytro Miasnikov', position: 'Chief Operating Officer AdKey.Agency', img: 'speaker-8' },
+    { name: 'Alex Emelian', position: 'Co-founder, Co-CEO, Simple', img: 'speaker-9' },
+    // ... добавь остальных спикеров по аналогии
+  ]
+
+.block.speakers.speakers__wrapper#speakers
+  .container
+
+
+
+    .speakers__top
+
+      h2.speakers__title.title= speakersTitle
+
+      button.speakers__arrow.speakers__arrow--prev
+        svg(xmlns='http://www.w3.org/2000/svg' width='28' height='20' fill='none')
+          path(fill='#100730' d='M10.762 19.603c-.52.53-1.365.53-1.886 0L.391 10.96c-.521-.53-.521-1.39 0-1.92L8.876.398c.521-.53 1.365-.53 1.886 0s.52 1.39 0 1.92l-6.21 6.324h22.115C27.403 8.642 28 9.25 28 10s-.597 1.358-1.333 1.358H4.552l6.21 6.324c.52.53.52 1.39 0 1.92')
+
+      button.speakers__arrow.speakers__arrow--next
+        svg(xmlns='http://www.w3.org/2000/svg' width='28' height='20' fill='none')
+          path(fill='#100730' d='M17.238 19.603c.52.53 1.365.53 1.886 0l8.486-8.643c.52-.53.52-1.39 0-1.92L19.124.398a1.317 1.317 0 0 0-1.886 0c-.52.53-.52 1.39 0 1.92l6.21 6.324H1.333C.597 8.642 0 9.25 0 10s.597 1.358 1.333 1.358h22.115l-6.21 6.324c-.52.53-.52 1.39 0 1.92')
+
+
+    .speakers__inner.swiper
+      .speakers__wrapper.swiper-wrapper
+        // each speaker, index in speakersList
+        //   .speakers__slide.swiper-slide
+        //     +picture(speaker.img, format='png', className='speakers__img', breakpoint=null)
+        //     .speakers__desc
+        //       span.speakers__name= speaker.name
+        //       span.speakers__position= speaker.position
+
+        //- Пример секретного спикера
+        each i in [1,2,3,4,5,6,7,8,9]
+           .speakers__slide.speakers__slide--secret.swiper-slide
+             +picture('speaker', format='png', className='speakers__img', breakpoint=null)
+             .speakers__label.text-upper= secretSpeakerLabel

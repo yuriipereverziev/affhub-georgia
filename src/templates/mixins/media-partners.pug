@@ -1,0 +1,435 @@
+mixin media-partners(modifier)
+  -
+    const mediaPartners = [
+      {
+        href: "https://affhub.media/",
+        img: "img/affhub-media.png",
+      },
+      {
+        href: "https://t.me/ftdcompany",
+        img: "img/ftd.svg"
+      },
+      {
+        href: "https://t.me/real_target",
+        img: "img/real_target.png",
+        //- w: '152',
+        //- h: '58',
+      },
+      //- {
+      //-   href: "https://www.instagram.com/affiliatepadelclub",
+      //-   img: "img/padel_club.svg"
+      //- },
+      {
+        href: "https://www.instagram.com/ev_mediaaa",
+        img: "img/ev_media.png"
+      },
+      {
+        href: "https://www.instagram.com/panch_agency/",
+        img: "img/panch_agency.svg"
+      },
+      {
+        href: "https://leadpanda.media/",
+        img: "img/lead_panda.svg"
+      },
+      {
+        href: "https://palai.media/",
+        img: "img/palai.svg"
+      },
+      {
+        href: "https://onepartners.io/",
+        img: "img/one_partners.svg"
+      },
+      {
+        href: "https://t.me/buyermedia",
+        img: "img/buyer_media.png",
+      },
+      //- {
+      //-   href: "https://arbitrageup.net/",
+      //-   img: "img/arbitrage_up.svg"
+      //- },
+      //- {
+      //-   href: "https://trafficake.com/uk/",
+      //-   img: "img/traffic_cake.png"
+      //- },
+      {
+        href: "https://www.instagram.com/onemedia.io/?hl=en",
+        img: "img/one_media.svg"
+      },
+      {
+        href: "https://wildwildapps.com/index-eng.php",
+        img: "img/wwg.png"
+      },
+
+
+      //- {
+      //-   href: "https://cgs.group/#affiliates",
+      //-   img: "img/cgs.svg"
+      //- },
+      //- {
+      //-   href: "https://t.me/affwriter",
+      //-   img: "img/affiliate_journalist.svg"
+      //- },
+      //- {
+      //-   href: "https://affpapa.com/",
+      //-   img: "img/affpapa.svg"
+      //- },
+      //- {
+      //-   href: "https://t.me/lilgambling12",
+      //-   img: "img/lilgambling.png"
+      //- },
+      //- {
+      //-   href: "https://affx.academy/ua/",
+      //-   img: "img/affx.png"
+      //- },
+      //- {
+      //-   href: "https://www.clickdealer.com/",
+      //-   img: "img/clickdealer.svg"
+      //- },
+      //- {
+      //-   href: "https://datify.link/en?utm_source=affhub&utm_medium=promo&utm_campaign=media",
+      //-   img: "img/datafy.png"
+      //- },
+      //- {
+      //-   href: "https://t.me/imortalfb",
+      //-   img: "img/imortal.png"
+      //- },
+      //- {
+      //-   href: "https://www.instagram.com/ahri_community/",
+      //-   img: "img/ahri.png"
+      //- },
+      //- {
+      //-   href: "https://fellows.team/",
+      //-   img: "img/fellows.png"
+      //- },
+      //- {
+      //-   href: "https://hwyd.media/",
+      //-   img: "img/hwyd.svg"
+      //- },
+      //- {
+      //-   href: "https://igaming.club/",
+      //-   img: "img/igaming.png"
+      //- },
+      //- {
+      //-   href: "https://improveads.agency/",
+      //-   img: "img/improve.png"
+      //- },
+      //- {
+      //-   href: "https://www.instagram.com/sempro.ukraine/?hl=en",
+      //-   img: "img/sempro.svg"
+      //- },
+      //- {
+      //-   href: "https://www.instagram.com/hr.community.ua/?igsh=MjI5bXBuYWZrYnE0#",
+      //-   img: "img/hr_community.svg"
+      //- },
+      //- {
+      //-   href: "https://www.instagram.com/ahri_community/",
+      //-   img: "img/traffic_devils.svg"
+      //- },
+      //- {
+      //-   href: "https://t.me/affiliate_poland",
+      //-   img: "img/aff-poland.png"
+      //- },
+      //- {
+      //-   href: "https://www.instagram.com/onemedia.io/?hl=en",
+      //-   img: "img/one_media-small.svg"
+      //- },
+      //- {
+      //-   href: "https://www.instagram.com/muus.agency?igsh=MTNjeTFpZHJqcWRnNw%3D%3D",
+      //-   img: "img/muus.svg"
+      //- },
+      //- {
+      //-   href: "https://t.me/kupets_traf",
+      //-   img: "img/kupets.svg"
+      //- },
+      {
+        href: "https://spaceprofit.team/",
+        img: "img/spt.svg"
+      },
+      //- {
+      //-   href: "https://thedvizh.com/",
+      //-   img: "img/dvizh.svg"
+      //- },
+      {
+        href: "https://tsquad.net/",
+        img: "img/traffic_squad.png"
+      },
+      //- {
+      //-   href: "https://traffcore.com/ru",
+      //-   img: "img/traforce.svg"
+      //- },
+      //- {
+      //-   href: "https://wintevents.com/",
+      //-   img: "img/wint_events.svg"
+      //- },
+      //- {
+      //-   href: "https://wildwildapps.com/index-eng.php",
+      //-   img: "img/wwa.png"
+      //- },
+      //- {
+      //-   href: "https://trident-media.agency/",
+      //-   img: "img/trident.svg"
+      //- },
+      //- {
+      //-   href: "https://gambling.sharklink.org/?utm_source=affhub444&utm_medium=affhub444",
+      //-   img: "img/sharklink.png"
+      //- },
+      //- {
+      //-   href: "https://traffic.one/",
+      //-   img: "img/traffic-one.svg"
+      //- },
+      //- {
+      //-   href: "https://adkey.agency/",
+      //-   img: "img/adkey.svg"
+      //- },
+      //- {
+      //-   href: "https://greyhunter.co/uk",
+      //-   img: "img/greyhunter.svg"
+      //- },
+      //- {
+      //-   href: "https://www.instagram.com/ya.brand.agency/",
+      //-   img: "img/yb.png"
+      //- },
+      //- //- {
+      //- //-     href: "https://g.partners/",
+      //- //-     img: "img/gparthers.png"
+      //- //- },
+      //- {
+      //-   href: "https://affminer.com/",
+      //-   img: "img/affminer.jpg"
+      //- },
+      //- //- {
+      //- //-     href: "https://jimpartners.com/?fbclid=PAZXh0bgNhZW0CMTEAAaeSWJCgvMddRohaCv2FIfOT6SNp3qC8B911-yPugP_sc3N0MYSCMDjjQekDCg_aem_VIg-pQbUalr4Rw-1v8F-gQ",
+      //- //-     img: "img/jimpartners.svg"
+      //- //- },
+      //- {
+      //-   href: "https://offer.one/",
+      //-   img: "img/offer-one.svg"
+      //- },
+      //- {
+      //-   href: "https://bitmedia.io/?r=lxmvuc0c&gad_source=1&gad_campaignid=21403644409&gbraid=0AAAAAqL4ZScxsD2e3Ku4n9KJkmWBLDPAx&gclid=CjwKCAjwkbzEBhAVEiwA4V-yqkF1hDgJqzqnCiaMFZG3nx0GjozZZ4sWzHatutJizpBdthbqwZF7FBoCh8AQAvD_BwE",
+      //-   img: "img/bitmedia-io.svg"
+      //- },
+      //- {
+      //-   href: "https://simple.app/ua/",
+      //-   img: "img/dark-simple.svg"
+      //- },
+      //- {
+      //-   href: "https://www.affnext.com/",
+      //-   img: "img/affnext-white.png"
+      //- },
+      //- {
+      //-   href: "https://affmaven.com/",
+      //-   img: "img/affmaven.png"
+      //- },
+      //- {
+      //-   href: "https://aff.ninja/",
+      //-   img: "img/aff-ninja.png"
+      //- },
+      //- {
+      //-   href: "https://gamblersconnect.com/",
+      //-   img: "img/gamblers.png"
+      //- },
+      //- {
+      //-   href: "https://salesdoubler.pro/ru/",
+      //-   img: "img/salesdoubler.svg"
+      //- },
+      //- {
+      //-   href: "https://adpaycards.com/",
+      //-   img: "img/adpay.png"
+      //- },
+      //- {
+      //-   href: "https://t.me/wtf_with_google",
+      //-   img: "img/wfo.png"
+      //- },
+      //- {
+      //-   href: "https://www.instagram.com/traforce.network/?igsh=MTdkbmNzdDUzZ2NyNw%3D%3D#",
+      //-   img: "img/traforce-network.svg"
+      //- },
+      //- {
+      //-   href: "https://www.igamingtoday.com/",
+      //-   img: "img/igaming-today.png"
+      //- },
+      //- {
+      //-   href: "https://www.huidu.io/en/",
+      //-   img: "img/huidu.svg"
+      //- },
+      //- {
+      //-   href: "t.me/yasher2324",
+      //-   img: "img/yasher.png"
+      //- },
+      //- {
+      //-   href: "https://evadav.com/ru",
+      //-   img: "img/evadav.svg"
+      //- },
+      //- {
+      //-   href: "https://t.me/zloytraff",
+      //-   img: "img/zloytraff.png"
+      //- },
+      //- {
+      //-   href: "https://t.me/zombietrafficc",
+      //-   img: "img/zombi.png"
+      //- },
+      //- {
+      //-   href: "https://www.casinoreviews.net/",
+      //-   img: "img/casino_reviews.svg"
+      //- },
+      //- {
+      //-   href: "https://gamblingtalk.net/",
+      //-   img: "img/gambling.png"
+      //- },
+      //- {
+      //-   href: "https://www.igamingcafe.com/",
+      //-   img: "img/igamingcafe.png"
+      //- },
+      //- {
+      //-   href: "https://www.thebettingcoach.com/en/",
+      //-   img: "img/thebettingcoach.png"
+      //- },
+      //- {
+      //-   href: "https://t.me/+s_Kw5Hag5Do1YmYy",
+      //-   img: "img/foks.png"
+      //- },
+      //- {
+      //-   href: "https://t.me/road_to_100m",
+      //-   img: "img/finikoff.png"
+      //- },
+      //- {
+      //-   href: "https://t.me/joker_traffic_arbit",
+      //-   img: "img/joker_traffic.png"
+      //- },
+      //- {
+      //-   href: "https://t.me/traffswear",
+      //-   img: "img/traffswear.png"
+      //- },
+      //- {
+      //-   href: "https://t.me/lil_traffff",
+      //-   img: "img/lil_traff.png"
+      //- },
+      //- {
+      //-   href: "https://incrypted.events/",
+      //-   img: "img/incrypted.svg"
+      //- },
+      //- {
+      //-   href: "https://growe.partners/",
+      //-   img: "img/growe.svg"
+      //- },
+      {
+        href: "https://affpro.com/",
+        img: "img/affpro.png"
+      },
+      {
+        href: "https://wintevents.com/",
+        img: "img/wint_events.svg"
+      },
+      {
+        href: "https://hwyd.media/",
+        img: "img/hwyd.png"
+      },
+      {
+        href: "https://everad.com/",
+        img: "img/everad.svg"
+      },
+      {
+        href: "https://www.instagram.com/ahri_community/",
+        img: "img/devils.svg"
+      },
+      {
+        href: "https://gambling.sharklink.org",
+        img: "img/sharklink.png"
+      },
+      {
+        href: "https://affiliate.makeberry.com/",
+        img: "img/makeberry.svg"
+      },
+      {
+        href: "https://gambeat.io/",
+        img: "img/gamebeat.svg"
+      },
+      {
+        href: "https://www.instagram.com/muus.agency",
+        img: "img/muus.png"
+      },
+      {
+        href: "https://traffter.com/",
+        img: "img/traffter.svg"
+      },
+      {
+        href: "https://www.instagram.com/holytraff/",
+        img: "img/holy_traff.svg"
+      },
+      {
+        href: "https://www.instagram.com/datingtraffic.experts",
+        img: "img/dating-traffic.svg"
+      },
+      {
+        href: "https://rockitmedia.io",
+        img: "img/rockit.svg"
+      },
+      {
+        href: "https://www.instagram.com/2b_digital.agency/",
+        img: "img/2b_digital.svg"
+      },
+      {
+        href: "https://leadpanda.agency/",
+        img: "img/lead_panda.svg"
+      },
+      {
+        href: "https://leadtimes.media/",
+        img: "img/leadtimes.svg"
+      },
+      {
+        href: "https://affcatalog.com/en/",
+        img: "img/affcatalog.png"
+      },
+      {
+        href: "https://masons.partners/?utm_source=affhub",
+        img: "img/masons.png"
+      },
+      {
+        href: "https://www.instagram.com/frbs.team.eng/?igsh=dzgzMHhkYTh5cDF5",
+        img: "img/frbs.png"
+      },
+      {
+        href: "https://cgs.group/#affiliates",
+        img: "img/cg-solutions.png"
+      },
+      {
+        href: "https://t.me/woman_gambling",
+        img: "img/woman-gambling.png"
+      },
+      {
+        href: "https://ahri.devils.inc/",
+        img: "img/ahri.png"
+      },
+      {
+        href: "https://www.rivni.net.ua/",
+        img: "img/rivni.png"
+      },
+      {
+        href: "https://spinarium.partners",
+        img: "img/spinarium.svg"
+      },
+      {
+        href: "https://www.instagram.com/yosa_live/",
+        img: "img/yosa.svg"
+      },
+      {
+        href: "https://13partners.net/",
+        img: "img/13-partners.png"
+      },
+      {
+        href: "https://t.me/kupets_traf",
+        img: "img/ku-traf.png"
+      },
+      {
+        href: "https://t.me/facebookovich",
+        img: "img/fbo.png"
+      },
+
+    ]
+
+  .media-partners-list
+    each partner in mediaPartners
+      .partners__ticker-item
+        a(href=partner.href, class="partners__link" target="_blank").shine-gold
+          img(src=basePath + partner.img, alt="" loading="lazy" width=152 height=158 fetchpriority="low" decoding="async")

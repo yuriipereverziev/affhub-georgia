@@ -1,0 +1,192 @@
+.speakers
+  &__wrapper
+
+    +rm(1024)
+      padding-bottom: 45px
+
+    +rm(1230)
+      padding-bottom: 45px
+
+  &__top
+    margin-bottom: 26px
+    +flex($justify: flex-start, $gap: 20px)
+
+    +rm(480)
+      margin-bottom: 32px
+
+    +rm(640)
+      margin-bottom: 38px
+
+    +rm(768)
+      margin-bottom: 44px
+
+    +rm(1024)
+      margin-bottom: 50px
+
+    +rm(1230)
+      margin-bottom: 56px
+
+  &__title
+    margin-bottom: 0
+    margin-right: auto
+
+    +rm(480)
+      margin-bottom: 0
+
+    +rm(640)
+      margin-bottom: 0
+
+    +rm(768)
+      margin-bottom: 0
+
+    +rm(1024)
+      margin-bottom: 0
+
+    +rm(1230)
+      margin-bottom: 0
+
+  &__arrow
+    width: 35px
+    height: 35px
+    border-radius: 10px
+    border: 1px solid #DA85FF85
+    background: white
+    +flex($gap: 0)
+    cursor: pointer
+    transition: .2s
+
+    +rm(640)
+      width: 40px
+      height: 40px
+
+    +rm(1024)
+      width: 50px
+      height: 50px
+
+    +rm(1230)
+      width: 56px
+      height: 56px
+
+    &:hover
+      border-color: #ff06b4
+      //background: rgba(0, 0, 0, .5)
+
+      svg path
+        fill: #ff06b4
+
+  &__arrow--next
+
+    svg
+      //transform: rotate(180deg)
+
+      path
+        transition: fill .2s
+
+  &__arrow.swiper-button-disabled
+    opacity: 0.4
+    cursor: default
+    pointer-events: none
+    border-color: rgba(255, 255, 255, 0.3)
+    background: rgba(255, 255, 255, 0.05)
+
+    svg path
+      fill: rgba(255, 255, 255, 0.3)
+
+  &__inner
+    touch-action: pan-y
+
+  &__wrapper
+    width: 320px
+    margin-left: auto
+    margin-right: auto
+    will-change: transform
+
+    +rm(480)
+      width: 480px
+
+    +rm(640)
+      width: 640px
+
+    +rm(768)
+      width: 768px
+
+    +rm(1024)
+      width: 100%
+
+  &__slide
+    $slide-w: 310px
+    $circle-w: 346px
+    $cir-color: red
+    overflow: hidden
+    position: relative
+    border-radius: 24px
+    //background: url("../img/speaker-bg.svg") no-repeat center center / cover
+    //aspect-ratio: 277/345
+    width: $slide-w
+    backface-visibility: hidden
+    transform: translateZ(0)
+
+    &::after
+
+      +rm(1024)
+        z-index: 0
+        position: absolute
+        top: 0
+        left: -($circle-w - $slide-w) / 2
+        content: ""
+        display: block
+        aspect-ratio: 1/1
+        width: $circle-w
+        background: radial-gradient($cir-color 10%, transparent)
+        filter: blur(14px)
+        border-radius: 50%
+
+    &--secret
+      &::after
+        content: none
+
+  &__img
+    position: relative
+    z-index: 1
+    object-fit: cover
+    object-position: center top
+    height: 100%
+    width: 320px
+
+  &__desc
+    position: absolute
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 2
+    display: flex
+    flex-direction: column
+    border: 1px solid rgba(255, 255, 255, .25)
+    padding: 20px
+    // background: rgba(18, 18, 18, .8)
+    backdrop-filter: blur(25px)
+    background: rgba(18, 18, 18, .4)
+
+    +rm(1024)
+
+  &__name
+    font-family: $headers-font
+    text-transform: uppercase
+    font-size: 17px
+    margin-bottom: 4px
+
+  &__position
+    font-family: $main-font
+    font-size: 14px
+
+  &__label
+    z-index: 1
+    position: absolute
+    bottom: 20px
+    left: 15px
+    width: 100px
+    font-size: 16px
+    font-family: $headers-font
+
+    +rm(768)
+      font-size: 18px

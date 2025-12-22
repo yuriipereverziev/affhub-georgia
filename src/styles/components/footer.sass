@@ -1,0 +1,153 @@
+.footer
+
+    &.block
+      +rm(1220)
+        padding-top: 0 !important
+    &__logo
+        pointer-events: none
+    // background: #1D1D1D
+
+    &__wrapper
+
+        +rm(1024)
+
+        +rm(1220)
+
+    &__logo-link
+        width: 120px
+        display: block
+        margin: 0 auto 22px
+
+        +rm(640)
+            margin-bottom: 26px
+
+        +rm(1024)
+            margin-bottom: 26px
+            margin: 0 0 31px 0
+        +rm(1220)
+            margin-bottom: 41px
+
+    &__inner
+        margin-bottom: 26px
+
+        +rm(480)
+            margin-bottom: 32px
+
+        +rm(640)
+            margin-bottom: 38px
+            +flex($justify: space-between, $align: stretch, $gap: 0, $wrap: wrap)
+
+        +rm(768)
+            margin-bottom: 44px
+
+        +rm(1024)
+            margin-bottom: 50px
+            flex-wrap: nowrap
+            justify-content: flex-start
+
+        +rm(1220)
+            margin-bottom: 60px
+
+    &__text
+        text-align: center
+        font-weight: 200
+        font-size: 16px
+        line-height: 1.35
+        margin-bottom: 20px
+        //opacity: .3
+
+        +rm(1024)
+            width: 37%
+            text-align: left
+            margin: 0 auto 0 0
+
+        +rm(1360)
+            width: 32%
+            margin-right: 140px
+
+    &__links
+        +flex($justify: space-between, $align: flex-start, $gap: 15px, $wrap: wrap)
+        width: 290px
+        margin: 0 auto 20px
+
+        +rm(640)
+            width: 250px
+            margin: 0
+
+        +rm(1024)
+            width: 220px
+            margin-right: 50px
+
+        +rm(1220)
+            margin-right: 130px
+            width: 272px
+        +rm(1360)
+            width: 330px
+            margin-right: 120px
+
+    &__link
+        width: 30%
+        font-size: 16px
+        text-transform: uppercase
+        //font-family: $ital-font
+        position: relative
+        color: #100730
+        transition: all .2s
+
+        +rm(640)
+            width: 33%
+
+        &:hover
+          text-decoration: underline
+            //color: #a39800
+
+    &__socila-inner
+        width: 290px
+        margin: 0 auto
+        +flex($justify: space-between, $gap: 0)
+
+        +rm(640)
+            width: inherit
+            gap: 20px
+            margin-bottom: 25px
+            justify-content: flex-start
+
+        +rm(1024)
+
+    &__social-link
+
+        & .icon stop
+            stop-color: #000000
+            transition: stop-color 0.3s ease
+
+        &:hover
+
+            stop
+              stop-color: #FF57C6
+
+
+
+    &__policy
+        width: 290px
+        margin: 0 auto
+        +flex($justify: space-between, $gap: 20px 15px, $wrap: wrap)
+
+        +rm(640)
+            width: 280px
+
+        .footer__link
+            width: fit-content
+
+    &__footnote
+        font-size: 14px
+        text-align: center
+        line-height: 1.57
+
+        +rm(640)
+            text-align: left
+
+    &__copy
+        text-align: center
+        font-size: 14px
+        font-weight: 200
+        //opacity: 0.3

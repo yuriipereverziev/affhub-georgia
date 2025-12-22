@@ -1,0 +1,33 @@
+section.charity
+    .container.block.charity__wrapper
+        h2.charity__title.title!= t.charity.title
+        ul.lots
+            li.lots__items
+                .flip
+                    .flip__front
+                        .lots__picture
+                            +picture('lot_secret', format = 'png', className = 'lots__img', breakpoint = null)
+                        .lots__info
+                            h3.lots__title.text-upper!= t.charity.secretLot
+                    //- .flip__back
+                    //-     p.flip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum?
+            li.lots__items
+                .flip
+                    .flip__front
+                        .lots__picture
+                            +picture('lot_secret', format = 'png', className = 'lots__img', breakpoint = null)
+                        .lots__info
+                            h3.lots__title.text-upper!= t.charity.secretLot
+                    //- .flip__back
+                    //-     p.flip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum?
+            li.lots__items
+                .flip
+                    .flip__front
+                        .lots__picture
+                            +picture('lot_secret', format = 'png', className = 'lots__img', breakpoint = null)
+                        .lots__info
+                            h3.lots__title.text-upper!= t.charity.secretLot
+                    //- .flip__back
+                    //-     p.flip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda eos esse ex excepturi in non pariatur provident, temporibus voluptatum?
+
+    .strips__container(data-stripes='2')

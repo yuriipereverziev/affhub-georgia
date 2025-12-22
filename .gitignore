@@ -1,0 +1,50 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build output
+.out/
+.next/
+.vite/
+.vercel/
+build/*.zip
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Testing
+coverage/
+*.lcov
+
+# GitHub Codespaces
+.devcontainer/
+
+# Optional (if you use Lint/Stylint cache)
+.eslintcache
+.stylelintcache
+
+# Optional lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

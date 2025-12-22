@@ -1,0 +1,150 @@
+.mastermind 
+    position: relative
+    animation: lift-up-parent 3s ease-in-out infinite
+
+    &__wrapper
+
+        +rm(1024)
+            padding-top: 45px
+
+        +rm(1230)
+            padding-top: 45px
+
+    &__img
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 25))
+        animation: lift-up-img 3s ease-in-out infinite
+        margin: 0 auto
+
+    &__header
+        +text-size(34, 64)
+        margin-bottom: 40px
+        text-align: center
+
+        +rm(480)
+            margin-bottom: 50px
+
+        +rm(640)
+            margin-bottom: 60px
+
+        +rm(768)
+            margin-bottom: 70px
+
+        +rm(1024)
+            margin-bottom: 80px
+
+        +rm(1230)
+            margin-bottom: 100px
+
+    &__list
+        margin-bottom: 30px
+
+        +rm(480)
+            margin-bottom: 36px
+            +flex($align: flex-start, $gap: 20px, $wrap: wrap)
+
+        +rm(640)
+            margin-bottom: 42px
+            justify-content: space-around
+
+        +rm(768)
+            margin-bottom: 48px
+            justify-content: center
+
+        +rm(1024)
+            margin-bottom: 60px
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+
+        +rm(1230)
+            margin-bottom: 78px
+            width: 100%
+
+    &__item
+        border-radius: 50%
+        width: 220px
+        height: 220px
+        margin: 0 auto
+        text-align: center
+        +flex($direction: column, $gap: 22px, $wrap: nowrap)
+        background: rgba(18, 18, 18, 0.10)
+        border: 1px solid rgba(249, 249, 249, 0.20)
+
+        +rm(480)
+            width: 210px
+            height: 210px
+
+        +rm(640)
+            width: 220px
+            height: 220px
+            margin: 0
+
+        &:nth-child(even) 
+
+            +rm(1230)
+                margin-top: 50px
+            
+
+        &:not(:last-of-type)
+            margin-bottom: 15px
+
+            +rm(480)
+                margin-bottom: 0
+
+    &__title
+        text-transform: uppercase
+
+    &__time
+        color: #F207FD
+        font-family: $headers-font
+        font-size: 24px
+
+    &__text
+        line-height: 1.1
+
+    &__cards
+        +flex($align: flex-start, $gap: 15px, $wrap: wrap)
+
+    &__cards-item
+        width: calc( 50% - 10px )
+        max-width: 183px
+        padding: 20px
+        text-align: center
+        +gradient(93deg, #1069E6, #9C00F0, #FF06B4)
+        font-family: $headers-font
+
+        +rm(480)
+            padding-top: 22px
+            padding-bottom: 22px
+
+    &__circle-bg
+        top: 10%
+
+        +rm(768)
+            top: 30%
+
+        +rm(1230)
+            top: 20%
+
+    &__circle-bg--pink
+        top: 10%
+
+        +rm(768)
+            top: 30%
+
+        +rm(1230)
+            top: 20%
+
+@keyframes lift-up-img 
+  0%, 100% 
+    transform: translateY(0)
+  
+  50% 
+    transform: translateY(-5px)
+
+@keyframes lift-up-parent 
+  0%, 100% 
+    transform: translateY(0)
+
+  50% 
+    transform: translateY(-15px)

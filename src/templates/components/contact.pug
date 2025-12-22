@@ -1,0 +1,20 @@
+section.contact.block
+    .container.contact__wrapper
+        h2.title.contact__title.text-upper Contact us
+        a(href="https://t.me/zavadadmytro", target="_blank", class="contact__main-link")
+            img(src=basePath + "img/contact_qr.svg", class="contact__img", alt=""  loading="lazy" width="150" height="150" fetchpriority="low" decoding="async")
+        h3.contact__subtitle.text-upper!= t.contact.subtitle
+        a(href="mailto:" + t.contact.email, class="contact__link")!= t.contact.email
+
+        picture.diamond.diamond-1
+          source(type="image/webp" media="(min-width:480px)" srcset="img/d12.webp")
+          source(media="(min-width:480px)" srcset="img/d12.png")
+          source(type="image/webp" media="(min-width:320px)" srcset="img/d12-mob.webp")
+          source(media="(min-width:320px)" srcset="img/d12-mob.png")
+          img(src="img/d12.png" alt="" loading="lazy" width="52" height="47" fetchpriority="low" decoding="async")
+        picture.diamond.diamond-2
+          source(type="image/webp" media="(min-width:480px)" srcset="img/d8.webp")
+          source(media="(min-width:480px)" srcset="img/d8.png")
+          source(type="image/webp" media="(min-width:320px)" srcset="img/d8-mob.webp")
+          source(media="(min-width:320px)" srcset="img/d8-mob.png")
+          img(src="img/d8.png" alt="" loading="lazy" width="46" height="49" fetchpriority="low" decoding="async")

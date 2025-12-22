@@ -1,0 +1,168 @@
+.community 
+    position: relative
+
+    +rm(1024)
+        margin-top: -30px
+
+    +rm(1230)
+        margin-top: -20px
+
+    &__wrapper
+        position: relative
+
+    &__img
+        position: absolute
+        width: 290px
+        mix-blend-mode: color-dodge
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 10%
+        mask-image: linear-gradient(to bottom, black 60%, transparent 100%)
+        animation: Pulse 3s infinite ease-in-out
+        pointer-events: none
+
+        +rm(480)
+            width: 320px
+
+        +rm(640)
+            width: 360px
+
+        +rm(768)
+            transform: none
+            left: auto
+            right: 0
+
+        +rm(1024)
+            width: 400px
+            bottom: 0
+
+        +rm(1230)
+            width: 447px
+            bottom: 10%
+
+    &__title
+
+        +rm(768)
+            width: 70%
+            margin-left: auto
+            margin-right: auto
+
+        +rm(1230)
+            width: 60%
+
+    &__inner 
+        margin-bottom: 26px
+
+        +rm(480)
+            margin-bottom: 32px
+        
+        +rm(640)
+            margin-bottom: 38px
+
+        +rm(768)
+            margin-bottom: 44px
+            +flex($justify: space-between, $align: stretch, $gap: 0, $wrap: nowrap)
+
+        +rm(1024)
+            margin-bottom: 50px
+
+        +rm(1230)
+            width: 1129px
+            margin: 0 auto 56px
+
+    &__item
+
+        +rm(768)
+            width: 46%
+
+        +rm(1024)
+            width: 45%
+
+        +rm(1230)
+            width: 484px
+
+        &:not(:last-of-type) 
+            margin-bottom: 20px
+
+            +rm(480)
+                margin-bottom: 25px
+
+            +rm(768)
+                margin-bottom: 0
+
+    &__item--right
+
+        +rm(1230)
+            width: 527px
+
+    &__text
+        line-height: 1.6
+
+        +rm(1024)
+            font-size: 18px
+
+        &:first-of-type
+            margin-bottom: 20px
+
+            +rm(480)
+                margin-bottom: 25px
+
+            +rm(768)
+                min-height: 6lh
+
+            +rm(1024)
+                min-height: 5lh
+                margin-bottom: 35px
+
+            +rm(1230)
+                margin-bottom: 53px
+            
+    &__info
+        +flex($justify: space-between, $gap: 20px 15px, $wrap: wrap) 
+
+        +rm(768)
+            gap: 40px 20px
+
+        +rm(1024)
+            gap: 56px 50px
+
+        +rm(1230)
+            gap: 40px 50px
+
+    &__info-top
+        font-size: 35px
+        background: linear-gradient(95deg, #1963E7 0%, #9803F0 29.22%, #F906B9 54.27%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        display: block
+        font-family: $headers-font
+
+        +rm(480)
+            font-size: 40px
+
+        +rm(1024)
+            font-size: 48px
+
+        +rm(1230)
+            font-size: 56px
+
+    &__info-bottom 
+        font-size: 18px
+
+        +rm(480)
+            font-size: 20px
+
+        +rm(1024)
+            font-size: 22px
+
+        +rm(1230)
+            font-size: 24px
+
+    &__btn
+        margin-bottom: 0
+
+@keyframes Pulse
+  0%, 100%
+    filter: drop-shadow(0 0 5px rgba(429, 18, 22, 0.4))
+  50%
+    filter: drop-shadow(0 0 25px rgba(429, 18, 22, 0.9))

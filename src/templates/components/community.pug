@@ -1,0 +1,21 @@
+section.community#community
+    .container.block.community__wrapper
+        +picture('man', format = 'png', className = 'community__img', breakpoint = 480)
+        h2.community__title.title= t.community.title
+        .community__inner
+            .community__item.community__item--left
+                p.community__text= t.community.text1
+                p.community__text= t.community.text2
+            .community__item.community__item--right
+                p.community__text= t.community.text3
+                .community__info
+                    .community__info-item 
+                        span.community__info-top= t.community.participants_count
+                        span.community__info-bottom= t.community.participants
+                    .community__info-item
+                        span.community__info-top= t.community.sqm_count
+                        span.community__info-bottom= t.community.sqm
+                    .community__info-item
+                        span.community__info-top= t.community.verticals_count
+                        span.community__info-bottom= t.community.verticals
+        a(href="#tickets", class="btn community__btn")!= t.promo.buyTicket

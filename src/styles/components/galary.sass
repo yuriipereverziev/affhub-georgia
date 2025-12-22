@@ -1,0 +1,562 @@
+.galary
+    &.block
+      +rm(1024)
+        padding-bottom: 80px !important
+
+      +rm(1220)
+        padding-bottom: 150px !important
+
+      +rm(1360)
+        padding-bottom: 200px !important
+      +rm(1440)
+        padding-bottom: 150px !important
+      
+    & .container
+
+        +rm(1024)
+            padding-left: 0
+            padding-right: 0
+
+        +rm(1440)
+            width: 1440px
+
+    &__wrapper
+        margin-bottom: 15px
+        padding-top: 20px
+
+        +rm(480)
+            margin-bottom: 20px
+
+        +rm(640)
+            margin-bottom: 25px
+
+        +rm(768)
+            margin-bottom: 40px
+
+        +rm(1024)
+            margin-bottom: 0
+            display: block
+            padding: 0
+
+    &__title
+        
+        +rm(480)
+            font-size: 27px
+
+        +rm(640)
+            font-size: 30px
+
+        +rm(768)
+            font-size: 33px
+
+        +rm(1024)
+            font-size: 37px
+
+        +rm(1230)
+            font-size: 40px
+
+    &__slider
+
+        +rm(1024)
+            height: 640px
+            overflow: visible
+
+            .galary__btns
+                display: none
+    
+    &__slide
+        width: 290px
+
+        &::before
+            position: absolute
+            content: ""
+            background: url(../img/scale.png) no-repeat center center / 80%, rgba(0, 0, 0, .8)
+            width: 30px
+            border-radius: 10px
+            height: 30px
+            bottom: 15px
+            right: 15px
+            pointer-events: none
+
+            +rm(1024)
+                opacity: 0
+                transition: opacity .3s
+                right: auto
+                bottom: auto
+                left: calc( 50% - 15px )
+                top: calc( 50% - 15px )
+                z-index: 11
+            
+        +rm(640)
+            width: 300px
+
+        +rm(768)
+            width: 320px
+
+        +rm(1024)
+            width: inherit
+            position: absolute
+            width: 20%
+            height: auto
+            border: 2px solid transparent
+            transition: .2s
+            overflow: hidden
+
+            &:nth-child(1)
+                top: 0%
+                left: 0%
+                z-index: 4
+
+            &:nth-child(2)
+                top: 0%
+                left: 19%
+                z-index: 2
+
+            &:nth-child(3)
+                top: 0%
+                left: 38%
+                z-index: 6
+
+            &:nth-child(4)
+                top: 0%
+                left: 57%
+                z-index: 9
+
+            &:nth-child(5)
+                top: 0%
+                left: 76%
+                z-index: 3
+
+            &:nth-child(6)
+                top: 11%
+                left: 0%
+                z-index: 5
+
+            &:nth-child(7)
+                top: 20%
+                left: 18%
+                z-index: 7
+
+            &:nth-child(8)
+                top: 20%
+                left: 37%
+                z-index: 4
+
+            &:nth-child(9)
+                top: 20%
+                left: 55%
+                z-index: 6
+
+            &:nth-child(10)
+                top: 20%
+                left: 74%
+                z-index: 8
+
+            &:nth-child(11)
+                top: 33%
+                left: 0%
+                z-index: 2
+
+            &:nth-child(12)
+                top: 40%
+                left: 19%
+                z-index: 5
+
+            &:nth-child(13)
+                top: 33%
+                left: 56%
+                z-index: 9
+
+            &:nth-child(14)
+                top: 39%
+                left: 69%
+                z-index: 6
+
+            &:nth-child(15)
+                top: 53%
+                left: 0%
+                z-index: 3
+
+            &:nth-child(16)
+                width: 24%
+                top: 61%
+                left: 17%
+                z-index: 7
+
+            &:nth-child(17)
+                top: 14%
+                left: auto
+                right: 0%
+                z-index: 1
+
+            &:nth-child(18)
+                top: 34%
+                left: auto
+                right: 0
+                z-index: 5
+
+            &:nth-child(19)
+                top: 55%
+                left: auto
+                right: 0%
+                z-index: 2
+
+            &:nth-child(20)
+                top: 60%
+                left: 66%
+                z-index: 6
+
+            &:nth-child(21)
+                top: 81%
+                left: 62%
+                z-index: 4
+
+            &:nth-child(22)
+                top: 56%
+                left: 43%
+                z-index: 9
+
+            &:nth-child(23)
+                top: 78%
+                left: 23%
+                z-index: 5
+
+            &:nth-child(24)
+                top: 75%
+                left: 0%
+                z-index: 2
+
+            &:hover
+                border-radius: 15px
+                z-index: 10 !important
+                border: 2px solid #fff
+                
+                &::before
+                    opacity: 1
+
+                & .galary__img
+                    transform: scale(1.1)
+
+        +rm(1230)
+
+            &:nth-child(17)
+                top: 9%
+
+            &:nth-child(21)
+                z-index: 9
+
+        +rm(1440)
+            width: 16%
+
+            &:nth-child(2)
+                left: 15%
+
+            &:nth-child(3)
+                left: 30%
+
+            &:nth-child(4)    
+                left: 45%
+
+            &:nth-child(5)
+                left: 60%
+
+            &:nth-child(6)
+                top: 0%
+                left: 75%
+
+            &:nth-child(7)
+                top: 10%
+                left: 0
+                z-index: 10
+
+            &:nth-child(8)
+                left: 15%
+
+            &:nth-child(9)
+                left: 30%
+
+            &:nth-child(10)
+                left: 45%
+
+            &:nth-child(11)
+                width: 25%
+                left: 60%
+                top: 9%
+
+            &:nth-child(12)
+                top: 37%
+                left: 70%
+
+            &:nth-child(13)
+                top: 0
+                left: auto
+                right: 0
+
+            &:nth-child(14)
+                top: 33%
+                left: 0
+
+            &:nth-child(15)
+                top: 41%
+                left: 30%
+
+            &:nth-child(16)
+                top: 43%
+                left: 45%
+
+            &:nth-child(17)
+                top: 43%
+                left: 60%
+
+            &:nth-child(18)
+                top: 48%
+
+            &:nth-child(19)
+                left: 0
+
+            &:nth-child(20)
+                left: 5%
+                top: 82%
+
+            &:nth-child(21)
+                left: 15%
+                top: 73%
+                z-index: 5
+                
+            &:nth-child(22)
+                left: 30%
+
+            &:nth-child(23)
+                left: 45%
+
+            &:nth-child(24)
+                left: 59%
+                
+            &:nth-child(25)
+                top: 60%
+                left: 60%
+                z-index: 3
+
+            &:nth-child(26)
+                top: 80%
+                left: 72%
+                z-index: 7
+
+            &:nth-child(27)
+                top: 57%
+                left: 72%
+                z-index: 4
+
+            &:nth-child(28)
+                top: 70%
+                left: 25%
+                z-index: 6
+
+            &:nth-child(29)
+                top: 65%
+                left: 44%
+                z-index: 8
+
+            &:nth-child(30)
+                top: 83%
+                left: auto
+                right: 0%
+                z-index: 2
+
+            &:nth-child(31)
+                top: 12%
+                left: 10%
+                z-index: 9
+                width: 12%
+
+            &:nth-child(32)
+                top: 63%
+                left: auto
+                right: 0%
+                z-index: 3
+                
+    &__img
+        object-fit: cover
+        object-position: top
+        aspect-ratio: 9 / 6
+        cursor: pointer
+
+        +rm(768)
+            aspect-ratio: 9 / 7
+
+        +rm(1024)
+            aspect-ratio: inherit
+            transition: transform .2s
+
+    &__btns
+        +flex($gap: 120px)
+
+        +rm(480)
+            width: 277px
+            justify-content: space-between
+            gap: 0
+            margin: 0 auto
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+    background: #1963E7
+
+.swiper-pagination-progressbar
+    background: rgba(255, 255, 255, .2)
+
+.modal.open 
+    display: block
+
+.modal
+    display: none
+    overscroll-behavior: contain
+    touch-action: pan-y
+ 
+    &__overlay
+        position: fixed
+        z-index: 15
+        background: rgba(255, 255, 255, .05)
+        backdrop-filter: blur(24px)
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        +flex($gap: 0)
+
+    &__content 
+        position: relative
+        padding: 60px 15px
+        overflow: hidden
+        height: 100%
+
+        +rm(1024)
+            padding-top: 80px
+            padding-bottom: 80px
+
+        +rm(1440)
+            width: 100%
+            max-width: 1530px
+
+        +rm(2560)
+            max-width: 1870px
+
+    &__close 
+        position: absolute
+        top: 25px
+        right: 15px
+        font-size: 34px
+        font-weight: 300
+        background: #000
+        width: 35px
+        height: 35px
+        color: #fff
+        cursor: pointer
+        z-index: 20
+
+        +rm(1024)
+            width: 50px
+            height: 50px
+
+        &::before,
+        &::after
+            content: ""
+            width: 20px
+            height: 1px
+            position: absolute
+            top: 50%
+            left: 50%
+            background: #fff
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+            +rm(1024)
+                width: 30px
+
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+
+    &-slider 
+        width: 100%
+        height: 100%
+        max-width: 450px
+
+        +rm(640)
+            max-width: 610px
+
+        +rm(768)
+            max-width: 730px
+
+        +rm(1024)
+            max-width: 950px
+
+        +rm(1230)
+            max-width: 1170px
+
+        +rm(1440)
+            max-width: 1380px
+
+        +rm(1920)
+            max-width: 1700px
+
+        +rm(2560)
+            max-width: 1840px
+
+    &-slider .swiper-wrapper 
+        align-items: center
+
+    &-slider .swiper-slide
+        align-content: center 
+
+    &-slider img
+        margin: 0 auto
+        max-height: 80vh
+        aspect-ratio: inherit
+        object-position: inherit
+
+        +rm(480)
+            max-width: 80%
+
+        +rm(1024)
+            max-width: 76%
+
+        +rm(1230)
+            max-width: 62%
+
+        +rm(1440)
+            max-width: 74%
+
+        +rm(2560)
+            max-width: 1600px
+
+    & .galary__btns
+        width: calc(100% - 30px)
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 20
+        
+    & .speakers__arrow--next
+        position: absolute
+        right: 30px
+
+        +rm(640)
+            right: 30px
+
+        +rm(1440)
+            right: 45px
+
+    & .speakers__arrow--prev
+        position: absolute
+        left: 0
+
+        +rm(640)
+            left: 0px
+
+        +rm(1440)
+            left: 15px
+
+    & .swiper-pagination
+        color: #fff
+        top: auto !important
+        bottom: 40px !important
+
+    .galary__btns
+      justify-content: space-between

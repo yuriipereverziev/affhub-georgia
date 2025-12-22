@@ -1,0 +1,71 @@
+mixin navLink(target, text, baseClass = '')
+  -
+    let href;
+    let isActive = false;
+
+    // Страницы
+    if (target === 'about') {
+      href = 'about.html';
+      isActive = currentPage === 'about';
+    } else if (target === 'contacts') {
+      href = 'contacts.html';
+      isActive = currentPage === 'contacts';
+    } else {
+      // Якоря на index
+      href = currentPage === 'index'
+              ? `#${target}`
+              : `index.html#${target}`;
+    }
+
+    const classes = isActive
+            ? `${baseClass} active`
+            : baseClass;
+  a(class=classes href=href)= text
+
+
+mixin text(tag, text, className)
+  #{tag}(class=className)&attributes(attributes)
+    = text
+    block
+
+mixin picture(name, format = 'jpg', className = '', breakpoint = null, loading = true, width = null, height = null)
+  -
+    const src = breakpoint ? `img/${name}-mob.${format}` : `img/${name}.${format}`;
+    const srcWebp = breakpoint ? `img/${name}-mob.webp` : `img/${name}.webp`;
+    const srcMob = breakpoint ? basePath + `img/${name}.${format}` : null;
+    const srcWebpMob = breakpoint ? basePath + `img/${name}.webp` : null;
+    const loadingAttr = loading ? 'lazy' : null;
+
+  picture
+    if breakpoint
+      source(media=`(min-width: ${breakpoint}px)`, srcset=srcWebpMob, type='image/webp')
+      source(media=`(min-width: ${breakpoint}px)`, srcset=srcMob)
+
+    source(srcset=basePath + srcWebp, type='image/webp')
+    img(src=basePath + `img/${name}.${format}`, class=className, alt=name, loading=loadingAttr, width=width, height=height)
+
+mixin addImg(imagesCount, imagePaths)
+  - var images = []
+
+  if imagePaths && imagePaths.length
+    each path, index in imagePaths
+      if index < imagesCount
+        - var webpPath = path.replace(/\.(jpg|png)$/, '.webp')
+        - images.push({ src: basePath + path, webp: basePath + webpPath, class: 'colage colage__item' + (index + 1) })
+
+  each image in images
+    picture
+      source(type='image/webp', srcset=image.webp)
+      img(src=image.src, class=image.class, alt='image')
+
+mixin zone-label(label)
+  .label(data-location=label.location)
+    if label.btn
+      a.label__btn(href=label.href target='_blank')= label.btn
+    if label.img
+      a.label__link(href=label.href target='_blank')
+        img.label__img(src=basePath + label.img alt='Partner')
+    if label.text
+      p.label__text!=label.text
+    if !label.text && !label.img
+      p.label__text Вільно

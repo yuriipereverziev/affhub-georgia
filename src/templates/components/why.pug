@@ -1,0 +1,51 @@
+-
+  const whyTitle = 'Why partner with us?'
+
+  const whyItems = [
+    {
+      header: 'Engage with industry leaders',
+      text: 'Connect directly with influential figures and decision-makers within the global affiliate marketing community'
+    },
+    {
+      header: 'Access exclusive networking opportunities',
+      text: 'Receive VIP passes to private events and invite-only gatherings throughout the conference'
+    },
+    {
+      header: 'Build high-value relationships',
+      text: 'Strengthen connections with top-tier clients, strategic partners, and key stakeholders in the affiliate ecosystem'
+    },
+    {
+      header: 'Boost brand visibility',
+      text: 'Position your brand in front of a highly engaged, international audience of affiliates, partners, and media buyers'
+    },
+    {
+      header: 'Maximize ROI with customized proposals',
+      text: 'Benefit from bespoke sponsorship opportunities tailored to align with your goals and deliver measurable impact'
+    },
+    {
+      header: 'Establish thought leadership',
+      text: 'Highlight your company as a forward-thinking innovator at the forefront of affiliate marketing'
+    },
+  ]
+
+  const whyBuyTicketText = 'Buy ticket'
+  const whyBecomePartnerText = 'Become a partner'
+
+section.why.block
+  .container.why__wrapper
+    h2.why__title.title= whyTitle
+
+    ul.why__list
+      each item in whyItems
+        li.why__item.glass
+          h4.why__header= item.header
+          p.why__text= item.text
+
+    .promo__btns.why__btns
+      a(href="index.html#tickets", class="btn promo__btn")= whyBuyTicketText
+      .tooltip__wrapper
+        a(href="https://t.me/zavadadmytro" target="_blank").btn.tooltip__btn.secondary__btn= whyBecomePartnerText
+
+  .circle__bg.why__circle-bg
+  .circle__bg.circle__bg--pink.why__circle-bg--pink
+  .strips__container(data-stripes="2")

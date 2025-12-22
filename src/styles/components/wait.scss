@@ -1,0 +1,96 @@
+.wait {
+  .swiper {
+    @include rm(1024) {
+      overflow: visible;
+    }
+  }
+}
+
+.wait-slider {
+  margin: 0 auto;
+
+  @include rm(768) {
+    max-width: 635px;
+  }
+
+  @include rm(1024) {
+    max-width: none;
+  }
+
+  &__item {
+    transition: transform 0.4s;
+
+    &:hover {
+      @include rm(1024) {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__content {
+    max-width: 305px;
+    margin: 0 auto;
+    position: relative;
+
+    @include rm(640) {
+      max-width: 305px;
+    }
+  }
+
+  &__title {
+    max-width: calc(100% - 20px);
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #000;
+    font-size: 20px;
+    // @include text-size(20, 29);
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: $ital-font;
+    background-color: #fff;
+
+    @include rm(1220) {
+      font-size: 25px;
+    }
+
+    @include rm(1360) {
+      font-size: 30px;
+    }
+  }
+
+  &__buttons {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    @include rm(1024) {
+      display: none;
+    }
+  }
+}
+
+.wait-slider__nav {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  position: static;
+  border: 1px solid #fff;
+  background: 0;
+
+  &--next {
+    transform: scale(1, -1);
+  }
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
