@@ -142,26 +142,28 @@
       //min-height: 100vh
       padding-top: 90px
 
+      &:before
+        position: absolute
+        content: ''
+        top: -170px
+        right: -190px
+        width: 1053px
+        height: 1037px
+        background: url(../img/promo-line.png)
+        background-position: left bottom
+        -webkit-transform: rotate(21deg)
+        transform: rotate(345deg)
+        mix-blend-mode: screen
+        background-size: 972px
+        z-index: 1
+
+
     +rm(1220)
       padding-top: 120px
     +rm(1360)
       padding-top: 180px
       //padding-bottom: 230px
 
-    &:before
-      position: absolute
-      content: ''
-      top: -170px
-      right: -190px
-      width: 1053px
-      height: 1037px
-      background: url(../img/promo-line.png)
-      background-position: left bottom
-      -webkit-transform: rotate(21deg)
-      transform: rotate(345deg)
-      mix-blend-mode: screen
-      background-size: 972px
-      z-index: 1
 
 
   &__container

@@ -1,20 +1,24 @@
 .info-partners {
   position: relative;
-  &:before {
-    position: absolute;
-    content: '';
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1440px;
-    height: 494px;
-    background: url("../img/lines-bg.png");
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: contain;
-    mix-blend-mode: plus-lighter;
-    z-index: 1;
 
+
+  @include rm(1024){
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1440px;
+      height: 494px;
+      background: url("../img/lines-bg.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: contain;
+      mix-blend-mode: plus-lighter;
+      z-index: 1;
+
+    }
   }
 
 

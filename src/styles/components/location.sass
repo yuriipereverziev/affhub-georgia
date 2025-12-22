@@ -1,21 +1,32 @@
 .location
   position: relative
 
-  &:before
-    position: absolute
-    content: ''
-    bottom: -500px
-    left: 50%
-    width: 1422px
-    height: 1407px
-    background: url(../img/location-line.png)
-    background-repeat: no-repeat
-    background-position: left bottom
-    transform: translateX(-50%) rotate(365deg)
+  +rm(1024)
+    &:before
+      position: absolute
+      content: ''
+      bottom: -500px
+      left: 50%
+      width: 1422px
+      height: 1407px
+      background: url(../img/location-line.png)
+      background-repeat: no-repeat
+      background-position: left bottom
+      transform: translateX(-50%) rotate(365deg)
 
-    mix-blend-mode: screen
-    background-size: 100%
-    z-index: 1
+      mix-blend-mode: screen
+      background-size: 100%
+      z-index: 1
+
+
+  &__top
+    margin-bottom: 20px
+    text-align: center
+
+    +rm(1024)
+      flex-shrink: 0
+      margin-bottom: 0px
+      text-align: left
 
 
   &__ellipses
@@ -110,7 +121,7 @@
     +rm(480)
       margin-bottom: 40px
     +rm(640)
-      margin-bottom: 60px
+      margin-bottom: 50px
     +rm(768)
       margin-bottom: 80px
     +rm(1024)
@@ -143,7 +154,18 @@
 
   &-galary
     display: flex
+    flex-direction: column
     gap: 25px
+    max-width: 350px
+    width: 100%
+    margin: 0 auto
+
+    +rm(480)
+      max-width: 420px
+
+    +rm(640)
+      max-width: 100%
+      flex-direction: row
 
     & img
       border-radius: 24px

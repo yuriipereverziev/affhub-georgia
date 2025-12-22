@@ -123,6 +123,7 @@
 }
 
 .vertical-list {
+  font-size: 15px;
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
@@ -130,6 +131,7 @@
 
 
   @include rm(640) {
+    font-size: 16px;
     //margin-bottom: 40px;
     gap: 20px;
   }

@@ -73,6 +73,8 @@
 }
 
 .partners-list {
+  position: relative;
+  z-index: 2;
   max-width: 450px;
   width: 100%;
   margin: 0 auto;
