@@ -19,7 +19,7 @@ export default () => {
       name: "pre-order",
       dates: {
         start: new Date().toISOString().split("T")[0],
-        end: "2025-12-17",
+        end: "2025-12-24",
       },
       prices: {
         silver: 100,
@@ -29,8 +29,8 @@ export default () => {
     {
       name: "order",
       dates: {
-        start: "2025-12-06",
-        end: "2025-12-10",
+        start: "2025-12-22",
+        end: "2025-12-31",
       },
       prices: {
         silver: 110,
@@ -40,8 +40,8 @@ export default () => {
     {
       name: "last",
       dates: {
-        start: "2025-12-11",
-        end: "2025-12-15",
+        start: "2025-12-22",
+        end: "2025-12-31",
       },
       prices: {
         silver: 120,

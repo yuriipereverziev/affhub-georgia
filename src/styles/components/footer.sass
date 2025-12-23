@@ -49,6 +49,27 @@
         +rm(1220)
             margin-bottom: 60px
 
+    &__contacts
+      margin-top: 15px
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      gap: 10px
+
+      +rm(1024)
+        justify-content: flex-start
+
+      & .footer__contact
+        display: flex
+        align-items: center
+        gap: 10px
+        color: rgba(255, 87, 198, 1)
+
+      //& .footer__contact:not(:last-of-type)
+      //  margin-bottom: 10px
+
+
     &__text
         text-align: center
         font-weight: 200
