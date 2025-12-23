@@ -350,14 +350,14 @@
         &:not(:last-of-type)
             margin-bottom: 18px
 
-        &::before
-            position: absolute
-            content: ""
-            width: 14px
-            height: 14px
-            background: url(../img/check_blue.svg) no-repeat center / contain
-            top: 2px
-            left: 0
+        //&::before
+        //    position: absolute
+        //    content: ""
+        //    width: 14px
+        //    height: 14px
+        //    background: url(../img/check_blue.svg) no-repeat center / contain
+        //    top: 2px
+        //    left: 0
 
     &__btn
         width: 100%
@@ -698,11 +698,12 @@
     height: auto
     padding: 10px 15px
     border-radius: 100px
-    background: linear-gradient(0deg, rgba(255, 238, 0, 0.20) 0%, rgba(255, 238, 0, 0.20) 100%), linear-gradient(100deg, #FFC933 8.21%, #473D1A 21.2%, #B48D00 31.35%, #D59C00 39.87%, #71600B 48.8%, #EBC31A 58.95%, #7A650D 67.88%, #A17F04 87.77%, #FFC933 100%)
+    border: solid 1px #ff57c6
+    background-color: rgba(255, 87, 198, .3)
     background-size: 100% 100%
     text-transform: uppercase
     font-size: 24px
-    color: #000
+    color: #fff
     font-weight: 400
     font-family: $ital-font
     transition: .2s
@@ -784,7 +785,8 @@
       transform: translateY(-50%)
       width: 24px
       height: 24px
-      background: #ebc31a
+      background: #fff
+      border: 1px solid #ff57c6
 
     &.active
       &::before
