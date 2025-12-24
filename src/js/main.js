@@ -5,6 +5,7 @@ import speakersSlider from './modules/speakers.js';
 import tickets from './modules/tickets.js';
 import expozone from './modules/expozone.js';
 import location from './modules/location';
+import mediaPartners from './modules/media-partners';
 // import charity from './modules/charity.js';
 import galary from './modules/galary.js';
 import footer from './modules/footer.js';
@@ -18,6 +19,7 @@ header()
 promo()
 expozone()
 location()
+
 // menu()
 // strips()
 
@@ -28,6 +30,7 @@ function main() {
   if (document.querySelector('.tickets')) {
     tickets();
   }
+  mediaPartners()
   // langSwitcher()
   // charity()
   wait()
