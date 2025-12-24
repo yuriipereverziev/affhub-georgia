@@ -4,15 +4,57 @@
   const secretSpeakerLabel = 'Secret speaker'
 
   const speakersList = [
-    { name: 'Andrii Kartsev', position: 'Head of One Media Nutra Team', img: 'speaker-1' },
-    { name: 'Nikita Koshelyuk', position: 'CEO Trident Media', img: 'speaker-3' },
-    { name: 'Miroslav Liaskovez', position: 'Founder of LeadMarketing, expert in online advertising and traffic arbitrage', img: 'speaker-4' },
-    { name: 'Iryna', position: 'Head of Affiliates FRBS Team', img: 'speaker-6' },
-    { name: 'Nikolay Popov', position: 'Head of Services AdKey.Agency', img: 'speaker-7' },
-    { name: 'Dmytro Miasnikov', position: 'Chief Operating Officer AdKey.Agency', img: 'speaker-8' },
-    { name: 'Alex Emelian', position: 'Co-founder, Co-CEO, Simple', img: 'speaker-9' },
-    // ... добавь остальных спикеров по аналогии
+    {
+      name: 'Andrii Kartsev',
+      position: 'Head of One Media Nutra Team',
+      img: 'speaker-1',
+      width: 320,
+      height: 420
+    },
+    {
+      name: 'Nikita Koshelyuk',
+      position: 'CEO Trident Media',
+      img: 'speaker-3',
+      width: 320,
+      height: 420
+    },
+    {
+      name: 'Miroslav Liaskovez',
+      position: 'Founder of LeadMarketing, expert in online advertising and traffic arbitrage',
+      img: 'speaker-4',
+      width: 320,
+      height: 420
+    },
+    {
+      name: 'Iryna',
+      position: 'Head of Affiliates FRBS Team',
+      img: 'speaker-6',
+      width: 320,
+      height: 420
+    },
+    {
+      name: 'Nikolay Popov',
+      position: 'Head of Services AdKey.Agency',
+      img: 'speaker-7',
+      width: 320,
+      height: 420
+    },
+    {
+      name: 'Dmytro Miasnikov',
+      position: 'Chief Operating Officer AdKey.Agency',
+      img: 'speaker-8',
+      width: 320,
+      height: 420
+    },
+    {
+      name: 'Alex Emelian',
+      position: 'Co-founder, Co-CEO, Simple',
+      img: 'speaker-9',
+      width: 320,
+      height: 420
+    }
   ]
+
 
 .block.speakers.speakers__wrapper#speakers
   .container
@@ -34,15 +76,30 @@
 
     .speakers__inner.swiper
       .speakers__wrapper.swiper-wrapper
-        // each speaker, index in speakersList
+
+        // обычные спикеры
+        // each speaker in speakersList
         //   .speakers__slide.swiper-slide
-        //     +picture(speaker.img, format='png', className='speakers__img', breakpoint=null)
+        //     img.speakers__img(
+        //       src=`/img/${speaker.img}.png`
+        //       alt=speaker.name
+        //       width=speaker.width
+        //       height=speaker.height
+        //       loading="lazy"
+        //     )
         //     .speakers__desc
         //       span.speakers__name= speaker.name
         //       span.speakers__position= speaker.position
 
-        //- Пример секретного спикера
+        //- секретные спикеры
         each i in [1,2,3,4,5,6,7,8,9]
-           .speakers__slide.speakers__slide--secret.swiper-slide
-             +picture('speaker', format='png', className='speakers__img', breakpoint=null)
-             .speakers__label.text-upper= secretSpeakerLabel
+          .speakers__slide.speakers__slide--secret.swiper-slide
+            img.speakers__img(
+              src="/img/speaker.png"
+              alt=secretSpeakerLabel
+              width="155"
+              height="177"
+              loading="lazy"
+            )
+            .speakers__label.text-upper= secretSpeakerLabel
+
