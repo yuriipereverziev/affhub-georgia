@@ -38,17 +38,34 @@ section.location#location.block
 
     .location__video
       .location__video-inner
-        //iframe.location__video-iframe(
-        //  src="https://www.youtube.com/embed/yPDNxVURoVg?si=SkobSzjEo5EBOT76?enablejsapi=1&controls=1"
-        //  title="Conference video"
-        //  frameborder="0"
-        //  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        //  allowfullscreen
-        //)
+        video.location__video-media(
+          src="img/video.mp4"
+          preload="metadata"
+          playsinline
+          muted
+
+        )
 
         button.location__video-play(
           type="button"
           aria-label="Play video"
           data-video-play
+
         )
+
+    //.location__video
+    //  .location__video-inner
+    //    //iframe.location__video-iframe(
+    //    //  src="https://www.youtube.com/embed/yPDNxVURoVg?si=SkobSzjEo5EBOT76?enablejsapi=1&controls=1"
+    //    //  title="Conference video"
+    //    //  frameborder="0"
+    //    //  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    //    //  allowfullscreen
+    //    //)
+    //
+    //    button.location__video-play(
+    //      type="button"
+    //      aria-label="Play video"
+    //      data-video-play
+    //    )
 

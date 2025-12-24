@@ -23,13 +23,13 @@ export default () => {
       },
       prices: {
         silver: 100,
-        gold: 150,
+        gold: 180,
       }
     },
     {
       name: "order",
       dates: {
-        start: "2025-12-22",
+        start: "2025-12-25",
         end: "2025-12-31",
       },
       prices: {
@@ -40,7 +40,7 @@ export default () => {
     {
       name: "last",
       dates: {
-        start: "2025-12-22",
+        start: "2025-12-26",
         end: "2025-12-31",
       },
       prices: {

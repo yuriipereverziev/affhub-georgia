@@ -276,12 +276,12 @@
       },
       prices: {
         silver: 100,
-        gold: 150
+        gold: 180
       }
     }, {
       name: "order",
       dates: {
-        start: "2025-12-22",
+        start: "2025-12-25",
         end: "2025-12-31"
       },
       prices: {
@@ -291,7 +291,7 @@
     }, {
       name: "last",
       dates: {
-        start: "2025-12-22",
+        start: "2025-12-26",
         end: "2025-12-31"
       },
       prices: {
@@ -1183,6 +1183,35 @@
     initZoneLabels();
   });
 
+  var location = (function () {
+    document.querySelectorAll('[data-video-play]').forEach(function (btn) {
+      var wrapper = btn.closest('.location__video');
+      var video = wrapper.querySelector('video'); // Подстраиваем aspect-ratio под видео
+
+      video.addEventListener('loadedmetadata', function () {
+        var aspectRatio = video.videoWidth / video.videoHeight;
+        wrapper.style.aspectRatio = "".concat(video.videoWidth, " / ").concat(video.videoHeight);
+      });
+
+      var togglePlay = function togglePlay() {
+        if (video.paused) {
+          video.muted = false;
+          video.play();
+          wrapper.classList.add('is-playing');
+        } else {
+          video.pause();
+          wrapper.classList.remove('is-playing');
+        }
+      };
+
+      btn.addEventListener('click', togglePlay);
+      video.addEventListener('click', togglePlay);
+      video.addEventListener('ended', function () {
+        wrapper.classList.remove('is-playing');
+      });
+    });
+  });
+
   var galary = (function () {
     var allImages = _toConsumableArray(document.querySelectorAll('.zoom-img'));
 
@@ -1405,8 +1434,8 @@
   scrollSmooth();
   header();
   promo();
-  expozone(); // location()
-  // menu()
+  expozone();
+  location(); // menu()
   // strips()
 
   function main() {

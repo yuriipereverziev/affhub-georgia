@@ -4,7 +4,7 @@ import header from './modules/header.js';
 import speakersSlider from './modules/speakers.js';
 import tickets from './modules/tickets.js';
 import expozone from './modules/expozone.js';
-// import location from './modules/location';
+import location from './modules/location';
 // import charity from './modules/charity.js';
 import galary from './modules/galary.js';
 import footer from './modules/footer.js';
@@ -17,7 +17,7 @@ scrollSmooth();
 header()
 promo()
 expozone()
-// location()
+location()
 // menu()
 // strips()
 
@@ -43,6 +43,8 @@ function main() {
 //     loader.style.display = "none";
 //   }, 500);
 // }, 2000);
+
+
 
 if (document.documentElement.clientWidth < 480) {
   window.addEventListener('scroll',

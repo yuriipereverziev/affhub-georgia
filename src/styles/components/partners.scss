@@ -100,7 +100,7 @@
   &__title {
     width: 100%;
     color: #fff;
-    color: #000;
+    //color: #000;
     font-family: "Podkova", serif;
 
     text-align: center;
@@ -136,7 +136,7 @@
     //backdrop-filter: blur(7px);
     transition: all 0.4s;
     will-change: transform; /* Оптимизация для GPU */
-
+    background: rgba(211, 159, 255, 1);
 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -229,6 +229,7 @@
       &--1,
       &--2 {
         width: calc(50% - 15px);
+        width: 67%;
       }
 
       &--inner {
