@@ -58,81 +58,84 @@
   &__ellipses {
     position: relative;
 
-    & .ellipse {
-      &--blue {
-        width: 300px;
-        height: 100px;
-        top: 100px;
-        left: 50px;
-        transform: rotate(-14deg);
+    @include rm(1024) {
 
-        @include rm(640) {
-          width: 400px;
-          height: 130px;
-          top: 150px;
-          left: 100px;
+
+      & .ellipse {
+        &--blue {
+          width: 300px;
+          height: 100px;
+          top: 100px;
+          left: 50px;
+          transform: rotate(-14deg);
+
+          @include rm(640) {
+            width: 400px;
+            height: 130px;
+            top: 150px;
+            left: 100px;
+          }
+
+          @include rm(768) {
+            width: 500px;
+            height: 150px;
+            top: 200px;
+            left: 200px;
+          }
+
+          @include rm(1024) {
+            width: 600px;
+            height: 180px;
+            top: 250px;
+            left: 250px;
+          }
+
+          @include rm(1220) {
+            width: 736px;
+            height: 218px;
+            top: 350px;
+            left: 315px;
+          }
         }
 
-        @include rm(768) {
-          width: 500px;
-          height: 150px;
+        &--rose {
+          width: 300px;
+          height: 100px;
           top: 200px;
-          left: 200px;
-        }
+          right: -50px;
+          transform: rotate(19deg);
 
-        @include rm(1024) {
-          width: 600px;
-          height: 180px;
-          top: 250px;
-          left: 250px;
-        }
+          @include rm(640) {
+            width: 400px;
+            height: 130px;
+            top: 300px;
+            right: -100px;
+          }
 
-        @include rm(1220) {
-          width: 736px;
-          height: 218px;
-          top: 350px;
-          left: 315px;
-        }
-      }
+          @include rm(768) {
+            width: 500px;
+            height: 150px;
+            top: 400px;
+            right: -180px;
+          }
 
-      &--rose {
-        width: 300px;
-        height: 100px;
-        top: 200px;
-        right: -50px;
-        transform: rotate(19deg);
+          @include rm(1024) {
+            width: 600px;
+            height: 180px;
+            top: 480px;
+            right: -250px;
+          }
 
-        @include rm(640) {
-          width: 400px;
-          height: 130px;
-          top: 300px;
-          right: -100px;
-        }
-
-        @include rm(768) {
-          width: 500px;
-          height: 150px;
-          top: 400px;
-          right: -180px;
-        }
-
-        @include rm(1024) {
-          width: 600px;
-          height: 180px;
-          top: 480px;
-          right: -250px;
-        }
-
-        @include rm(1220) {
-          width: 736px;
-          height: 218px;
-          top: 551px;
-          right: -357px;
+          @include rm(1220) {
+            width: 736px;
+            height: 218px;
+            top: 551px;
+            right: -357px;
+          }
         }
       }
     }
   }
-
 
 
   &__wrapper {
@@ -187,7 +190,8 @@
   /* ===== META CARDS ===== */
   &__meta {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
 
     @include rm(640) {
@@ -197,17 +201,27 @@
   }
 
   &__meta-item {
-    flex: 1 1 0;
+    width: 100%;
+    //flex: 1 1 0;
     padding: 20px 22px;
+    gap: 15px;
     border-radius: 20px;
     backdrop-filter: blur(5px);
     //background: rgba(243, 241, 241, 0.12);
     border: 1px solid rgba(201, 201, 201, 0.6);
 
+
     @include rm(480) {
+
       border: 1px solid rgba(255, 255, 255, .6);
     }
+    @include rm(640) {
+      width: calc((100% - 20px) / 2);
+      gap: 20px;
+    }
+
     @include rm(1024) {
+      width: calc((100% - 40px) / 3);
       padding: 24px 26px;
     }
   }
@@ -215,6 +229,7 @@
   &__meta-img {
     margin-bottom: 20px;
   }
+
   &__meta-title {
     font-family: $ital-font;
     //font-weight: 700;
@@ -223,10 +238,10 @@
     margin-bottom: 8px;
     color: #0f172a;
 
-    @include rm(768){
+    @include rm(768) {
       font-size: 20px;
     }
-    @include rm(1024){
+    @include rm(1024) {
       font-size: 22px;
     }
   }
@@ -239,7 +254,7 @@
     //@include rm(768){
     //  font-size: 18px;
     //}
-    @include rm(1024){
+    @include rm(1024) {
       font-size: 18px;
     }
   }

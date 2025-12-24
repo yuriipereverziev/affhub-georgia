@@ -1,21 +1,23 @@
 .timeline
     position: relative
 
-    & .ellipse
 
-      &--blue
-        width: 1490px
-        height: 442px
-        top: -50px
-        right: -710px
-        transform: rotate(18deg)
+    +rm(1024)
+      & .ellipse
 
-      &--rose
-        top: 100px
-        left: -295px
-        width: 736px
-        height: 218px
-        transform: rotate(-14deg)
+        &--blue
+          width: 1490px
+          height: 442px
+          top: -50px
+          right: -710px
+          transform: rotate(18deg)
+
+        &--rose
+          top: 100px
+          left: -295px
+          width: 736px
+          height: 218px
+          transform: rotate(-14deg)
 
 
     &__subtitle

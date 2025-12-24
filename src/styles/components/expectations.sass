@@ -1,7 +1,7 @@
 .expectations
   position: relative
 
-  +rm(640)
+  +rm(1024)
     &:before
       position: absolute
       content: ''
@@ -30,22 +30,22 @@
   //  background-size: contain
   //  mix-blend-mode: screen
 
+  +rm(1024)
+    & .ellipse
 
-  & .ellipse
+      &--blue
+        width: 1490px
+        height: 442px
+        top: 15px
+        right: -620px
+        transform: rotate(18deg)
 
-    &--blue
-      width: 1490px
-      height: 442px
-      top: 15px
-      right: -620px
-      transform: rotate(18deg)
-
-    &--rose
-      top: 400px
-      left: -95px
-      width: 736px
-      height: 218px
-      transform: rotate(-14deg)
+      &--rose
+        top: 400px
+        left: -95px
+        width: 736px
+        height: 218px
+        transform: rotate(-14deg)
 
 
   &__wrapper
