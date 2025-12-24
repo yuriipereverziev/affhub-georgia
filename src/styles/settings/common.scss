@@ -347,8 +347,8 @@ br {
 .glass {
   background: rgba(255, 255, 255, 0.12);
 
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  //backdrop-filter: blur(20px);
+  //-webkit-backdrop-filter: blur(20px);
 
   /* тонкая белая рамка */
   border: 1px solid rgba(255, 255, 255, 0.6);
