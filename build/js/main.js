@@ -1184,94 +1184,171 @@
   });
 
   var location = (function () {
-    document.querySelectorAll('[data-video-play]').forEach(function (btn) {
-      var wrapper = btn.closest('.location__video');
-      var video = wrapper.querySelector('video'); // Подстраиваем aspect-ratio под видео
+    // Загружаем YouTube API
+    if (!window.YT) {
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+    }
 
-      video.addEventListener('loadedmetadata', function () {
-        var aspectRatio = video.videoWidth / video.videoHeight;
-        wrapper.style.aspectRatio = "".concat(video.videoWidth, " / ").concat(video.videoHeight);
+    var videoWrappers = document.querySelectorAll('.location__video');
+
+    function initYouTubePlayers() {
+      videoWrappers.forEach(function (wrapper) {
+        var iframe = wrapper.querySelector('iframe');
+        var btn = wrapper.querySelector('[data-video-play]');
+        var preload = wrapper.querySelector('.location__video-preload'); // Создаем player
+
+        var player = new YT.Player(iframe, {
+          events: {
+            onReady: function onReady() {
+              // Кнопка включения
+              btn.addEventListener('click', function () {
+                player.playVideo();
+                preload.style.opacity = 0;
+                btn.style.display = 'none';
+                wrapper.classList.add('is-playing');
+              });
+            },
+            onStateChange: function onStateChange(event) {
+              if (event.data === YT.PlayerState.ENDED) {
+                wrapper.classList.remove('is-playing');
+                preload.style.opacity = 1;
+                btn.style.display = 'block';
+              }
+            }
+          }
+        });
       });
+    } // Ждем, когда API подгрузится
 
-      var togglePlay = function togglePlay() {
-        if (video.paused) {
-          video.muted = false;
-          video.play();
-          wrapper.classList.add('is-playing');
-        } else {
-          video.pause();
-          wrapper.classList.remove('is-playing');
-        }
-      };
 
-      btn.addEventListener('click', togglePlay);
-      video.addEventListener('click', togglePlay);
-      video.addEventListener('ended', function () {
-        wrapper.classList.remove('is-playing');
-      });
-    });
+    window.onYouTubeIframeAPIReady = initYouTubePlayers;
   });
 
+  // export default () => {
+  //   const canvas = document.querySelector('.wave-animation__canvas');
+  //   if (!canvas) return;
+  //
+  //   const ctx = canvas.getContext('2d');
+  //
+  //   function resize() {
+  //     const dpr = window.devicePixelRatio || 1;
+  //     const rect = canvas.getBoundingClientRect();
+  //
+  //     canvas.width = rect.width * dpr;
+  //     canvas.height = rect.height * dpr;
+  //
+  //     // сброс трансформаций
+  //     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  //
+  //     canvas.style.width = rect.width + 'px';
+  //     canvas.style.height = rect.height + 'px';
+  //   }
+  //
+  //   resize();
+  //   window.addEventListener('resize', resize);
+  //
+  //   function animate() {
+  //     const rect = canvas.getBoundingClientRect();
+  //     ctx.clearRect(0, 0, rect.width, rect.height);
+  //     const time = Date.now() * 0.00033; // Чуть ускорил анимацию для живости
+  //     const centerX = rect.width / 2;
+  //
+  //     for (let i = 0; i < 3; i++) {
+  //       ctx.beginPath();
+  //       ctx.strokeStyle = `rgba(211, 159, 255, ${0.6 - i * 0.1})`;
+  //       ctx.lineWidth = 4; // Чуть толще для лучшей видимости клубка
+  //
+  //
+  //       // Небольшое общее смещение линий, чтобы они не были идеально одинаковыми
+  //       const baseOffset = (i - 2) * 35; // Лёгкое расслоение (15 px между линиями)
+  //
+  //       for (let x = 0; x <= rect.width; x += 1) { // Шаг 1 для плавности
+  //         const distFromCenter = Math.abs(x - centerX);
+  //
+  //         // Чем ближе к центру — тем сильнее хаос (экспоненциальный буст)
+  //         const centerEffect = Math.exp(-distFromCenter / 120); // 180 — регулирует ширину клубка
+  //
+  //         let y = rect.height / 2 + baseOffset;
+  //
+  //         // Основная плавная волна (видна по краям)
+  //         y += Math.sin(x * 0.015 + time + i * 0.5) * 25;
+  //
+  //         // Хаотичные колебания — только в центре и очень сильные
+  //         y += Math.sin(x * 0.08 + time * 3 + i * 1.3) * 60 * centerEffect;
+  //         y += Math.sin(x * 0.12 - time * 4 + i * 2.1) * 50 * centerEffect;
+  //         y += Math.sin(x * 0.15 + time * 2.5 + i * 1.7) * 40 * centerEffect;
+  //         y += Math.sin(x * 0.10 - time * 3.5 + i * 0.9) * 55 * centerEffect;
+  //         y += Math.sin(x * 0.18 + time * 4.2 + i * 2.4) * 35 * centerEffect; // Ещё одна частота для плотности
+  //
+  //         if (x === 0) ctx.moveTo(x, y);
+  //         else ctx.lineTo(x, y);
+  //       }
+  //       ctx.stroke();
+  //     }
+  //
+  //     requestAnimationFrame(animate);
+  //   }
+  //
+  //   animate();
+  // }
   var mediaPartners = (function () {
-    var canvas = document.querySelector('.wave-animation__canvas');
-    if (!canvas) return;
-    var ctx = canvas.getContext('2d');
+    var canvases = document.querySelectorAll('.wave-animation__canvas');
+    if (!canvases.length) return;
+    canvases.forEach(function (canvas) {
+      var ctx = canvas.getContext('2d');
+      var width = 0;
+      var height = 0;
+      var centerY = 0;
 
-    function resize() {
-      var dpr = window.devicePixelRatio || 1;
-      var rect = canvas.getBoundingClientRect();
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr; // сброс трансформаций
+      function resize() {
+        var dpr = window.devicePixelRatio || 1;
+        var rect = canvas.getBoundingClientRect();
+        width = rect.width;
+        height = rect.height;
+        centerY = height / 2;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr; // масштабируем контекст, чтобы координаты были в CSS пикселях
 
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      canvas.style.width = rect.width + 'px';
-      canvas.style.height = rect.height + 'px';
-    }
-
-    resize();
-    window.addEventListener('resize', resize);
-
-    function animate() {
-      var rect = canvas.getBoundingClientRect();
-      ctx.clearRect(0, 0, rect.width, rect.height);
-      var time = Date.now() * 0.00033; // Чуть ускорил анимацию для живости
-
-      var centerX = rect.width / 2;
-
-      for (var i = 0; i < 3; i++) {
-        ctx.beginPath();
-        ctx.strokeStyle = "rgba(211, 159, 255, ".concat(0.6 - i * 0.1, ")");
-        ctx.lineWidth = 4; // Чуть толще для лучшей видимости клубка
-        // Небольшое общее смещение линий, чтобы они не были идеально одинаковыми
-
-        var baseOffset = (i - 2) * 35; // Лёгкое расслоение (15 px между линиями)
-
-        for (var x = 0; x <= rect.width; x += 1) {
-          // Шаг 1 для плавности
-          var distFromCenter = Math.abs(x - centerX); // Чем ближе к центру — тем сильнее хаос (экспоненциальный буст)
-
-          var centerEffect = Math.exp(-distFromCenter / 120); // 180 — регулирует ширину клубка
-
-          var y = rect.height / 2 + baseOffset; // Основная плавная волна (видна по краям)
-
-          y += Math.sin(x * 0.015 + time + i * 0.5) * 25; // Хаотичные колебания — только в центре и очень сильные
-
-          y += Math.sin(x * 0.08 + time * 3 + i * 1.3) * 60 * centerEffect;
-          y += Math.sin(x * 0.12 - time * 4 + i * 2.1) * 50 * centerEffect;
-          y += Math.sin(x * 0.15 + time * 2.5 + i * 1.7) * 40 * centerEffect;
-          y += Math.sin(x * 0.10 - time * 3.5 + i * 0.9) * 55 * centerEffect;
-          y += Math.sin(x * 0.18 + time * 4.2 + i * 2.4) * 35 * centerEffect; // Ещё одна частота для плотности
-
-          if (x === 0) ctx.moveTo(x, y);else ctx.lineTo(x, y);
-        }
-
-        ctx.stroke();
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       }
 
-      requestAnimationFrame(animate);
-    }
+      resize();
+      window.addEventListener('resize', resize);
 
-    animate();
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        var time = Date.now() * 0.00033;
+        var centerX = width / 2;
+
+        for (var i = 0; i < 3; i++) {
+          ctx.beginPath();
+          ctx.strokeStyle = "rgba(211, 159, 255, ".concat(0.6 - i * 0.1, ")");
+          ctx.lineWidth = 4;
+          var baseOffset = (i - 2) * 35;
+
+          for (var x = 0; x <= width; x += 1) {
+            var distFromCenter = Math.abs(x - centerX);
+            var centerEffect = Math.exp(-distFromCenter / 120);
+            var y = centerY + baseOffset;
+            y += Math.sin(x * 0.015 + time + i * 0.5) * 25;
+            y += Math.sin(x * 0.08 + time * 3 + i * 1.3) * 60 * centerEffect;
+            y += Math.sin(x * 0.12 - time * 4 + i * 2.1) * 50 * centerEffect;
+            y += Math.sin(x * 0.15 + time * 2.5 + i * 1.7) * 40 * centerEffect;
+            y += Math.sin(x * 0.10 - time * 3.5 + i * 0.9) * 55 * centerEffect;
+            y += Math.sin(x * 0.18 + time * 4.2 + i * 2.4) * 35 * centerEffect;
+            if (x === 0) ctx.moveTo(x, y);else ctx.lineTo(x, y);
+          }
+
+          ctx.stroke();
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    });
   });
 
   var galary = (function () {
@@ -1545,4 +1622,3 @@
   // );
 
 }());
-//# sourceMappingURL=main.js.map

@@ -1,10 +1,14 @@
 -
   var locationTitle = 'Location';
   var locationText = 'Tbilisi, Georgia, ExpoGeorgia';
+  var videoText = 'AFFHUB is an organizer of large-scale affiliate conferences, featuring thousands of participants, exhibition stands, and entertainment zones';
   var locationDate = 'March 27, 2026';
 
 
 section.location#location.block
+
+  .wave-animation
+    canvas.wave-animation__canvas
 
   .location__ellipses.ellipses
     .ellipse.ellipse--grey
@@ -36,36 +40,42 @@ section.location#location.block
           source(type="image/webp" srcset="img/location-2.webp")
           img(src="img/location-2.png" alt="" loading="lazy" width="421" height="253" fetchpriority="low" decoding="async")
 
-    .location__video
-      .location__video-inner
-        video.location__video-media(
-          src="img/video.mp4"
-          preload="metadata"
-          playsinline
-          muted
+    //.location__video
+    //  .location__video__wrapper
+    //    .location__video-inner
+    //      video.location__video-media(
+    //        src="img/video.mp4"
+    //        preload="metadata"
+    //        playsinline
+    //        muted
+    //
+    //      )
+    //
+    //      button.location__video-play(
+    //        type="button"
+    //        aria-label="Play video"
+    //        data-video-play
+    //
+    //      )
+    .location__video__wrapper
 
-        )
+      p.location__text= videoText
+
+
+      .location__video
+        .location__video-inner
+          img.location__video-preload(src="img/preview.png" alt="Preview")
+
+          iframe.location__video-iframe(
+            src="https://www.youtube.com/embed/ZhyGebbIv6Q?autoplay=0&modestbranding=1&enablejsapi=1"
+            title="Conference video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          )
 
         button.location__video-play(
           type="button"
           aria-label="Play video"
           data-video-play
-
         )
-
-    //.location__video
-    //  .location__video-inner
-    //    //iframe.location__video-iframe(
-    //    //  src="https://www.youtube.com/embed/yPDNxVURoVg?si=SkobSzjEo5EBOT76?enablejsapi=1&controls=1"
-    //    //  title="Conference video"
-    //    //  frameborder="0"
-    //    //  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    //    //  allowfullscreen
-    //    //)
-    //
-    //    button.location__video-play(
-    //      type="button"
-    //      aria-label="Play video"
-    //      data-video-play
-    //    )
 

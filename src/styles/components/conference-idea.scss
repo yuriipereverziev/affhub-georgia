@@ -10,24 +10,24 @@
   //background-image: url(../img/conference-idea-bg.png);
 
 
-  @include rm(1024){
-    &:before {
-      position: absolute;
-      content: '';
-      bottom: -170px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 1440px;
-      height: 494px;
-      background: url("../img/lines-bg.png");
-      background-repeat: no-repeat;
-      background-position: left bottom;
-      background-size: contain;
-      mix-blend-mode: plus-lighter;
-      z-index: 1;
-
-    }
-  }
+  //@include rm(1024){
+  //  &:before {
+  //    position: absolute;
+  //    content: '';
+  //    bottom: -170px;
+  //    left: 50%;
+  //    transform: translateX(-50%);
+  //    width: 1440px;
+  //    height: 494px;
+  //    background: url("../img/lines-bg.png");
+  //    background-repeat: no-repeat;
+  //    background-position: left bottom;
+  //    background-size: contain;
+  //    mix-blend-mode: plus-lighter;
+  //    z-index: 1;
+  //
+  //  }
+  //}
 
 
   //overflow: hidden;
@@ -243,4 +243,12 @@
       font-size: 18px;
     }
   }
+}
+
+
+.conference-idea .wave-animation {
+  //left: 50%;
+  //transform: translateX(-50%);
+  top: auto;
+  bottom: -400px;
 }

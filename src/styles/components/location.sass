@@ -111,8 +111,6 @@
         height: 218px
         transform: rotate(-14deg)
 
-
-
   &__wrapper
     position: relative
     z-index: 2
@@ -133,6 +131,18 @@
       gap: 30px
       margin-bottom: 150px
 
+  &__video__wrapper
+    position: relative
+    z-index: 2
+
+    +rm(1024)
+      display: flex
+      justify-content: space-between
+      gap: 20px
+    +rm(1220)
+      gap: 30px
+
+
   &__title
     +rm(1024)
       margin-bottom: 20px
@@ -146,6 +156,8 @@
 
 
   &__text
+    position: relative
+    z-index: 2
     font-size: 16px
     margin-bottom: 24px
 
@@ -172,78 +184,66 @@
 
 
   &__video
+    flex-shrink: 0
     position: relative
     width: 100%
     margin: 0 auto
     border-radius: 24px
     overflow: hidden
     z-index: 4
-    //aspect-ratio: 16 / 9
-
-    background: white
-    border: 5px solid white
-
-    backdrop-filter: blur(18px)
-    -webkit-backdrop-filter: blur(18px)
-
+    aspect-ratio: 16 / 9
 
     background: rgba(151, 133, 255, .24)
-    -webkit-transition: all .4s
     transition: all .4s
     will-change: transform
 
     border: 10px solid rgba(255, 255, 255, .6)
-    -webkit-box-shadow: inset -1px -1px 3px rgba(255, 255, 255, .9), inset 3px 3px 8px rgba(0, 0, 0, .08)
     box-shadow: inset -1px -1px 3px rgba(255, 255, 255, .9), inset 3px 3px 8px rgba(0, 0, 0, .08)
-    //min-height: 600px
-    //box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 20px 40px rgba(17, 24, 39, 0.12)
 
     +rm(640)
-      max-width: 560px
+      max-width: 500px
 
     +rm(768)
       max-width: 720px
-
-    //+rm(1024)
-    //  max-width: 920px
-    //  border: 20px solid white
-    //
-    //+rm(1220)
-    //  max-width: 1040px
 
     &-inner
       position: relative
       border-radius: 16px
       overflow: hidden
-      //background: red
       width: 100%
       height: 100%
 
-    &-media
+    &-iframe
       position: absolute
       inset: 0
       width: 100%
       height: 100%
-      z-index: 1
-      object-fit: contain
+      z-index: 2
+
+    &-preload
+      position: absolute
+      inset: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: 3
+      opacity: 1
+      transition: opacity .4s
 
     &-play
       position: absolute
-      z-index: 2
+      z-index: 4
       inset: 0
       margin: auto
-
       width: 64px
       height: 64px
       border-radius: 50%
       border: none
       cursor: pointer
-
       background: #fff
       display: flex
       align-items: center
       justify-content: center
-
       box-shadow: 0 10px 24px rgba(17, 24, 39, 0.18)
       transition: .25s ease
 
@@ -268,9 +268,15 @@
         transform: scale(1.06)
 
     &.is-playing
+      .location__video-preload
+        opacity: 0
+        pointer-events: none
+
       .location__video-play
         opacity: 0
         pointer-events: none
+
+
 
 
 
