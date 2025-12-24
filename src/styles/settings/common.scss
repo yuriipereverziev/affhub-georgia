@@ -155,12 +155,6 @@ button {
   }
 }
 
-@supports (-webkit-touch-callout: none) {
-  .ellipse {
-    filter: blur(40px);
-    opacity: 0.6;
-  }
-}
 
 .inner-page {
   padding-top: 0;
