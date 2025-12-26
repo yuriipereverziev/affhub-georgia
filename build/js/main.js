@@ -285,8 +285,8 @@
         end: "2025-12-31"
       },
       prices: {
-        silver: 110,
-        gold: 160
+        silver: 120,
+        gold: 200
       }
     }, {
       name: "last",
@@ -295,8 +295,8 @@
         end: "2025-12-31"
       },
       prices: {
-        silver: 120,
-        gold: 170
+        silver: 150,
+        gold: 250
       }
     }]; // Кнопки волн
 
