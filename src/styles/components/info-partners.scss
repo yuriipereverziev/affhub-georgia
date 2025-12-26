@@ -470,6 +470,25 @@
       }
     }
 
+    &--45 {
+      .info-partners-list__img {
+        max-width: 120px;
+
+        //@include rm(1024){
+        //  max-width: 90px;
+        //}
+      }
+    }
+    &--46 {
+      .info-partners-list__img {
+        max-width: 80px;
+
+        @include rm(1024){
+          max-width: 120px;
+        }
+      }
+    }
+
 
     &:hover {
       .info-partners-list__img {
