@@ -537,6 +537,6 @@ section.info-partners.block
         li.info-partners-list__item(class=`info-partners-list__item--${partner.id}`)
           a(href=partner.href target="_blank").info-partners-list__link
             if partner.width && partner.height
-              img(src=partner.img alt=partner.alt loading="lazy" width=partner.width height=partner.height).info-partners-list__img
+              img(src=partner.img alt=partner.alt width=partner.width height=partner.height).info-partners-list__img
             else
-              img(src=partner.img alt=partner.alt loading="lazy").info-partners-list__img
+              img(src=partner.img alt=partner.alt).info-partners-list__img
