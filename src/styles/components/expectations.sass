@@ -30,6 +30,16 @@
   //  background-size: contain
   //  mix-blend-mode: screen
 
+
+  & .ellipse
+
+    &--blue
+      width: 200px
+      height: 442px
+      top: 15px
+      right: 20px
+      transform: rotate(18deg)
+
   +rm(1024)
     & .ellipse
 
@@ -54,10 +64,12 @@
 
   &__title
     margin-bottom: 32px
-    max-width: 520px
+
 
     +rm(768)
       margin-bottom: 48px
+    +rm(1024)
+      max-width: 520px
 
   &__list
     display: flex

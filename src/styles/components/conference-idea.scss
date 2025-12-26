@@ -145,10 +145,14 @@
 
   /* ===== TITLE ===== */
   &__title {
-    max-width: 520px;
+
     margin-bottom: 32px;
 
     @include rm(768) {
+      margin-bottom: 48px;
+    }
+    @include rm(1024) {
+      max-width: 520px;
       margin-bottom: 48px;
     }
   }

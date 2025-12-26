@@ -6,23 +6,10 @@ body {
   overflow-x: hidden;
   padding-top: 60px;
 
-  /* градиент фона из всех цветов + белый */
-  background: radial-gradient(circle at top left, rgba(151, 133, 255, 0.6) 0%, transparent 40%),
-  radial-gradient(circle at top right, rgba(218, 133, 255, 0.5) 0%, transparent 40%),
-  radial-gradient(circle at bottom left, rgba(133, 218, 255, 0.5) 0%, transparent 35%),
-  radial-gradient(circle at bottom right, rgba(255, 133, 239, 0.4) 0%, transparent 30%),
-  radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 60%),
-  radial-gradient(circle at center, rgba(145, 133, 255, 0.4) 0%, transparent 50%),
-  radial-gradient(circle at 25% 50%, rgba(173, 211, 255, 0.35) 0%, transparent 50%),
-  radial-gradient(circle at 75% 30%, rgba(189, 226, 255, 0.25) 0%, transparent 50%);
-
-  background-blend-mode: screen; /* плавное смешивание цветов */
-  background-size: cover;
-  background-attachment: fixed; /* для стабильного эффекта при скролле */
-
+  background: #FFFFFF;
 
   @include rm(1024) {
-    background: #FFFFFF;
+
     padding-top: 70px;
   }
 }
@@ -135,44 +122,45 @@ button {
   max-width: 1200px; // ширина контейнера
   margin: 0 auto; // по центру
 }
+
 .ellipse {
 
 
-  @include rm(1024){
-    position: absolute;
-    pointer-events: none;
-    border-radius: 50%;
-    //filter: blur(60px);
-    filter: blur(100px);
-    opacity: 0.8;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  //filter: blur(60px);
+  filter: blur(100px);
+  opacity: 0.8;
 
 
-    &--blue {
-      background: rgba(151, 133, 255, 1);
-    }
-
-    &--red {
-      background: rgba(218, 133, 255, 1);
-    }
-
-    &--green {
-      background: rgba(133, 218, 255, 1);
-    }
-    &--rose {
-      background: rgba(255, 133, 239, 1);
-    }
-
-    &--purple {
-      background: rgba(145, 133, 255, 1);
-    }
-    &--grey {
-      background: rgba(189, 226, 255, .5);
-    }
-    &--turquoise {
-      background: rgba(173, 211, 255, 1);
-    }
+  &--blue {
+    background: rgba(151, 133, 255, 1);
   }
 
+  &--red {
+    background: rgba(218, 133, 255, 1);
+  }
+
+  &--green {
+    background: rgba(133, 218, 255, 1);
+  }
+
+  &--rose {
+    background: rgba(255, 133, 239, 1);
+  }
+
+  &--purple {
+    background: rgba(145, 133, 255, 1);
+  }
+
+  &--grey {
+    background: rgba(189, 226, 255, .5);
+  }
+
+  &--turquoise {
+    background: rgba(173, 211, 255, 1);
+  }
 
 
 }
@@ -181,7 +169,6 @@ button {
 .inner-page {
   padding-top: 0;
 }
-
 
 
 .title-accent {
@@ -391,21 +378,19 @@ br {
   overflow: hidden;
 
   /* более насыщенный фон */
-  background:
-    linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.2),   // уменьшили прозрачность блика
-        rgba(255, 255, 255, 0.05)
-    ),
-    rgba(255, 255, 255, 0.3);      // увеличили непрозрачность основного слоя
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2), // уменьшили прозрачность блика
+      rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0.7); // увеличили непрозрачность основного слоя
 
   /* рамка */
   border: 1px solid rgba(255, 255, 255, 0.55);
 
   /* мягкое "стеклянное" вдавливание */
-  box-shadow:
-    inset 1px 1px 2px rgba(255, 255, 255, 0.9),
-    inset -3px -3px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.9),
+  inset -3px -3px 8px rgba(0, 0, 0, 0.08);
 }
 
 .glass::before {

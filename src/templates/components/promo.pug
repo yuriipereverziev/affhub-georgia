@@ -20,12 +20,13 @@ section.promo#promo
         h1.promo__title.text-upper AFFHUB AFFILIATE CONNECT CONF
 
 
-        picture.promo-hero__block
-          //source(type="image/webp" media="(min-width:480px)" srcset="img/heart.webp")
-          //source(media="(min-width:480px)" srcset="img/heart.png")
-          //source(type="image/webp" media="(min-width:320px)" srcset="img/heart-mob.webp")
-          //source(media="(min-width:320px)" srcset="img/heart-mob.png")
-          img(src="img/heart.png" alt="" width="320" height="432" fetchpriority="high" loading="eager")
+        .promo-hero__wrapper
+          picture.promo-hero__block
+            //source(type="image/webp" media="(min-width:480px)" srcset="img/heart.webp")
+            //source(media="(min-width:480px)" srcset="img/heart.png")
+            //source(type="image/webp" media="(min-width:320px)" srcset="img/heart-mob.webp")
+            //source(media="(min-width:320px)" srcset="img/heart-mob.png")
+            img(src="img/heart.png" alt="" width="320" height="432" fetchpriority="high" loading="eager")
 
         a(href="https://t.me/kateonred", class="btn promo__btn secondary__btn", target="_blank")
           span.btn__text Become a partner
