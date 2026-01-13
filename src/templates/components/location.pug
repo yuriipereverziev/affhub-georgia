@@ -21,26 +21,142 @@ section.location#location.block
   .container
     h2.location__title.title= locationTitle
 
-    .location__wrapper
-      .location__top
+    ul.location__wrapper
 
+      li.location__item.location__top.glass
         p.location__text= locationText
           span.location__date= locationDate
 
-        a(href="https://maps.app.goo.gl/YqhUxXSFht53DedCA", class="btn promo__btn secondary__btn", target="_blank")
+        a(href="https://maps.app.goo.gl/YqhUxXSFht53DedCA", class="btn detail__btn", target="_blank")
           span.btn__text View Details
 
-
-      .location-galary
+      li.location__item
         picture.location__img
           source(type="image/webp" srcset="img/location-1.webp")
           img(src="img/location-1.png" alt="" loading="lazy" width="422" height="253" fetchpriority="low" decoding="async")
 
+      li.location__item
         picture.location__img
           source(type="image/webp" srcset="img/location-2.webp")
           img(src="img/location-2.png" alt="" loading="lazy" width="421" height="253" fetchpriority="low" decoding="async")
 
+
+
+
+    button.btn.location__btn#promo-codes-btn DISCOUNT CODES FOR ACCOMMODATION
+
+
+
+    .location__popup-overlay
+    .location__popup
+      span.location__popup-close &times;
+      h2 Dates: March 26–28, 2026
+
+      .accordion
+
+        .accordion-item
+          button.accordion-button(data-hotel="wyndham") Wyndham Grand Tbilisi (5★)
+
+          .accordion-content#wyndham-info
+            p
+              | Special rate available for attendees — promo code:&nbsp;
+              span.copy-code(data-code="AFFHUB") AFFHUB
+
+            p
+              a(
+                href="https://www.wyndhamhotels.com/wyndham-grand/tbilisi-georgia/wyndham-grand-tbilisi/overview?CID=LC:46q62bu8edfbx3y:53591&iata=00093796"
+                target="_blank"
+              ) Wyndham Grand Tbilisi
+
+            ul
+              li Central location near Rustaveli Avenue
+              li Perfect for VIP guests and speakers
+
+            p
+              | 📩&nbsp;
+              a(href="mailto:reservations@wyndhamgrandtbilisi.com")
+                | reservations@wyndhamgrandtbilisi.com
+
+            p
+              | 👉 Special rate valid (26–28 March 2026) with code&nbsp;
+              span.copy-code(data-code="AFFHUB") AFFHUB
+
+
+        .accordion-item
+          button.accordion-button(data-hotel="holiday") Holiday Inn Tbilisi (4★)
+
+          .accordion-content#holiday-info
+            p
+              a(
+                href="https://www.ihg.com/holidayinn/hotels/us/en/find-hotels/select-roomrate?qDest=1,%20%2026%20May%20Square,%20Tbilisi,%20GE&qPt=CASH&qCiD=23&qCoD=31&qCiMy=022026&qCoMy=022026&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qGrpCd=W52&qSlH=TBSMS&srb_u=1&qFS=false&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.kd.ma.sp.va.sp.re.vx.nd.sx.we.lx.rn.sn.sn.sn.sn.sn.nu.ge&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false&qpMbw=0&qErm=false&qpMn=0&qRmFltr="
+                target="_blank"
+              ) Holiday Inn Tbilisi
+
+            ul
+              li Easy access to Expo Georgia & airport
+              li Comfortable for attendees and partners
+
+            p
+              | 📩&nbsp;
+              a(href="mailto:ssakhelashvili@hi-tbilisi.com")
+                | ssakhelashvili@hi-tbilisi.com
+
+            p
+              | 👉 Special rate valid (26–28 March 2026) with code&nbsp;
+              span.copy-code(data-code="AFFHUB") AFFHUB
+
+
+
+
+    // Добавьте этот блок после button.btn.location__btn#promo-codes-btn
+    // и перед .location__popup-overlay
+
+    .location__travel-partner.glass
+      .location__travel-partner-header
+        .location__travel-partner-logo
+          img(src="img/MLT-logo.png" alt="MICELAB-TRAVEL")
+
+        .location__travel-partner-title
+          .location__travel-partner-badge Official Travel Partner
+          h3.location__travel-partner-name MICELAB-TRAVEL
+          p.location__travel-partner-subtitle AFFHUB 2026 in Georgia
+
+      .location__travel-partner-services
+        h4.location__travel-partner-services-title We support participants with:
+
+        .location__travel-partner-services-list
+          .location__travel-partner-service-item
+            span.location__travel-partner-service-icon 🏨
+            span Hotel booking with partner rates
+
+          .location__travel-partner-service-item
+            span.location__travel-partner-service-icon 🚗
+            span Transfers & logistics
+
+          .location__travel-partner-service-item
+            span.location__travel-partner-service-icon ✈️
+            span Flight assistance
+
+          .location__travel-partner-service-item
+            span.location__travel-partner-service-icon 🛟
+            span Full 24/7 travel support
+
+      .location__travel-partner-contacts
+        a.location__travel-partner-contact(href="mailto:info@micelab-travel.com")
+          span.location__travel-partner-contact-icon 📩
+          span info@micelab-travel.com
+
+        a.location__travel-partner-contact(href="https://wa.me/995555195926" target="_blank")
+          span.location__travel-partner-contact-icon 📲
+          span +995 555 19 59 26
+
+        a.location__travel-partner-contact(href="https://micelab-travel.com" target="_blank")
+          span.location__travel-partner-contact-icon 🌐
+          span micelab-travel.com
+
+
     //.location__video
+
     //  .location__video__wrapper
     //    .location__video-inner
     //      video.location__video-media(

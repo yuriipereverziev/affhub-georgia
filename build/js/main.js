@@ -1224,6 +1224,58 @@
 
 
     window.onYouTubeIframeAPIReady = initYouTubePlayers;
+    var openPopupBtn = document.querySelector(".location__btn");
+    var closePopupBtn = document.querySelector(".location__popup-close");
+    var popup = document.querySelector(".location__popup");
+    var overlay = document.querySelector(".location__popup-overlay");
+    openPopupBtn.addEventListener("click", function () {
+      popup.classList.add("active");
+      overlay.classList.add("active");
+    });
+    closePopupBtn.addEventListener("click", function () {
+      popup.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+    overlay.addEventListener("click", function () {
+      popup.classList.remove("active");
+      overlay.classList.remove("active");
+    }); // Аккордеон
+
+    var accordionButtons = document.querySelectorAll(".accordion-button");
+    accordionButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var hotelId = button.getAttribute("data-hotel");
+        var content = document.getElementById("".concat(hotelId, "-info")); // Закрываем все остальные
+
+        document.querySelectorAll(".accordion-content").forEach(function (item) {
+          if (item !== content) {
+            item.classList.remove("active");
+          }
+        });
+        document.querySelectorAll(".accordion-button").forEach(function (btn) {
+          if (btn !== button) {
+            btn.classList.remove("active");
+          }
+        }); // Переключаем текущий блок
+
+        content.classList.toggle("active");
+        button.classList.toggle("active");
+      });
+    });
+    document.querySelectorAll(".copy-code").forEach(function (element) {
+      element.addEventListener("click", function () {
+        var promoCode = element.getAttribute("data-code");
+        navigator.clipboard.writeText(promoCode).then(function () {
+          var originalText = element.textContent;
+          element.textContent = "Скопійовано!";
+          element.classList.add("copied");
+          setTimeout(function () {
+            element.textContent = originalText;
+            element.classList.remove("copied");
+          }, 1500);
+        });
+      });
+    });
   });
 
   // export default () => {
@@ -1622,4 +1674,3 @@
   // );
 
 }());
-//# sourceMappingURL=main.js.map
