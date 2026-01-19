@@ -27,10 +27,10 @@ function main() {
   speakersSlider()
   dress()
   // speakersSlider()
-  // if (document.querySelector('.tickets')) {
-  //   tickets();
-  // }
-  tickets();
+  if (document.querySelector('.tickets')) {
+    tickets();
+  }
+  // tickets();
   mediaPartners()
   // langSwitcher()
   // charity()

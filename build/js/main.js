@@ -924,7 +924,6 @@
 
           setupDynamicSelects();
           termsCheckboxes = document.querySelectorAll(".rte-order-agreement-element input");
-          console.log(termsCheckboxes);
           termsCheckboxes.forEach(function (checkbox) {
             checkbox.required = true;
             checkbox.addEventListener("change", function () {
@@ -1202,20 +1201,28 @@
     }
 
     var videoWrappers = document.querySelectorAll('.location__video');
+    if (!videoWrappers.length) return; // 🔥 защита
+
+    var openPopupBtn = document.querySelector(".location__btn");
+    if (!openPopupBtn) return; // 🔥 защита
+
+    var popup = document.querySelector(".location__popup");
+    if (!popup) return; // 🔥 защита
+    // дальше основной код
 
     function initYouTubePlayers() {
       videoWrappers.forEach(function (wrapper) {
         var iframe = wrapper.querySelector('iframe');
         var btn = wrapper.querySelector('[data-video-play]');
-        var preload = wrapper.querySelector('.location__video-preload'); // Создаем player
+        var preload = wrapper.querySelector('.location__video-preload');
+        if (!iframe || !btn || !preload) return; // 🔥 защита внутри цикла
 
         var player = new YT.Player(iframe, {
           events: {
             onReady: function onReady() {
-              // Кнопка включения
               btn.addEventListener('click', function () {
                 player.playVideo();
-                preload.style.opacity = 0;
+                preload.style.opacity = '0';
                 btn.style.display = 'none';
                 wrapper.classList.add('is-playing');
               });
@@ -1223,51 +1230,45 @@
             onStateChange: function onStateChange(event) {
               if (event.data === YT.PlayerState.ENDED) {
                 wrapper.classList.remove('is-playing');
-                preload.style.opacity = 1;
+                preload.style.opacity = '1';
                 btn.style.display = 'block';
               }
             }
           }
         });
       });
-    } // Ждем, когда API подгрузится
-
+    }
 
     window.onYouTubeIframeAPIReady = initYouTubePlayers;
-    var openPopupBtn = document.querySelector(".location__btn");
     var closePopupBtn = document.querySelector(".location__popup-close");
-    var popup = document.querySelector(".location__popup");
     var overlay = document.querySelector(".location__popup-overlay");
     openPopupBtn.addEventListener("click", function () {
       popup.classList.add("active");
       overlay.classList.add("active");
     });
-    closePopupBtn.addEventListener("click", function () {
+    closePopupBtn === null || closePopupBtn === void 0 ? void 0 : closePopupBtn.addEventListener("click", function () {
       popup.classList.remove("active");
       overlay.classList.remove("active");
     });
-    overlay.addEventListener("click", function () {
+    overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener("click", function () {
       popup.classList.remove("active");
       overlay.classList.remove("active");
     }); // Аккордеон
 
     var accordionButtons = document.querySelectorAll(".accordion-button");
+    if (!accordionButtons.length) return; // 🔥 защита
+
     accordionButtons.forEach(function (button) {
       button.addEventListener("click", function () {
         var hotelId = button.getAttribute("data-hotel");
-        var content = document.getElementById("".concat(hotelId, "-info")); // Закрываем все остальные
-
+        var content = document.getElementById("".concat(hotelId, "-info"));
+        if (!content) return;
         document.querySelectorAll(".accordion-content").forEach(function (item) {
-          if (item !== content) {
-            item.classList.remove("active");
-          }
+          if (item !== content) item.classList.remove("active");
         });
         document.querySelectorAll(".accordion-button").forEach(function (btn) {
-          if (btn !== button) {
-            btn.classList.remove("active");
-          }
-        }); // Переключаем текущий блок
-
+          if (btn !== button) btn.classList.remove("active");
+        });
         content.classList.toggle("active");
         button.classList.toggle("active");
       });
@@ -1275,6 +1276,7 @@
     document.querySelectorAll(".copy-code").forEach(function (element) {
       element.addEventListener("click", function () {
         var promoCode = element.getAttribute("data-code");
+        if (!promoCode) return;
         navigator.clipboard.writeText(promoCode).then(function () {
           var originalText = element.textContent;
           element.textContent = "Скопійовано!";
@@ -1642,11 +1644,12 @@
   function main() {
     speakersSlider();
     dress(); // speakersSlider()
-    // if (document.querySelector('.tickets')) {
-    //   tickets();
-    // }
 
-    tickets();
+    if (document.querySelector('.tickets')) {
+      tickets();
+    } // tickets();
+
+
     mediaPartners(); // langSwitcher()
     // charity()
 

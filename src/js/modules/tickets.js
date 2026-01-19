@@ -68,7 +68,6 @@ export default () => {
     return today >= start && today <= end;
   }
 
-
 // Функція встановлення активної волни
   function setActiveWave(phase) {
     // Скидання класів
@@ -722,7 +721,6 @@ export default () => {
         setupDynamicSelects()
 
         termsCheckboxes = document.querySelectorAll(".rte-order-agreement-element input");
-        console.log(termsCheckboxes);
 
         termsCheckboxes.forEach(checkbox => {
           checkbox.required = true;
