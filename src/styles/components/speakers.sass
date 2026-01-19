@@ -122,6 +122,8 @@
     overflow: hidden
     position: relative
     border-radius: 24px
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
     //background: url("../img/speaker-bg.svg") no-repeat center center / cover
     //aspect-ratio: 277/345
     width: $slide-w
@@ -145,6 +147,21 @@
         //filter: blur(14px)
         //border-radius: 50%
 
+    //&::before
+    //
+    //  +rm(1024)
+    //    z-index: 0
+    //    position: absolute
+    //    top: 0
+    //    left: 0
+    //    content: ""
+    //    display: block
+    //    aspect-ratio: 1/1
+    //    width: 100%
+    //    //background: radial-gradient($cir-color 10%, transparent)
+    //    background: red
+
+
     &--secret
       &::after
         content: none
@@ -162,6 +179,8 @@
 
   &__desc
     border-radius: 24px
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
     text-align: center
     position: absolute
     left: 0

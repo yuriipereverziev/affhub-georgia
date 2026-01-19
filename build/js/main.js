@@ -272,7 +272,7 @@
       name: "pre-order",
       dates: {
         start: new Date().toISOString().split("T")[0],
-        end: "2025-12-24"
+        end: "2026-01-24"
       },
       prices: {
         silver: 100,
@@ -1674,3 +1674,4 @@
   // );
 
 }());
+//# sourceMappingURL=main.js.map
