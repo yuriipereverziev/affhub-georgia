@@ -271,8 +271,8 @@
     var cardList = [{
       name: "pre-order",
       dates: {
-        start: new Date().toISOString().split("T")[0],
-        end: "2026-01-24"
+        start: "2026-01-01",
+        end: "2026-01-31"
       },
       prices: {
         silver: 100,
@@ -281,8 +281,8 @@
     }, {
       name: "order",
       dates: {
-        start: "2025-12-25",
-        end: "2025-12-31"
+        start: "2026-02-01",
+        end: "2026-03-12"
       },
       prices: {
         silver: 120,
@@ -291,8 +291,8 @@
     }, {
       name: "last",
       dates: {
-        start: "2025-12-26",
-        end: "2025-12-31"
+        start: "2026-03-13",
+        end: "2026-03-27"
       },
       prices: {
         silver: 150,
@@ -305,12 +305,14 @@
     var lastWave = document.querySelector(".tickets__last-wave"); // Перевірка чи доступна волна
 
     function isWaveAvailable(phase) {
-      var currentDate = new Date().toISOString().split("T")[0];
+      var today = new Date();
       var wave = cardList.find(function (el) {
         return el.name === phase;
       });
       if (!wave) return false;
-      return currentDate >= wave.dates.start && currentDate <= wave.dates.end;
+      var start = new Date(wave.dates.start);
+      var end = new Date(wave.dates.end);
+      return today >= start && today <= end;
     } // Функція встановлення активної волни
 
 
@@ -339,14 +341,16 @@
 
 
     function checkDate() {
-      var currentDate = new Date().toISOString().split("T")[0];
-      var currentPhase = null; // Перевірка чи поточна дата входить в якусь з хвиль
-
+      var today = new Date();
+      var currentPhase = null;
       cardList.forEach(function (el) {
-        if (currentDate >= el.dates.start && currentDate <= el.dates.end) {
+        var start = new Date(el.dates.start);
+        var end = new Date(el.dates.end);
+
+        if (today >= start && today <= end) {
           currentPhase = el.name;
         }
-      }); // Якщо не знайдено активної хвилі, встановлюємо першу за замовчуванням
+      });
 
       if (!currentPhase) {
         currentPhase = cardList[0].name;
@@ -357,17 +361,12 @@
 
 
     function setTicketsPrices(phase) {
-      var silverPrice = document.querySelector(".tickets__inner--silver .price__value");
-      var goldPrice = document.querySelector(".tickets__inner--gold .price__value");
-
-      var _ref = cardList.find(function (p) {
+      var card = cardList.find(function (p) {
         return p.name === phase;
-      }) || {},
-          prices = _ref.prices;
-
-      if (!prices) return;
-      silverPrice.textContent = prices.silver;
-      goldPrice.textContent = prices.gold;
+      });
+      if (!card) return;
+      document.querySelector(".tickets__inner--silver .price__value").textContent = card.prices.silver;
+      document.querySelector(".tickets__inner--gold .price__value").textContent = card.prices.gold;
     } // Ініціалізація кліків на волни
 
 
@@ -496,20 +495,20 @@
       function newEl(tag, attrs) {
         var e = document.createElement(tag);
         if (!attrs) return e;
-        Object.entries(attrs).forEach(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              k = _ref3[0],
-              v = _ref3[1];
+        Object.entries(attrs).forEach(function (_ref) {
+          var _ref2 = _slicedToArray(_ref, 2),
+              k = _ref2[0],
+              v = _ref2[1];
 
           if (k === 'class') {
             if (Array.isArray(v)) v.forEach(function (c) {
               return c && e.classList.add(c);
             });else if (v) e.classList.add(v);
           } else if (k === 'style' && _typeof(v) === 'object') {
-            Object.entries(v).forEach(function (_ref4) {
-              var _ref5 = _slicedToArray(_ref4, 2),
-                  ks = _ref5[0],
-                  vs = _ref5[1];
+            Object.entries(v).forEach(function (_ref3) {
+              var _ref4 = _slicedToArray(_ref3, 2),
+                  ks = _ref4[0],
+                  vs = _ref4[1];
 
               return e.style[ks] = vs;
             });
@@ -840,21 +839,29 @@
     var ticketBtns = document.querySelectorAll(".tickets__btn");
     ticketBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        openPopup();
+        openPopup(); // Получаем все счетчики билетов
+
         var ticketCountSilver = document.querySelector(".rte-tbody .rte-tr:first-child .rte-number-input");
-        var ticketCountSilverIncrease = document.querySelector(".rte-tbody .rte-tr:first-child .rte-increase-button"); // const ticketCountGold = document.querySelector(".rte-tbody .rte-tr:nth-child(2) .rte-number-input");
-        // const ticketCountGoldIncrease = document.querySelector(".rte-tbody .rte-tr:nth-child(2) .rte-increase-button");
-        // const ticketCountVip = document.querySelector(".rte-tbody .rte-tr:nth-child(3) .rte-number-input");
-        // const ticketCountVipIncrease = document.querySelector(".rte-tbody .rte-tr:nth-child(3) .rte-increase-button");
+        var ticketCountSilverIncrease = document.querySelector(".rte-tbody .rte-tr:first-child .rte-increase-button");
+        var ticketCountSilverDecrease = document.querySelector(".rte-tbody .rte-tr:first-child .rte-decrease-button");
+        var ticketCountGold = document.querySelector(".rte-tbody .rte-tr:nth-child(2) .rte-number-input");
+        var ticketCountGoldIncrease = document.querySelector(".rte-tbody .rte-tr:nth-child(2) .rte-increase-button");
+        var ticketCountGoldDecrease = document.querySelector(".rte-tbody .rte-tr:nth-child(2) .rte-decrease-button"); // Сбрасываем ВСЕ счетчики в 0
 
-        if (btn.classList.contains("tickets__btn") && ticketCountSilver.value == '0') {
-          ticketCountSilverIncrease.click();
-        } // else if (btn.classList.contains("tickets__btn--gold") && ticketCountGold.value == '0') {
-        //     ticketCountGoldIncrease.click()
-        // } else if (btn.classList.contains("tickets__btn--vip") && ticketCountVip.value == '0') {
-        //     ticketCountVipIncrease.click()
-        // }
+        while (ticketCountSilver && ticketCountSilver.value !== '0') {
+          ticketCountSilverDecrease === null || ticketCountSilverDecrease === void 0 ? void 0 : ticketCountSilverDecrease.click();
+        }
 
+        while (ticketCountGold && ticketCountGold.value !== '0') {
+          ticketCountGoldDecrease === null || ticketCountGoldDecrease === void 0 ? void 0 : ticketCountGoldDecrease.click();
+        } // Увеличиваем счетчик ТОЛЬКО для выбранного билета
+
+
+        if (btn.classList.contains("tickets__btn--silver")) {
+          ticketCountSilverIncrease === null || ticketCountSilverIncrease === void 0 ? void 0 : ticketCountSilverIncrease.click();
+        } else if (btn.classList.contains("tickets__btn--gold")) {
+          ticketCountGoldIncrease === null || ticketCountGoldIncrease === void 0 ? void 0 : ticketCountGoldIncrease.click();
+        }
       });
     });
     popupCloseBtn.addEventListener("click", function () {
