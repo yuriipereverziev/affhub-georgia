@@ -293,8 +293,7 @@ export default () => {
     }
 
     label.textContent = inputs[0].name.includes("position") ? text1 :
-      inputs[0].name.includes("vertical") ? text2 :
-        text3;
+      inputs[0].name.includes("vertical") ? text2 : text3;
 
     inputs.forEach(input => {
       const labelEl = formGroup.querySelector(`label[for="${input.id}"]`);
@@ -303,6 +302,8 @@ export default () => {
       optionEl.textContent = labelEl ? labelEl.textContent.trim() : input.value;
       select.appendChild(optionEl);
     });
+
+
 
     inputs.forEach(i => i.style.display = 'none');
     formGroup.querySelectorAll('label').forEach(l => l.style.display = 'none');
@@ -334,6 +335,7 @@ export default () => {
       txtSearch: 'search',
       ...options
     };
+
 
     function newEl(tag, attrs) {
       const e = document.createElement(tag);
@@ -428,6 +430,13 @@ export default () => {
             checked: o.selected
           });
 
+          // 🔹 Добавляем кастомный класс для позиции
+          if (el.name.includes('position')) {
+            optionInput.style.display = 'none';            // прячем галочку
+            optionWrapper.classList.add('position-option'); // добавляем класс к опции
+            list.classList.add('position-list');           // добавляем класс к контейнеру списка
+          }
+
           optionWrapper.appendChild(optionInput);
           optionWrapper.appendChild(newEl('label', {text: o.text}));
 
@@ -486,7 +495,8 @@ export default () => {
             } else {
               selectedOptions.forEach(sel => {
                 const span = newEl('span', {class: 'optext', text: sel.text, srcOption: sel});
-                if (el.attributes['multiselect-hide-x']?.value !== 'true') {
+                if (!el.name.includes('position') && el.attributes['multiselect-hide-x']?.value !== 'true') {
+
                   span.appendChild(newEl('span', {
                     class: 'optdel',
                     text: '✖',
@@ -516,7 +526,7 @@ export default () => {
                   srcOption: selectedOptions[0]
                 });
 
-                if (el.attributes['multiselect-hide-x']?.value !== 'true') {
+                if (!el.name.includes('position') && el.attributes['multiselect-hide-x']?.value !== 'true') {
                   const delBtn = newEl('span', {
                     class: 'optdel',
                     text: '✖',

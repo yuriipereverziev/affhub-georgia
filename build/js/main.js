@@ -611,7 +611,16 @@
               type: inputType,
               name: 'multiselect-' + idx,
               checked: o.selected
-            });
+            }); // 🔹 Добавляем кастомный класс для позиции
+
+            if (el.name.includes('position')) {
+              optionInput.style.display = 'none'; // прячем галочку
+
+              optionWrapper.classList.add('position-option'); // добавляем класс к опции
+
+              list.classList.add('position-list'); // добавляем класс к контейнеру списка
+            }
+
             optionWrapper.appendChild(optionInput);
             optionWrapper.appendChild(newEl('label', {
               text: o.text
@@ -686,7 +695,7 @@
                     srcOption: sel
                   });
 
-                  if (((_el$attributes$multis5 = el.attributes['multiselect-hide-x']) === null || _el$attributes$multis5 === void 0 ? void 0 : _el$attributes$multis5.value) !== 'true') {
+                  if (!el.name.includes('position') && ((_el$attributes$multis5 = el.attributes['multiselect-hide-x']) === null || _el$attributes$multis5 === void 0 ? void 0 : _el$attributes$multis5.value) !== 'true') {
                     span.appendChild(newEl('span', {
                       class: 'optdel',
                       text: '✖',
@@ -722,7 +731,7 @@
                     srcOption: selectedOptions[0]
                   });
 
-                  if (((_el$attributes$multis6 = el.attributes['multiselect-hide-x']) === null || _el$attributes$multis6 === void 0 ? void 0 : _el$attributes$multis6.value) !== 'true') {
+                  if (!el.name.includes('position') && ((_el$attributes$multis6 = el.attributes['multiselect-hide-x']) === null || _el$attributes$multis6 === void 0 ? void 0 : _el$attributes$multis6.value) !== 'true') {
                     var delBtn = newEl('span', {
                       class: 'optdel',
                       text: '✖',
