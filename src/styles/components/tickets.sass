@@ -781,35 +781,40 @@
   .single-select .multiselect-dropdown-list input
     pointer-events: none
 
-  .rte-order-agreement-element
-    padding: 5px 0 5px 35px
-    color: #fff
-    line-height: 1.2
-    font-weight: 400
+  //.rte-order-agreement-element
+  //  padding: 5px 0 5px 35px
+  //  color: #fff
+  //  line-height: 1.2
+  //  font-weight: 400
+  //  cursor: pointer  // Добавьте эту строку
+  //  position: relative  // Убедитесь что есть position: relative
+  //
+  //  &::before
+  //    content: ""
+  //    position: absolute
+  //    top: 50%
+  //    left: 0
+  //    transform: translateY(-50%)
+  //    width: 24px
+  //    height: 24px
+  //    background: #fff
+  //    border: 1px solid #ff57c6
+  //    cursor: pointer  // Добавьте эту строку
+  //
+  //  &.active
+  //    &::before
+  //      background-image: url(../img/icon-check.svg)
+  //      background-size: 50%
+  //      background-position: 50%
+  //      background-repeat: no-repeat
+  //
+  //  a
+  //    color: #fff
+  //    pointer-events: auto  // Добавьте чтобы ссылки работали
+  //
+  //  input
+  //    display: none
 
-    &::before
-      content: ""
-      position: absolute
-      top: 50%
-      left: 0
-      transform: translateY(-50%)
-      width: 24px
-      height: 24px
-      background: #fff
-      border: 1px solid #ff57c6
-
-    &.active
-      &::before
-        background-image: url(../img/icon-check.svg)
-        background-size: 50%
-        background-position: 50%
-        background-repeat: no-repeat
-
-  .rte-order-agreement-element a
-    color: #fff
-
-  .rte-order-agreement-element input
-    display: none
 
   .rte-order-details
     +rm(640)

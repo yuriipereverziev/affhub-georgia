@@ -924,6 +924,7 @@
 
           setupDynamicSelects();
           termsCheckboxes = document.querySelectorAll(".rte-order-agreement-element input");
+          console.log(termsCheckboxes);
           termsCheckboxes.forEach(function (checkbox) {
             checkbox.required = true;
             checkbox.addEventListener("change", function () {
@@ -936,6 +937,8 @@
               var termsValid = _toConsumableArray(termsCheckboxes).every(function (input) {
                 return input.checked === true;
               });
+
+              console.log(termsValid);
 
               if (termsValid) {
                 nextOrderBtn.disabled = false;
@@ -1639,11 +1642,11 @@
   function main() {
     speakersSlider();
     dress(); // speakersSlider()
+    // if (document.querySelector('.tickets')) {
+    //   tickets();
+    // }
 
-    if (document.querySelector('.tickets')) {
-      tickets();
-    }
-
+    tickets();
     mediaPartners(); // langSwitcher()
     // charity()
 

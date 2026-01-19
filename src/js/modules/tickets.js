@@ -657,6 +657,7 @@ export default () => {
   })
 
   const nextBtn = document.querySelector(".rte-table-footer button");
+
   let termsCheckboxes = '';
 
   if (nextBtn) {
@@ -721,6 +722,8 @@ export default () => {
         setupDynamicSelects()
 
         termsCheckboxes = document.querySelectorAll(".rte-order-agreement-element input");
+        console.log(termsCheckboxes);
+
         termsCheckboxes.forEach(checkbox => {
           checkbox.required = true;
           checkbox.addEventListener("change", function () {
@@ -733,6 +736,8 @@ export default () => {
             const termsValid = [...termsCheckboxes].every(input => {
               return (input.checked === true);
             });
+
+            console.log(termsValid)
 
             if (termsValid) {
               nextOrderBtn.disabled = false;
