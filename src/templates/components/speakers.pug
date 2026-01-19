@@ -3,57 +3,68 @@
   const learnMoreText = 'learn more'
   const secretSpeakerLabel = 'Secret speaker'
 
+
+
   const speakersList = [
     {
-      name: 'Andrii Kartsev',
-      position: 'Head of One Media Nutra Team',
+      firstName: 'Alexander',
+      lastName: 'Omelianovich',
+      position: 'CEO LeadBit, CEO DepHouse',
       img: 'speaker-1',
       width: 320,
       height: 420
     },
     {
-      name: 'Nikita Koshelyuk',
-      position: 'CEO Trident Media',
+      firstName: 'Oleg',
+      lastName: 'Kupets',
+      position: 'Owner KuPartners',
+      img: 'speaker-2',
+      width: 320,
+      height: 420
+    },
+    {
+      firstName: 'Dmitry',
+      lastName: 'Myasnikov',
+      position: 'СOO AdKey.Agency',
       img: 'speaker-3',
       width: 320,
       height: 420
     },
-    {
-      name: 'Miroslav Liaskovez',
-      position: 'Founder of LeadMarketing, expert in online advertising and traffic arbitrage',
-      img: 'speaker-4',
-      width: 320,
-      height: 420
-    },
-    {
-      name: 'Iryna',
-      position: 'Head of Affiliates FRBS Team',
-      img: 'speaker-6',
-      width: 320,
-      height: 420
-    },
-    {
-      name: 'Nikolay Popov',
-      position: 'Head of Services AdKey.Agency',
-      img: 'speaker-7',
-      width: 320,
-      height: 420
-    },
-    {
-      name: 'Dmytro Miasnikov',
-      position: 'Chief Operating Officer AdKey.Agency',
-      img: 'speaker-8',
-      width: 320,
-      height: 420
-    },
-    {
-      name: 'Alex Emelian',
-      position: 'Co-founder, Co-CEO, Simple',
-      img: 'speaker-9',
-      width: 320,
-      height: 420
-    }
+    // {
+    //   name: 'Iryna',
+    //   position: 'Head of Affiliates FRBS Team',
+    //   img: 'speaker-6',
+    //   width: 320,
+    //   height: 420
+    // },
+    // {
+    //   name: 'Nikolay Popov',
+    //   position: 'Head of Services AdKey.Agency',
+    //   img: 'speaker-7',
+    //   width: 320,
+    //   height: 420
+    // },
+    // {
+    //   name: 'Dmytro Miasnikov',
+    //   position: 'Chief Operating Officer AdKey.Agency',
+    //   img: 'speaker-8',
+    //   width: 320,
+    //   height: 420
+    // },
+    // {
+    //   name: 'Alex Emelian',
+    //   position: 'Co-founder, Co-CEO, Simple',
+    //   img: 'speaker-9',
+    //   width: 320,
+    //   height: 420
+    // }
   ]
+
+
+  const REAL_SPEAKERS_COUNT = 3
+  const TOTAL_SPEAKERS_COUNT = 6
+  const realSpeakers = speakersList.slice(0, REAL_SPEAKERS_COUNT)
+  const secretSpeakersCount = Math.max(TOTAL_SPEAKERS_COUNT - realSpeakers.length, 0)
 
 
 .block.speakers.speakers__wrapper#speakers
@@ -77,22 +88,25 @@
     .speakers__inner.swiper
       .speakers__wrapper.swiper-wrapper
 
-        // обычные спикеры
-        // each speaker in speakersList
-        //   .speakers__slide.swiper-slide
-        //     img.speakers__img(
-        //       src=`/img/${speaker.img}.png`
-        //       alt=speaker.name
-        //       width=speaker.width
-        //       height=speaker.height
-        //       loading="lazy"
-        //     )
-        //     .speakers__desc
-        //       span.speakers__name= speaker.name
-        //       span.speakers__position= speaker.position
+        // настоящие спикеры
+        each speaker in realSpeakers
+          .speakers__slide.swiper-slide
+            img.speakers__img(
+              src=`/img/${speaker.img}.png`
+              alt=speaker.name
+              width=speaker.width
+              height=speaker.height
+              loading="lazy"
+            )
+            .speakers__desc
+              span.speakers__name
+                | #{speaker.firstName}
+                br
+                | #{speaker.lastName}
+              span.speakers__position= speaker.position
 
-        //- секретные спикеры
-        each i in [1,2,3,4,5,6,7,8,9]
+        // секретные спикеры
+        each i in Array(secretSpeakersCount)
           .speakers__slide.speakers__slide--secret.swiper-slide
             img.speakers__img(
               src="/img/speaker.png"
@@ -102,4 +116,5 @@
               loading="lazy"
             )
             .speakers__label.text-upper= secretSpeakerLabel
+
 
