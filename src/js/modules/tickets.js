@@ -1606,9 +1606,13 @@ export default () => {
         popupBack.classList.add("active");
         RTEform.style.display = "none";
         RTEdetails.style.display = "block";
+
         const nextOrderBtn = document.querySelector(".rte-add-button");
         nextOrderBtn.textContent = isUALang ? textJSDictionary.get("Order") : "Order";
         nextOrderBtn.id = "order-btn-step2";
+
+        nextOrderBtn.disabled = true;
+        nextOrderBtn.style.opacity = 0.5;
 
         const orderDetailsElements = document.querySelectorAll(".rte-order-details__element");
         orderDetailsElements.forEach(element => {

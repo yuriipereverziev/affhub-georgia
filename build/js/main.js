@@ -1822,6 +1822,8 @@
           var nextOrderBtn = document.querySelector(".rte-add-button");
           nextOrderBtn.textContent = isUALang ? textJSDictionary.get("Order") : "Order";
           nextOrderBtn.id = "order-btn-step2";
+          nextOrderBtn.disabled = true;
+          nextOrderBtn.style.opacity = 0.5;
           var orderDetailsElements = document.querySelectorAll(".rte-order-details__element");
           orderDetailsElements.forEach(function (element) {
             var formGroup = element.querySelector(".rte-form-group");
