@@ -92,7 +92,7 @@
         each speaker in realSpeakers
           .speakers__slide.swiper-slide
             img.speakers__img(
-              src=`/img/${speaker.img}.png`
+              src=`img/${speaker.img}.png`
               alt=speaker.name
               width=speaker.width
               height=speaker.height
@@ -109,7 +109,7 @@
         each i in Array(secretSpeakersCount)
           .speakers__slide.speakers__slide--secret.swiper-slide
             img.speakers__img(
-              src="/img/speaker.png"
+              src="img/speaker.png"
               alt=secretSpeakerLabel
               width="155"
               height="177"
